@@ -1,0 +1,24 @@
+/*
+  # Block the site from being embedded in iframes on other domains (clickjacking)
+  X-Frame-Options: DENY
+
+  # Stop browsers from guessing content types (MIME sniffing attacks)
+  X-Content-Type-Options: nosniff
+
+  # Only send the bare origin as the referrer when navigating to external sites
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Restrict which browser features this page can use
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+  # Force HTTPS for 1 year, include subdomains (HSTS)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Content Security Policy:
+  # - default: only this origin
+  # - scripts: this origin + Cloudflare Web Analytics only
+  # - styles: this origin + Google Fonts
+  # - fonts: this origin + Google Fonts
+  # - images: this origin + data URIs (for inline SVG/canvas)
+  # - connect: this origin + Cloudflare Analytics API
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'

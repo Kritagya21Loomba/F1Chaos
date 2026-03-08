@@ -1,0 +1,156 @@
+---
+import Base from '../../layouts/Base.astro';
+import SeasonBarChart from '../../components/charts/SeasonBarChart';
+import { DATA_SLUG_TO_URL, RACE_META, SEASON_COLORS } from '../../data/races';
+
+export async function getStaticPaths() {
+  const allMetrics = import.meta.glob('../../../public/metrics/*.json', { eager: true });
+
+  // Group metrics by year
+  const byYear: Record<string, any[]> = {};
+  for (const [filePath, raw] of Object.entries(allMetrics)) {
+    const filename  = filePath.split('/').pop()!.replace('.json', '');
+    const sepIdx    = filename.indexOf('_');
+    const yearStr   = filename.slice(0, sepIdx);
+    const dataSlug  = filename.slice(sepIdx + 1);
+    const metrics   = (raw as any).default ?? raw;
+    byYear[yearStr] ??= [];
+    byYear[yearStr].push({ dataSlug, metrics });
+  }
+
+  return Object.entries(byYear).map(([yearStr, races]) => {
+    races.sort((a, b) => (a.metrics.round ?? 99) - (b.metrics.round ?? 99));
+    const year = parseInt(yearStr);
+    const totalInversions = races.reduce((s, r) => s + (r.metrics.total_lap_inversions ?? 0), 0);
+    const avgVolatility   = +(races.reduce((s, r) => s + (r.metrics.volatility_score ?? 0), 0) / races.length).toFixed(4);
+    const totalDnfs       = races.reduce((s, r) => s + (r.metrics.dnf_count ?? 0), 0);
+    const sorted          = [...races].sort((a, b) => (b.metrics.volatility_score ?? 0) - (a.metrics.volatility_score ?? 0));
+    const highestVol      = sorted[0];
+    const lowestVol       = sorted.at(-1)!;
+
+    return {
+      params: { year: yearStr },
+      props: {
+        year,
+        races,
+        totalInversions,
+        avgVolatility,
+        totalDnfs,
+        highestVol,
+        lowestVol,
+      },
+    };
+  });
+}
+
+const { year, races, totalInversions, avgVolatility, totalDnfs, highestVol, lowestVol } = Astro.props;
+const color   = SEASON_COLORS[year] ?? '#7070a0';
+const cssVar  = `--y${year}-color`;
+const yearClass = `y${year}`;
+
+// Build bar chart data for the React component
+const barData = races.map(r => ({
+  round:      r.metrics.round ?? 0,
+  shortName:  RACE_META[r.dataSlug]?.shortName ?? r.metrics.grand_prix ?? r.dataSlug,
+  circuit:    RACE_META[r.dataSlug]?.circuit   ?? r.metrics.circuit ?? '',
+  volatility: r.metrics.volatility_score ?? 0,
+  inversions: r.metrics.total_lap_inversions ?? 0,
+  href:       `/${year}/${DATA_SLUG_TO_URL[r.dataSlug] ?? r.dataSlug}`,
+}));
+---
+
+<Base title={`${year} Season`} activeNav={String(year)}>
+  <div class="container">
+    <div class="page-header">
+      <div class="overline">Full Season &mdash; {races.length} Races</div>
+      <h1 style={`color: var(${cssVar});`}>{year} F1 Season</h1>
+      <p class="subtitle">
+        All {races.length} race results with inversion-based chaos metrics.
+        {year === 2026 && <strong>First season under new technical regulations.</strong>}
+      </p>
+    </div>
+
+    <!-- Season headline stats -->
+    <div class="metric-row">
+      <div class={`metric-card highlight ${yearClass}`}>
+        <div class="label">Total lap inversions</div>
+        <div class="value" style={`color: var(${cssVar});`}>{totalInversions.toLocaleString()}</div>
+        <div class="sub">across all {races.length} races</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Avg volatility</div>
+        <div class="value">{avgVolatility}</div>
+        <div class="sub">inversions / (grid &times; laps)</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Total DNFs</div>
+        <div class="value">{totalDnfs}</div>
+        <div class="sub">retirements season-wide</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Most chaotic race</div>
+        <div class="value" style="font-size: 20px;">{RACE_META[highestVol?.dataSlug]?.shortName ?? '—'}</div>
+        <div class="sub">vol. {highestVol?.metrics.volatility_score}</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Least chaotic race</div>
+        <div class="value" style="font-size: 20px;">{RACE_META[lowestVol?.dataSlug]?.shortName ?? '—'}</div>
+        <div class="sub">vol. {lowestVol?.metrics.volatility_score}</div>
+      </div>
+    </div>
+
+    <!-- Season bar chart (React, with tooltip) -->
+    <div class="section">
+      <div class="section-title">Volatility by Round</div>
+      <div class="section-desc">
+        Higher bar = more chaotic race. Hover for details, click to explore full analytics.
+      </div>
+      <div class="card" style="padding: 24px 24px 16px; overflow: visible;">
+        <SeasonBarChart client:load races={barData} color={color} />
+      </div>
+    </div>
+
+    <!-- Race cards grid -->
+    <div class="section">
+      <div class="section-title">All Races</div>
+      <div class="season-grid">
+        {races.map((r) => {
+          const meta    = RACE_META[r.dataSlug];
+          const urlSlug = DATA_SLUG_TO_URL[r.dataSlug] ?? r.dataSlug;
+          const m       = r.metrics;
+          const winner  = m.driver_movements?.[0];
+          return (
+            <a class="season-race-card" href={`/${year}/${urlSlug}`}>
+              <div class="round">Round {m.round}</div>
+              <div class="race-name">{meta?.shortName ?? m.grand_prix}</div>
+              <div class="circuit-name">{meta?.circuit ?? m.circuit}</div>
+              <div class="mini-stats">
+                <div class="mini-stat">
+                  <div class="n" style={`color: var(${cssVar});`}>{m.volatility_score}</div>
+                  <div class="l">Volatility</div>
+                </div>
+                <div class="mini-stat">
+                  <div class="n">{(m.total_lap_inversions ?? 0).toLocaleString()}</div>
+                  <div class="l">Inversions</div>
+                </div>
+                {winner && (
+                  <div class="mini-stat">
+                    <div class="n" style="font-size: 14px;">{winner.code}</div>
+                    <div class="l">Winner</div>
+                  </div>
+                )}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px;">
+      <a href="/compare" class="race-card" style="flex: 1; min-width: 200px; padding: 16px 20px;">
+        <div style="font-size: 13px; color: var(--muted);">Compare seasons</div>
+        <div style="font-size: 18px; font-weight: 700;">Season Overview &rarr;</div>
+      </a>
+    </div>
+  </div>
+</Base>

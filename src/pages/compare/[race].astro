@@ -1,0 +1,288 @@
+---
+import Base from '../../layouts/Base.astro';
+import MultiSeriesChart from '../../components/charts/MultiSeriesChart';
+import DriverMovementChart from '../../components/charts/DriverMovementChart';
+import { DATA_SLUG_TO_URL, RACE_META, SEASON_COLORS } from '../../data/races';
+import type { ChartSeries } from '../../components/charts/MultiSeriesChart';
+
+export async function getStaticPaths() {
+  const allMetrics = import.meta.glob('../../../public/metrics/*.json', { eager: true });
+
+  // Group metrics by dataSlug (circuit identity), deduplicating by year
+  const bySlug: Record<string, Map<number, any>> = {};
+  for (const [filePath, raw] of Object.entries(allMetrics)) {
+    const filename = filePath.split('/').pop()!.replace('.json', '');
+    const sepIdx   = filename.indexOf('_');
+    const yearStr  = filename.slice(0, sepIdx);
+    const dataSlug = filename.slice(sepIdx + 1);
+    const year     = parseInt(yearStr);
+    if (!bySlug[dataSlug]) bySlug[dataSlug] = new Map();
+    bySlug[dataSlug].set(year, (raw as any).default ?? raw);
+  }
+
+  // Only generate a page for circuits present in 2+ different years
+  return Object.entries(bySlug)
+    .filter(([, yearMap]) => yearMap.size > 1)
+    .map(([dataSlug, yearMap]) => {
+      const entries = [...yearMap.entries()]
+        .sort(([a], [b]) => a - b)
+        .map(([year, metrics]) => ({ year, metrics }));
+      const urlSlug = DATA_SLUG_TO_URL[dataSlug] ?? dataSlug;
+      return {
+        params: { race: urlSlug },
+        props:  { dataSlug, urlSlug, entries },
+      };
+    });
+}
+
+const { dataSlug, urlSlug, entries } = Astro.props;
+const meta = RACE_META[dataSlug];
+
+// Build per-year series for charts
+const inversionSeries: ChartSeries[] = entries.map(e => ({
+  key:   String(e.year),
+  label: String(e.year),
+  color: SEASON_COLORS[e.year] ?? '#7070a0',
+  data:  (e.metrics.inversions_per_lap ?? []).map((d: any) => ({ lap: d.lap, value: d.inversions })),
+}));
+
+const cumulativeSeries: ChartSeries[] = entries.map(e => ({
+  key:   String(e.year),
+  label: String(e.year),
+  color: SEASON_COLORS[e.year] ?? '#7070a0',
+  data:  (e.metrics.cumulative_inversions ?? []).map((d: any) => ({ lap: d.lap, value: d.cumulative })),
+}));
+
+// Build all sequential year-over-year pairs (e.g. 2024->2025, 2025->2026)
+// Plus total range if 3+ years (e.g. 2024->2026)
+interface YearPair {
+  fromYear: number;
+  toYear: number;
+  fromMetrics: any;
+  toMetrics: any;
+  label: string;
+  isRange: boolean; // true = not adjacent (full range)
+}
+
+const pairs: YearPair[] = [];
+// Adjacent pairs
+for (let i = 0; i < entries.length - 1; i++) {
+  pairs.push({
+    fromYear:    entries[i].year,
+    toYear:      entries[i + 1].year,
+    fromMetrics: entries[i].metrics,
+    toMetrics:   entries[i + 1].metrics,
+    label:       `${entries[i].year} → ${entries[i + 1].year}`,
+    isRange:     false,
+  });
+}
+// Total range (first → last) if 3+ years
+if (entries.length >= 3) {
+  pairs.push({
+    fromYear:    entries[0].year,
+    toYear:      entries[entries.length - 1].year,
+    fromMetrics: entries[0].metrics,
+    toMetrics:   entries[entries.length - 1].metrics,
+    label:       `${entries[0].year} → ${entries[entries.length - 1].year} (total)`,
+    isRange:     true,
+  });
+}
+---
+
+<Base title={`Compare — ${meta?.shortName ?? urlSlug}`} activeNav="compare">
+  <div class="container">
+    <div class="page-header">
+      <div class="overline">Cross-season comparison</div>
+      <h1>{meta?.name ?? urlSlug}</h1>
+      <p class="subtitle">
+        {meta?.circuit} — comparing {entries.map(e => e.year).join(', ')}.
+        Did the 2026 regulations change how this circuit raced?
+      </p>
+    </div>
+
+    <!-- ── Section 1: Year snapshot cards ──────────────────────────────────── -->
+    <div class="section">
+      <div class="section-title">Race Snapshots by Year</div>
+      <div class="section-desc">Key metrics for each year at this circuit, side by side.</div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-bottom: 8px;">
+        {entries.map(e => {
+          const m      = e.metrics;
+          const color  = SEASON_COLORS[e.year] ?? '#7070a0';
+          const winner = m.driver_movements?.[0];
+          return (
+            <div class={`compare-card y${e.year}`}>
+              <div class="c-label">Season</div>
+              <div class="c-year">{e.year}</div>
+              <div class="c-metric">
+                <div class="l">Lap inversions</div>
+                <div class="v">{m.total_lap_inversions}</div>
+              </div>
+              <div class="c-metric">
+                <div class="l">Volatility score</div>
+                <div class="v">{m.volatility_score}</div>
+              </div>
+              <div class="c-metric">
+                <div class="l">Start &rarr; finish</div>
+                <div class="v">{m.total_inversions}</div>
+              </div>
+              <div class="c-metric">
+                <div class="l">DNFs</div>
+                <div class="v">{m.dnf_count}</div>
+              </div>
+              {winner && (
+                <div class="c-metric">
+                  <div class="l">Winner</div>
+                  <div class="v" style="font-size: 20px;">{winner.code}</div>
+                </div>
+              )}
+              {m.biggest_mover && (
+                <div class="c-metric">
+                  <div class="l">Biggest mover</div>
+                  <div class="v" style={`font-size: 16px; color: ${color};`}>
+                    {m.biggest_mover.code} +{m.biggest_mover.positions_gained}
+                  </div>
+                </div>
+              )}
+              <div style="margin-top: 16px;">
+                <a href={`/${e.year}/${urlSlug}`} style={`font-size: 13px; color: ${color};`}>
+                  Full {e.year} race &rarr;
+                </a>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- ── Section 2: Year-over-year deltas ────────────────────────────────── -->
+    <div class="section">
+      <div class="section-title">Year-over-Year Changes</div>
+      <div class="section-desc">
+        How much did volatility shift between seasons?
+        Green = increased chaos, red = decreased.
+        {entries.length >= 3 && <>&nbsp;The <em>total</em> row spans the full {entries[0].year}&ndash;{entries[entries.length - 1].year} range.</>}
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        {pairs.map(pair => {
+          const invDelta  = pair.toMetrics.total_lap_inversions - pair.fromMetrics.total_lap_inversions;
+          const volDelta  = +(pair.toMetrics.volatility_score - pair.fromMetrics.volatility_score).toFixed(4);
+          const pctChange = Math.round((pair.toMetrics.total_lap_inversions / pair.fromMetrics.total_lap_inversions - 1) * 100);
+          const isPos     = invDelta >= 0;
+          const borderStyle = pair.isRange ? '1px dashed #2a2a3f' : '1px solid #2a2a3f';
+
+          return (
+            <div style={`background: var(--surface); border: ${borderStyle}; border-radius: 12px; padding: 20px 24px;`}>
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+                <span style={`font-size: 13px; font-weight: 600; color: ${SEASON_COLORS[pair.fromYear] ?? '#7070a0'};`}>
+                  {pair.fromYear}
+                </span>
+                <span style="color: var(--muted); font-size: 14px;">&rarr;</span>
+                <span style={`font-size: 13px; font-weight: 600; color: ${SEASON_COLORS[pair.toYear] ?? '#7070a0'};`}>
+                  {pair.toYear}
+                </span>
+                {pair.isRange && (
+                  <span style="margin-left: 4px; font-size: 10px; background: var(--surface2); color: var(--muted); border-radius: 4px; padding: 2px 8px; letter-spacing: 0.1em; text-transform: uppercase;">
+                    Full Range
+                  </span>
+                )}
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px;">
+                <div>
+                  <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 4px;">Inversion delta</div>
+                  <div style={`font-size: 28px; font-weight: 700; font-family: var(--font-mono); color: ${isPos ? 'var(--green)' : 'var(--accent)'};`}>
+                    {isPos ? '+' : ''}{invDelta}
+                  </div>
+                  <div style="font-size: 11px; color: var(--muted);">lap inversions</div>
+                </div>
+                <div>
+                  <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 4px;">Volatility delta</div>
+                  <div style={`font-size: 28px; font-weight: 700; font-family: var(--font-mono); color: ${volDelta >= 0 ? 'var(--green)' : 'var(--accent)'};`}>
+                    {volDelta >= 0 ? '+' : ''}{volDelta}
+                  </div>
+                  <div style="font-size: 11px; color: var(--muted);">score change</div>
+                </div>
+                <div>
+                  <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 4px;">Change</div>
+                  <div style={`font-size: 28px; font-weight: 700; font-family: var(--font-mono); color: ${pctChange >= 0 ? 'var(--green)' : 'var(--accent)'};`}>
+                    {pctChange >= 0 ? '+' : ''}{pctChange}%
+                  </div>
+                  <div style="font-size: 11px; color: var(--muted);">more chaos</div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- ── Section 3: Charts ─────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-title">Inversions Per Lap — All Years</div>
+      <div class="section-desc">
+        {entries.map(e => e.year).join(' vs ')} — hover for exact values. Higher peaks = more overtaking activity.
+      </div>
+      <div class="card chart-wrap">
+        <MultiSeriesChart
+          client:load
+          series={inversionSeries}
+          yLabel="Inversions per Lap"
+          height={320}
+        />
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Cumulative Inversions — Race Chaos Over Time</div>
+      <div class="section-desc">
+        Steeper slope = more chaotic phase. The gap between curves shows the effect of regulation changes.
+      </div>
+      <div class="card chart-wrap">
+        <MultiSeriesChart
+          client:load
+          series={cumulativeSeries}
+          yLabel="Cumulative Inversions"
+          height={320}
+        />
+      </div>
+    </div>
+
+    <!-- ── Section 4: Driver movement per year ──────────────────────────── -->
+    <div class="section">
+      <div class="section-title">Driver Position Changes by Year</div>
+      <div class="section-desc">
+        Positions gained (green) or lost (red) from grid start to finish.
+        DNF drivers shown in grey.
+      </div>
+      {entries.map(e => (
+        <div style="margin-bottom: 32px;">
+          <div style={`font-size: 13px; font-weight: 600; color: ${SEASON_COLORS[e.year] ?? '#7070a0'}; margin-bottom: 12px; letter-spacing: 0.06em; text-transform: uppercase;`}>
+            {e.year} Race
+          </div>
+          <div class="card chart-wrap tall">
+            <DriverMovementChart client:load data={e.metrics.driver_movements} height={480} />
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="insight">
+      <div class="title">Methodology</div>
+      <p>
+        Inversions are counted using a <strong>Fenwick Tree (BIT)</strong> per lap,
+        measuring each lap's position array against the original grid order.
+        Start&rarr;finish totals use a <strong>MergeSort-based counter</strong>.
+        DNF drivers are excluded from inversion counts but shown in movement charts.
+        Data via <strong>FastF1</strong>.
+      </p>
+    </div>
+
+    <div style="margin-top: 32px;">
+      <a href="/compare" class="race-card" style="display: inline-block; padding: 16px 20px; max-width: 300px;">
+        <div style="font-size: 13px; color: var(--muted);">Back to</div>
+        <div style="font-size: 18px; font-weight: 700;">&larr; Season Comparison</div>
+      </a>
+    </div>
+  </div>
+</Base>

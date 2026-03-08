@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import SeasonTrendChart from '../components/charts/SeasonTrendChart';
+import { RACE_META, SEASON_COLORS } from '../data/races';
+
+const allMetrics = import.meta.glob('../../public/metrics/*.json', { eager: true });
+
+// Build season summaries
+const byYear: Record<number, { dataSlug: string; metrics: any }[]> = {};
+for (const [filePath, raw] of Object.entries(allMetrics)) {
+  const filename = filePath.split('/').pop()!.replace('.json', '');
+  const sepIdx   = filename.indexOf('_');
+  const yearStr  = filename.slice(0, sepIdx);
+  const dataSlug = filename.slice(sepIdx + 1);
+  const year     = parseInt(yearStr);
+  byYear[year]   ??= [];
+  byYear[year].push({ dataSlug, metrics: (raw as any).default ?? raw });
+}
+
+const seasonSummaries = Object.entries(byYear)
+  .sort(([a], [b]) => parseInt(a) - parseInt(b))
+  .map(([yearStr, races]) => {
+    const year     = parseInt(yearStr);
+    const avgVol   = +(races.reduce((s, r) => s + (r.metrics.volatility_score ?? 0), 0) / races.length).toFixed(4);
+    const totalInv = races.reduce((s, r) => s + (r.metrics.total_lap_inversions ?? 0), 0);
+    return { year, raceCount: races.length, avgVol, totalInv, color: SEASON_COLORS[year] ?? '#7070a0' };
+  });
+---
+
+<Base title="Home" activeNav="home">
+  <div class="container">
+    <div class="page-header">
+      <div class="overline">Algorithm + F1 + Data</div>
+      <h1>F1 Race Chaos Analyzer</h1>
+      <p class="subtitle">
+        Using <strong>inversion counting</strong> to measure overtaking turbulence and race volatility
+        across 2024, 2025, and 2026. Did the new regulations actually produce more exciting racing?
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">What is an inversion?</div>
+      <div class="insight">
+        <div class="title">Algorithm Concept</div>
+        <p>
+          An <strong>inversion</strong> occurs when a driver is running ahead of someone who started ahead of them.
+          If Norris starts P2 but runs behind Russell who started P5, that's 1 inversion.
+          More inversions = more overtaking = more chaotic race. We count inversions using
+          <strong>Merge Sort</strong> (start&rarr;finish) and a <strong>Fenwick Tree / BIT</strong> (per lap).
+          The <strong>volatility score</strong> normalises this across grid size and race length.
+        </p>
+      </div>
+    </div>
+
+    <!-- Season trend chart -->
+    <div class="section">
+      <div class="section-title">Average Volatility Trend</div>
+      <div class="section-desc">
+        Each point is a full season's average. The scale is open-ended — future seasons
+        may land anywhere on this axis.
+      </div>
+      <div class="card" style="padding: 24px 32px 8px;">
+        <SeasonTrendChart seasons={seasonSummaries} client:visible />
+      </div>
+    </div>
+
+    <!-- Season cards -->
+    <div class="section">
+      <div class="section-title">Explore by Season</div>
+      <div class="card-grid">
+        {seasonSummaries.map(s => {
+          const cssVar = `--y${s.year}-color`;
+          return (
+            <a class="race-card" href={`/${s.year}`}>
+              <div class={`year-badge y${s.year}`}>{s.year} Season</div>
+              <h2>{s.raceCount} Races</h2>
+              <div class="circuit" style="margin-bottom: 16px;">Full calendar with inversion metrics</div>
+              <div class="stat-row">
+                <div class="stat">
+                  <span class="n" style={`color: var(${cssVar});`}>{s.avgVol}</span>
+                  <span class="l">Avg Volatility</span>
+                </div>
+                <div class="stat">
+                  <span class="n" style={`color: var(${cssVar});`}>{s.totalInv.toLocaleString()}</span>
+                  <span class="l">Total Inversions</span>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- Cross-season compare CTA -->
+    <div class="section">
+      <div class="section-title">Compare Seasons</div>
+      <div class="section-desc">
+        Side-by-side metrics, same-circuit comparisons across 2024, 2025, and 2026.
+      </div>
+      <a class="race-card" href="/compare" style="max-width: 480px; display: inline-block;">
+        <div style="font-size: 18px; font-weight: 700; color: var(--text);">
+          Full Season Comparison &rarr;
+        </div>
+        <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">
+          Average volatility, total inversions, race-by-race breakdowns
+        </div>
+      </a>
+    </div>
+  </div>
+</Base>

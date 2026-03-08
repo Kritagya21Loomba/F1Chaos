@@ -1,0 +1,188 @@
+---
+import Base from '../../layouts/Base.astro';
+import VolatilityChart from '../../components/charts/VolatilityChart';
+import CumulativeChart from '../../components/charts/CumulativeChart';
+import DriverMovementChart from '../../components/charts/DriverMovementChart';
+import PositionHeatmap from '../../components/charts/PositionHeatmap';
+import LapPositionChart from '../../components/charts/LapPositionChart';
+import { DATA_SLUG_TO_URL, RACE_META, SEASON_COLORS } from '../../data/races';
+
+export async function getStaticPaths() {
+  const allMetrics = import.meta.glob('../../../public/metrics/*.json', { eager: true });
+
+  return Object.entries(allMetrics).map(([filePath, raw]) => {
+    const filename = filePath.split('/').pop()!.replace('.json', ''); // e.g. "2024_au"
+    const sepIdx  = filename.indexOf('_');
+    const yearStr = filename.slice(0, sepIdx);
+    const dataSlug = filename.slice(sepIdx + 1);
+    const year = parseInt(yearStr);
+    const urlSlug = DATA_SLUG_TO_URL[dataSlug] ?? dataSlug;
+
+    return {
+      params: { year: yearStr, race: urlSlug },
+      props:  {
+        metrics:  (raw as any).default ?? raw,
+        year,
+        dataSlug,
+        urlSlug,
+      },
+    };
+  });
+}
+
+const { metrics: m, year, dataSlug, urlSlug } = Astro.props;
+const meta    = RACE_META[dataSlug];
+const color   = SEASON_COLORS[year] ?? '#7070a0';
+const cssVar  = `--y${year}-color`;
+
+const winner = m.driver_movements?.[0];
+const bm     = m.biggest_mover;
+const mo     = m.most_overtaken;
+
+// Determine which other years have data for this same circuit
+const otherYears: number[] = [];
+const allYears = [2024, 2025, 2026];
+for (const y of allYears) {
+  if (y !== year) otherYears.push(y);
+}
+---
+
+<Base title={`${meta?.shortName ?? urlSlug} ${year}`} activeNav={String(year)}>
+  <div class="container">
+    <div class="page-header">
+      <div class="overline">
+        {year} Season &mdash; Round {m.round}
+        {year === 2026 && <span style="margin-left: 8px; background: color-mix(in srgb, var(--green) 15%, transparent); color: var(--green); font-size: 10px; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 4px;">NEW REGULATIONS</span>}
+      </div>
+      <h1 style={`color: var(${cssVar});`}>{meta?.name ?? m.grand_prix}</h1>
+      <p class="subtitle">{m.circuit} &mdash; {m.total_laps} laps &mdash; {m.grid_size} drivers</p>
+    </div>
+
+    <!-- Key metrics -->
+    <div class="metric-row">
+      <div class={`metric-card highlight y${year}`}>
+        <div class="label">Total lap inversions</div>
+        <div class="value" style={`color: var(${cssVar});`}>{m.total_lap_inversions}</div>
+        <div class="sub">start&rarr;finish: {m.total_inversions}</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Volatility score</div>
+        <div class="value">{m.volatility_score}</div>
+        <div class="sub">inversions / (grid &times; laps)</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Winner</div>
+        <div class="value" style="font-size: 22px;">{winner?.code ?? '—'}</div>
+        <div class="sub">{winner?.name}</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Biggest mover</div>
+        <div class="value" style="font-size: 22px; color: var(--green);">{bm?.code ?? '—'}</div>
+        <div class="sub">+{bm?.positions_gained} positions ({bm?.name})</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Most overtaken</div>
+        <div class="value" style="font-size: 22px; color: var(--accent);">{mo?.code ?? '—'}</div>
+        <div class="sub">{mo?.positions_gained} positions ({mo?.name})</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">DNFs</div>
+        <div class="value">{m.dnf_count}</div>
+        <div class="sub">retirements</div>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="title">Race Summary</div>
+      <p>
+        The {year} {meta?.shortName ?? urlSlug} GP produced <strong>{m.total_lap_inversions} lap
+        inversions</strong> across {m.total_laps} laps, with a volatility score of
+        <strong>{m.volatility_score}</strong>.
+        {bm && <><strong>{bm.name} ({bm.code})</strong> was the biggest mover, gaining {bm.positions_gained} positions. </>}
+        {m.dnf_count > 0 && <>There were {m.dnf_count} retirements which influenced race positions.</>}
+      </p>
+    </div>
+
+    <!-- Inversions per lap -->
+    <div class="section">
+      <div class="section-title">Inversions Per Lap</div>
+      <div class="section-desc">
+        Each point shows how many active inversions existed that lap relative to the starting grid order.
+        Higher peaks indicate more overtaking activity.
+      </div>
+      <div class="card chart-wrap">
+        <VolatilityChart client:load data={m.inversions_per_lap} color={color} height={320} />
+      </div>
+    </div>
+
+    <!-- Cumulative inversions -->
+    <div class="section">
+      <div class="section-title">Cumulative Inversion Curve</div>
+      <div class="section-desc">
+        Running total of inversions across the race. Steep sections indicate high-action phases.
+        Flat sections mean positions locked in for multiple laps.
+      </div>
+      <div class="card chart-wrap">
+        <CumulativeChart client:load data={m.cumulative_inversions} color={color} height={320} />
+      </div>
+    </div>
+
+    <!-- Lap-by-lap position tracker -->
+    <div class="section">
+      <div class="section-title">Lap-by-Lap Position Tracker</div>
+      <div class="section-desc">
+        Each line is one driver's position through the race. P1 is at the top.
+        Lines end where a driver retired. Use filters to isolate specific battles or storylines.
+      </div>
+      <div class="card">
+        <LapPositionChart
+          client:load
+          positionMatrix={m.position_matrix}
+          drivers={m.drivers}
+          totalDrivers={m.grid_size}
+        />
+      </div>
+    </div>
+
+    <!-- Driver movement -->
+    <div class="section">
+      <div class="section-title">Driver Position Changes</div>
+      <div class="section-desc">
+        Positions gained (green) or lost (red) from grid start to final classification.
+        DNF drivers shown in grey.
+      </div>
+      <div class="card chart-wrap tall">
+        <DriverMovementChart client:load data={m.driver_movements} height={480} />
+      </div>
+    </div>
+
+    <!-- Heatmap -->
+    <div class="section">
+      <div class="section-title">Position Heatmap</div>
+      <div class="section-desc">
+        Rows = laps, columns = drivers sorted by grid position. Green = P1, red = last.
+        More colour transitions = more movement = more chaos. Faded cells = DNF.
+      </div>
+      <div class="card" style="overflow: hidden;">
+        <PositionHeatmap
+          client:load
+          matrix={m.position_matrix}
+          drivers={m.drivers}
+          labelEvery={5}
+        />
+      </div>
+    </div>
+
+    <!-- Cross-year compare links -->
+    <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href={`/${year}`} class="race-card" style="flex: 1; min-width: 200px; padding: 16px 20px;">
+        <div style="font-size: 13px; color: var(--muted);">Back to season</div>
+        <div style={`font-size: 18px; font-weight: 700; color: var(${cssVar});`}>{year} Season &larr;</div>
+      </a>
+      <a href={`/compare/${urlSlug}`} class="race-card" style="flex: 1; min-width: 200px; padding: 16px 20px;">
+        <div style="font-size: 13px; color: var(--muted);">Compare across years</div>
+        <div style="font-size: 18px; font-weight: 700;">Compare {meta?.shortName} &rarr;</div>
+      </a>
+    </div>
+  </div>
+</Base>
