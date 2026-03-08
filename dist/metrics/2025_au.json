@@ -1,0 +1,5551 @@
+{
+  "race_id": "2025_au",
+  "year": 2025,
+  "round": 1,
+  "grand_prix": "Australian Grand Prix",
+  "circuit": "Melbourne",
+  "total_laps": 57,
+  "grid_size": 20,
+  "total_inversions": 25,
+  "total_lap_inversions": 699,
+  "volatility_score": 0.6132,
+  "max_possible_inversions": 190,
+  "biggest_mover": {
+    "code": "ANT",
+    "name": "Andrea Kimi Antonelli",
+    "team": "Mercedes",
+    "start_pos": 16,
+    "finish_pos": 4,
+    "positions_gained": 12,
+    "dnf": false,
+    "dnf_lap": null
+  },
+  "most_overtaken": {
+    "code": "PIA",
+    "name": "Oscar Piastri",
+    "team": "McLaren",
+    "start_pos": 2,
+    "finish_pos": 9,
+    "positions_gained": -7,
+    "dnf": false,
+    "dnf_lap": null
+  },
+  "dnf_count": 6,
+  "drivers": [
+    {
+      "code": "NOR",
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "status": "FINISHED"
+    },
+    {
+      "code": "VER",
+      "name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "status": "FINISHED"
+    },
+    {
+      "code": "RUS",
+      "name": "George Russell",
+      "team": "Mercedes",
+      "status": "FINISHED"
+    },
+    {
+      "code": "ANT",
+      "name": "Andrea Kimi Antonelli",
+      "team": "Mercedes",
+      "status": "FINISHED"
+    },
+    {
+      "code": "ALB",
+      "name": "Alexander Albon",
+      "team": "Williams",
+      "status": "FINISHED"
+    },
+    {
+      "code": "STR",
+      "name": "Lance Stroll",
+      "team": "Aston Martin",
+      "status": "FINISHED"
+    },
+    {
+      "code": "HUL",
+      "name": "Nico Hulkenberg",
+      "team": "Kick Sauber",
+      "status": "FINISHED"
+    },
+    {
+      "code": "LEC",
+      "name": "Charles Leclerc",
+      "team": "Ferrari",
+      "status": "FINISHED"
+    },
+    {
+      "code": "PIA",
+      "name": "Oscar Piastri",
+      "team": "McLaren",
+      "status": "FINISHED"
+    },
+    {
+      "code": "HAM",
+      "name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "status": "FINISHED"
+    },
+    {
+      "code": "GAS",
+      "name": "Pierre Gasly",
+      "team": "Alpine",
+      "status": "FINISHED"
+    },
+    {
+      "code": "TSU",
+      "name": "Yuki Tsunoda",
+      "team": "Racing Bulls",
+      "status": "FINISHED"
+    },
+    {
+      "code": "OCO",
+      "name": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "status": "FINISHED"
+    },
+    {
+      "code": "BEA",
+      "name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "status": "FINISHED"
+    },
+    {
+      "code": "LAW",
+      "name": "Liam Lawson",
+      "team": "Red Bull Racing",
+      "status": "DNF"
+    },
+    {
+      "code": "BOR",
+      "name": "Gabriel Bortoleto",
+      "team": "Kick Sauber",
+      "status": "DNF"
+    },
+    {
+      "code": "ALO",
+      "name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "status": "DNF"
+    },
+    {
+      "code": "SAI",
+      "name": "Carlos Sainz",
+      "team": "Williams",
+      "status": "DNF"
+    },
+    {
+      "code": "DOO",
+      "name": "Jack Doohan",
+      "team": "Alpine",
+      "status": "DNF"
+    },
+    {
+      "code": "HAD",
+      "name": "Isack Hadjar",
+      "team": "Racing Bulls",
+      "status": "DNF"
+    }
+  ],
+  "driver_movements": [
+    {
+      "code": "NOR",
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "start_pos": 1,
+      "finish_pos": 1,
+      "positions_gained": 0,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "VER",
+      "name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "start_pos": 3,
+      "finish_pos": 2,
+      "positions_gained": 1,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "RUS",
+      "name": "George Russell",
+      "team": "Mercedes",
+      "start_pos": 4,
+      "finish_pos": 3,
+      "positions_gained": 1,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "ANT",
+      "name": "Andrea Kimi Antonelli",
+      "team": "Mercedes",
+      "start_pos": 16,
+      "finish_pos": 4,
+      "positions_gained": 12,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "ALB",
+      "name": "Alexander Albon",
+      "team": "Williams",
+      "start_pos": 6,
+      "finish_pos": 5,
+      "positions_gained": 1,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "STR",
+      "name": "Lance Stroll",
+      "team": "Aston Martin",
+      "start_pos": 13,
+      "finish_pos": 6,
+      "positions_gained": 7,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "HUL",
+      "name": "Nico Hulkenberg",
+      "team": "Kick Sauber",
+      "start_pos": 17,
+      "finish_pos": 7,
+      "positions_gained": 10,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "LEC",
+      "name": "Charles Leclerc",
+      "team": "Ferrari",
+      "start_pos": 7,
+      "finish_pos": 8,
+      "positions_gained": -1,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "PIA",
+      "name": "Oscar Piastri",
+      "team": "McLaren",
+      "start_pos": 2,
+      "finish_pos": 9,
+      "positions_gained": -7,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "HAM",
+      "name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "start_pos": 8,
+      "finish_pos": 10,
+      "positions_gained": -2,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "GAS",
+      "name": "Pierre Gasly",
+      "team": "Alpine",
+      "start_pos": 9,
+      "finish_pos": 11,
+      "positions_gained": -2,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "TSU",
+      "name": "Yuki Tsunoda",
+      "team": "Racing Bulls",
+      "start_pos": 5,
+      "finish_pos": 12,
+      "positions_gained": -7,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "OCO",
+      "name": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "start_pos": 19,
+      "finish_pos": 13,
+      "positions_gained": 6,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "BEA",
+      "name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "start_pos": 20,
+      "finish_pos": 14,
+      "positions_gained": 6,
+      "dnf": false,
+      "dnf_lap": null
+    },
+    {
+      "code": "LAW",
+      "name": "Liam Lawson",
+      "team": "Red Bull Racing",
+      "start_pos": 18,
+      "finish_pos": 15,
+      "positions_gained": 3,
+      "dnf": true,
+      "dnf_lap": 48
+    },
+    {
+      "code": "BOR",
+      "name": "Gabriel Bortoleto",
+      "team": "Kick Sauber",
+      "start_pos": 15,
+      "finish_pos": 16,
+      "positions_gained": -1,
+      "dnf": true,
+      "dnf_lap": 47
+    },
+    {
+      "code": "ALO",
+      "name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "start_pos": 12,
+      "finish_pos": 17,
+      "positions_gained": -5,
+      "dnf": true,
+      "dnf_lap": 34
+    },
+    {
+      "code": "SAI",
+      "name": "Carlos Sainz",
+      "team": "Williams",
+      "start_pos": 10,
+      "finish_pos": 18,
+      "positions_gained": -8,
+      "dnf": true,
+      "dnf_lap": 2
+    },
+    {
+      "code": "DOO",
+      "name": "Jack Doohan",
+      "team": "Alpine",
+      "start_pos": 14,
+      "finish_pos": 19,
+      "positions_gained": -5,
+      "dnf": true,
+      "dnf_lap": 2
+    },
+    {
+      "code": "HAD",
+      "name": "Isack Hadjar",
+      "team": "Racing Bulls",
+      "start_pos": 11,
+      "finish_pos": 20,
+      "positions_gained": -9,
+      "dnf": true,
+      "dnf_lap": 2
+    }
+  ],
+  "inversions_per_lap": [
+    {
+      "lap": 1,
+      "inversions": 30
+    },
+    {
+      "lap": 2,
+      "inversions": 7
+    },
+    {
+      "lap": 3,
+      "inversions": 7
+    },
+    {
+      "lap": 4,
+      "inversions": 7
+    },
+    {
+      "lap": 5,
+      "inversions": 7
+    },
+    {
+      "lap": 6,
+      "inversions": 7
+    },
+    {
+      "lap": 7,
+      "inversions": 7
+    },
+    {
+      "lap": 8,
+      "inversions": 7
+    },
+    {
+      "lap": 9,
+      "inversions": 7
+    },
+    {
+      "lap": 10,
+      "inversions": 7
+    },
+    {
+      "lap": 11,
+      "inversions": 7
+    },
+    {
+      "lap": 12,
+      "inversions": 7
+    },
+    {
+      "lap": 13,
+      "inversions": 7
+    },
+    {
+      "lap": 14,
+      "inversions": 6
+    },
+    {
+      "lap": 15,
+      "inversions": 6
+    },
+    {
+      "lap": 16,
+      "inversions": 7
+    },
+    {
+      "lap": 17,
+      "inversions": 5
+    },
+    {
+      "lap": 18,
+      "inversions": 5
+    },
+    {
+      "lap": 19,
+      "inversions": 4
+    },
+    {
+      "lap": 20,
+      "inversions": 4
+    },
+    {
+      "lap": 21,
+      "inversions": 4
+    },
+    {
+      "lap": 22,
+      "inversions": 5
+    },
+    {
+      "lap": 23,
+      "inversions": 5
+    },
+    {
+      "lap": 24,
+      "inversions": 5
+    },
+    {
+      "lap": 25,
+      "inversions": 5
+    },
+    {
+      "lap": 26,
+      "inversions": 5
+    },
+    {
+      "lap": 27,
+      "inversions": 5
+    },
+    {
+      "lap": 28,
+      "inversions": 5
+    },
+    {
+      "lap": 29,
+      "inversions": 5
+    },
+    {
+      "lap": 30,
+      "inversions": 5
+    },
+    {
+      "lap": 31,
+      "inversions": 5
+    },
+    {
+      "lap": 32,
+      "inversions": 5
+    },
+    {
+      "lap": 33,
+      "inversions": 7
+    },
+    {
+      "lap": 34,
+      "inversions": 7
+    },
+    {
+      "lap": 35,
+      "inversions": 7
+    },
+    {
+      "lap": 36,
+      "inversions": 7
+    },
+    {
+      "lap": 37,
+      "inversions": 7
+    },
+    {
+      "lap": 38,
+      "inversions": 7
+    },
+    {
+      "lap": 39,
+      "inversions": 5
+    },
+    {
+      "lap": 40,
+      "inversions": 5
+    },
+    {
+      "lap": 41,
+      "inversions": 5
+    },
+    {
+      "lap": 42,
+      "inversions": 5
+    },
+    {
+      "lap": 43,
+      "inversions": 4
+    },
+    {
+      "lap": 44,
+      "inversions": 35
+    },
+    {
+      "lap": 45,
+      "inversions": 36
+    },
+    {
+      "lap": 46,
+      "inversions": 36
+    },
+    {
+      "lap": 47,
+      "inversions": 34
+    },
+    {
+      "lap": 48,
+      "inversions": 31
+    },
+    {
+      "lap": 49,
+      "inversions": 31
+    },
+    {
+      "lap": 50,
+      "inversions": 31
+    },
+    {
+      "lap": 51,
+      "inversions": 30
+    },
+    {
+      "lap": 52,
+      "inversions": 29
+    },
+    {
+      "lap": 53,
+      "inversions": 28
+    },
+    {
+      "lap": 54,
+      "inversions": 26
+    },
+    {
+      "lap": 55,
+      "inversions": 25
+    },
+    {
+      "lap": 56,
+      "inversions": 26
+    },
+    {
+      "lap": 57,
+      "inversions": 25
+    }
+  ],
+  "cumulative_inversions": [
+    {
+      "lap": 1,
+      "cumulative": 30
+    },
+    {
+      "lap": 2,
+      "cumulative": 37
+    },
+    {
+      "lap": 3,
+      "cumulative": 44
+    },
+    {
+      "lap": 4,
+      "cumulative": 51
+    },
+    {
+      "lap": 5,
+      "cumulative": 58
+    },
+    {
+      "lap": 6,
+      "cumulative": 65
+    },
+    {
+      "lap": 7,
+      "cumulative": 72
+    },
+    {
+      "lap": 8,
+      "cumulative": 79
+    },
+    {
+      "lap": 9,
+      "cumulative": 86
+    },
+    {
+      "lap": 10,
+      "cumulative": 93
+    },
+    {
+      "lap": 11,
+      "cumulative": 100
+    },
+    {
+      "lap": 12,
+      "cumulative": 107
+    },
+    {
+      "lap": 13,
+      "cumulative": 114
+    },
+    {
+      "lap": 14,
+      "cumulative": 120
+    },
+    {
+      "lap": 15,
+      "cumulative": 126
+    },
+    {
+      "lap": 16,
+      "cumulative": 133
+    },
+    {
+      "lap": 17,
+      "cumulative": 138
+    },
+    {
+      "lap": 18,
+      "cumulative": 143
+    },
+    {
+      "lap": 19,
+      "cumulative": 147
+    },
+    {
+      "lap": 20,
+      "cumulative": 151
+    },
+    {
+      "lap": 21,
+      "cumulative": 155
+    },
+    {
+      "lap": 22,
+      "cumulative": 160
+    },
+    {
+      "lap": 23,
+      "cumulative": 165
+    },
+    {
+      "lap": 24,
+      "cumulative": 170
+    },
+    {
+      "lap": 25,
+      "cumulative": 175
+    },
+    {
+      "lap": 26,
+      "cumulative": 180
+    },
+    {
+      "lap": 27,
+      "cumulative": 185
+    },
+    {
+      "lap": 28,
+      "cumulative": 190
+    },
+    {
+      "lap": 29,
+      "cumulative": 195
+    },
+    {
+      "lap": 30,
+      "cumulative": 200
+    },
+    {
+      "lap": 31,
+      "cumulative": 205
+    },
+    {
+      "lap": 32,
+      "cumulative": 210
+    },
+    {
+      "lap": 33,
+      "cumulative": 217
+    },
+    {
+      "lap": 34,
+      "cumulative": 224
+    },
+    {
+      "lap": 35,
+      "cumulative": 231
+    },
+    {
+      "lap": 36,
+      "cumulative": 238
+    },
+    {
+      "lap": 37,
+      "cumulative": 245
+    },
+    {
+      "lap": 38,
+      "cumulative": 252
+    },
+    {
+      "lap": 39,
+      "cumulative": 257
+    },
+    {
+      "lap": 40,
+      "cumulative": 262
+    },
+    {
+      "lap": 41,
+      "cumulative": 267
+    },
+    {
+      "lap": 42,
+      "cumulative": 272
+    },
+    {
+      "lap": 43,
+      "cumulative": 276
+    },
+    {
+      "lap": 44,
+      "cumulative": 311
+    },
+    {
+      "lap": 45,
+      "cumulative": 347
+    },
+    {
+      "lap": 46,
+      "cumulative": 383
+    },
+    {
+      "lap": 47,
+      "cumulative": 417
+    },
+    {
+      "lap": 48,
+      "cumulative": 448
+    },
+    {
+      "lap": 49,
+      "cumulative": 479
+    },
+    {
+      "lap": 50,
+      "cumulative": 510
+    },
+    {
+      "lap": 51,
+      "cumulative": 540
+    },
+    {
+      "lap": 52,
+      "cumulative": 569
+    },
+    {
+      "lap": 53,
+      "cumulative": 597
+    },
+    {
+      "lap": 54,
+      "cumulative": 623
+    },
+    {
+      "lap": 55,
+      "cumulative": 648
+    },
+    {
+      "lap": 56,
+      "cumulative": 674
+    },
+    {
+      "lap": 57,
+      "cumulative": 699
+    }
+  ],
+  "position_matrix": [
+    {
+      "lap": 1,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": false
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": false
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": false
+      }
+    },
+    {
+      "lap": 2,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 3,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 4,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 5,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 6,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 7,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 8,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 9,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 10,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 11,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 12,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 13,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 14,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 12,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 15,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 12,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 16,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 3,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 17,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 12,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 18,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 12,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 19,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 12,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 20,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 12,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 21,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 12,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 22,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 23,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 24,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 25,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 26,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 27,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 28,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 29,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 30,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 31,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 32,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 10,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 33,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 13,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 17,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 11,
+        "dnf": false
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 34,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 35,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 36,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 37,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 38,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 16,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 39,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 40,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 41,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 42,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 6,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 43,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 3,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 10,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 6,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 2,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 8,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 9,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 5,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 15,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 44,
+      "NOR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 1,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 9,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 10,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 3,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 2,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 7,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 45,
+      "NOR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 1,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 11,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 9,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 10,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 5,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 2,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 4,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 3,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 14,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 7,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 13,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 46,
+      "NOR": {
+        "pos": 3,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 5,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 6,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 8,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 7,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 10,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 12,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 2,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 1,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 11,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 4,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 16,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 9,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 14,
+        "dnf": false
+      },
+      "ALO": {
+        "pos": 17,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 47,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 11,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 12,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 15,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 10,
+        "dnf": false
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 48,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 10,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 13,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 11,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 12,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 49,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 10,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 13,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 11,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 12,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 50,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 10,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 13,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 11,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 12,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 51,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 10,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 11,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 52,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 9,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 12,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 10,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 11,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 53,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 9,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 10,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 8,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 12,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 54,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 8,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 11,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 10,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 12,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 55,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 5,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 4,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 8,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 10,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 11,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 12,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 56,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 5,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 8,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 10,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 9,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 11,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 12,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    },
+    {
+      "lap": 57,
+      "NOR": {
+        "pos": 1,
+        "dnf": false
+      },
+      "VER": {
+        "pos": 2,
+        "dnf": false
+      },
+      "RUS": {
+        "pos": 3,
+        "dnf": false
+      },
+      "ANT": {
+        "pos": 4,
+        "dnf": false
+      },
+      "ALB": {
+        "pos": 5,
+        "dnf": false
+      },
+      "STR": {
+        "pos": 6,
+        "dnf": false
+      },
+      "HUL": {
+        "pos": 7,
+        "dnf": false
+      },
+      "LEC": {
+        "pos": 8,
+        "dnf": false
+      },
+      "PIA": {
+        "pos": 9,
+        "dnf": false
+      },
+      "HAM": {
+        "pos": 10,
+        "dnf": false
+      },
+      "GAS": {
+        "pos": 11,
+        "dnf": false
+      },
+      "TSU": {
+        "pos": 12,
+        "dnf": false
+      },
+      "OCO": {
+        "pos": 13,
+        "dnf": false
+      },
+      "BEA": {
+        "pos": 14,
+        "dnf": false
+      },
+      "LAW": {
+        "pos": 15,
+        "dnf": true
+      },
+      "BOR": {
+        "pos": 17,
+        "dnf": true
+      },
+      "ALO": {
+        "pos": 16,
+        "dnf": true
+      },
+      "SAI": {
+        "pos": 18,
+        "dnf": true
+      },
+      "DOO": {
+        "pos": 19,
+        "dnf": true
+      },
+      "HAD": {
+        "pos": 20,
+        "dnf": true
+      }
+    }
+  ]
+}
