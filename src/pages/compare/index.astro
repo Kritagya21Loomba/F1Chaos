@@ -1,18 +1,19 @@
 ---
 import Base from '../../layouts/Base.astro';
 import SeasonTrendChart from '../../components/charts/SeasonTrendChart';
-import { DATA_SLUG_TO_URL, RACE_META, SEASON_COLORS, ALL_YEARS } from '../../data/races';
+import { DATA_SLUG_TO_URL, RACE_META, SEASON_COLORS } from '../../data/races';
 
 const allMetrics = import.meta.glob('../../../public/metrics/*.json', { eager: true });
 
-// Build per-year season summaries
 interface SeasonStats {
   year: number;
   raceCount: number;
   totalInversions: number;
   avgVolatility: number;
   totalDnfs: number;
-  mostChaotic: { slug: string; vol: number; name: string } | null;
+  avgOvertakesPerRace: number;
+  avgSCPerRace: number;
+  mostChaotic:  { slug: string; vol: number; name: string } | null;
   leastChaotic: { slug: string; vol: number; name: string } | null;
 }
 
@@ -31,37 +32,69 @@ for (const [filePath, raw] of Object.entries(allMetrics)) {
 const seasons: SeasonStats[] = Object.entries(byYear)
   .sort(([a], [b]) => parseInt(a) - parseInt(b))
   .map(([yearStr, races]) => {
-    const year = parseInt(yearStr);
-    const totalInv = races.reduce((s, r) => s + (r.metrics.total_lap_inversions ?? 0), 0);
-    const avgVol   = +(races.reduce((s, r) => s + (r.metrics.volatility_score ?? 0), 0) / races.length).toFixed(4);
-    const dnfs     = races.reduce((s, r) => s + (r.metrics.dnf_count ?? 0), 0);
-    const sorted   = [...races].sort((a, b) => (b.metrics.volatility_score ?? 0) - (a.metrics.volatility_score ?? 0));
+    const year    = parseInt(yearStr);
+    const n       = races.length;
+    const totalInv  = races.reduce((s, r) => s + (r.metrics.total_lap_inversions ?? 0), 0);
+    const avgVol    = +(races.reduce((s, r) => s + (r.metrics.volatility_score ?? 0), 0) / n).toFixed(4);
+    const dnfs      = races.reduce((s, r) => s + (r.metrics.dnf_count ?? 0), 0);
+    const avgOT     = +(races.reduce((s, r) => s + (r.metrics.overtake_summary?.on_track ?? 0), 0) / n).toFixed(1);
+    const avgSC     = +(races.reduce((s, r) => s + (r.metrics.track_status?.sc_count ?? 0) + (r.metrics.track_status?.vsc_count ?? 0), 0) / n).toFixed(2);
+    const sorted    = [...races].sort((a, b) => (b.metrics.volatility_score ?? 0) - (a.metrics.volatility_score ?? 0));
     return {
       year,
-      raceCount:       races.length,
-      totalInversions: totalInv,
-      avgVolatility:   avgVol,
-      totalDnfs:       dnfs,
-      mostChaotic:  sorted[0]  ? { slug: sorted[0].dataSlug,  vol: sorted[0].metrics.volatility_score,  name: RACE_META[sorted[0].dataSlug]?.shortName  ?? sorted[0].dataSlug  } : null,
+      raceCount:           n,
+      totalInversions:     totalInv,
+      avgVolatility:       avgVol,
+      totalDnfs:           dnfs,
+      avgOvertakesPerRace: avgOT,
+      avgSCPerRace:        avgSC,
+      mostChaotic:  sorted[0]     ? { slug: sorted[0].dataSlug,   vol: sorted[0].metrics.volatility_score,   name: RACE_META[sorted[0].dataSlug]?.shortName   ?? sorted[0].dataSlug   } : null,
       leastChaotic: sorted.at(-1) ? { slug: sorted.at(-1)!.dataSlug, vol: sorted.at(-1)!.metrics.volatility_score, name: RACE_META[sorted.at(-1)!.dataSlug]?.shortName ?? sorted.at(-1)!.dataSlug } : null,
     };
   });
 
-// Find circuits available in multiple years for cross-year compare links
+// Pre-compute comparison rows for the Stats panel
+interface CompRow {
+  label: string;
+  desc: string;
+  values: { year: number; displayVal: string; pct: number; color: string }[];
+}
+
+function makeRow(label: string, desc: string, fn: (s: SeasonStats) => number, fmt?: (v: number) => string): CompRow {
+  const raw  = seasons.map(s => ({ year: s.year, v: fn(s) }));
+  const maxV = Math.max(...raw.map(r => r.v));
+  return {
+    label,
+    desc,
+    values: raw.map(r => ({
+      year:       r.year,
+      displayVal: fmt ? fmt(r.v) : String(r.v),
+      pct:        maxV > 0 ? Math.round((r.v / maxV) * 100) : 0,
+      color:      SEASON_COLORS[r.year] ?? '#7070a0',
+    })),
+  };
+}
+
+const compRows: CompRow[] = [
+  makeRow('Avg Volatility / Race',       'Higher = more positional chaos relative to grid size and race length',    s => s.avgVolatility),
+  makeRow('Avg On-Track Overtakes / Race','Genuine overtakes only — pit-stop and SC-driven position changes excluded', s => s.avgOvertakesPerRace),
+  makeRow('Avg SC / VSC Events / Race',  'Safety Car + Virtual Safety Car deployments per race',                    s => s.avgSCPerRace),
+  makeRow('Total DNFs',                  'Retirements across the full season',                                       s => s.totalDnfs),
+];
+
+// Find circuits for cross-year compare links
 const bySlug: Record<string, number[]> = {};
 for (const [filePath] of Object.entries(allMetrics)) {
   const filename = filePath.split('/').pop()!.replace('.json', '');
   const sepIdx   = filename.indexOf('_');
-  const yearStr  = filename.slice(0, sepIdx);
-  const dataSlug = filename.slice(sepIdx + 1);
-  bySlug[dataSlug] ??= [];
-  bySlug[dataSlug].push(parseInt(yearStr));
+  bySlug[filename.slice(sepIdx + 1)] ??= [];
+  bySlug[filename.slice(sepIdx + 1)].push(parseInt(filename.slice(0, sepIdx)));
 }
 const multiYearRaces = Object.entries(bySlug)
   .filter(([, years]) => years.length > 1)
   .sort((a, b) => a[0].localeCompare(b[0]));
 
-const maxAvgVol = Math.max(...seasons.map(s => s.avgVolatility));
+const maxAvgVol   = Math.max(...seasons.map(s => s.avgVolatility));
 const trendSeasons = seasons.map(s => ({
   year:      s.year,
   color:     SEASON_COLORS[s.year] ?? '#7070a0',
@@ -72,82 +105,115 @@ const trendSeasons = seasons.map(s => ({
 ---
 
 <Base title="Season Comparison" activeNav="compare">
-  <div class="container">
-    <div class="page-header">
-      <div class="overline">Cross-season analysis</div>
-      <h1>Season Comparison</h1>
-      <p class="subtitle">
-        Comparing 2024, 2025, and 2026 season-level chaos metrics. Did the 2026 regulations
-        deliver on the promise of more overtaking?
+
+  <!-- ══════════════════════════════════════════════════ COMPARE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-angle"></div>
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="page-hero-eye">
+        <span class="page-hero-dot"></span>
+        Cross-Season Analysis &mdash; {seasons.length} Seasons
+      </div>
+      <h1 class="page-hero-title">Season Comparison</h1>
+      <p class="page-hero-sub">
+        Comparing {seasons.map(s => s.year).join(', ')} season-level chaos metrics.
+        Did the 2026 regulations deliver on the promise of more overtaking?
       </p>
     </div>
+  </section>
 
-    <!-- Season stat cards -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px;">
-      {seasons.map(s => {
-        const cssVar = `--y${s.year}-color`;
-        const color  = SEASON_COLORS[s.year] ?? '#7070a0';
-        const barPct = maxAvgVol > 0 ? Math.round((s.avgVolatility / maxAvgVol) * 100) : 0;
-        return (
-          <div class={`compare-card y${s.year}`}>
-            <div class="c-label">Season</div>
-            <div class="c-year">{s.year}</div>
-            <div class="c-metric">
-              <div class="l">Avg volatility</div>
-              <div class="v">{s.avgVolatility}</div>
-            </div>
-            <div style="height: 8px; background: var(--surface2); border-radius: 4px; overflow: hidden; margin-bottom: 16px;">
-              <div style={`width: ${barPct}%; height: 100%; background: ${color}; border-radius: 4px;`} />
-            </div>
-            <div class="c-metric">
-              <div class="l">Total inversions</div>
-              <div class="v" style="font-size: 20px;">{s.totalInversions.toLocaleString()}</div>
-            </div>
-            <div class="c-metric">
-              <div class="l">Races</div>
-              <div class="v" style="font-size: 20px;">{s.raceCount}</div>
-            </div>
-            <div class="c-metric">
-              <div class="l">Total DNFs</div>
-              <div class="v" style="font-size: 20px;">{s.totalDnfs}</div>
-            </div>
-            {s.mostChaotic && (
+  <div class="container" style="padding-top: 48px; padding-bottom: 80px;">
+
+    <!-- ── Season stat cards ─────────────────────────────────── -->
+    <div class="section">
+      <div class="section-title">Season Snapshots</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+        {seasons.map(s => {
+          const cssVar = `--y${s.year}-color`;
+          const color  = SEASON_COLORS[s.year] ?? '#7070a0';
+          const barPct = maxAvgVol > 0 ? Math.round((s.avgVolatility / maxAvgVol) * 100) : 0;
+          return (
+            <div class={`compare-card y${s.year}`}>
+              <div class="c-label">Season</div>
+              <div class="c-year">{s.year}</div>
               <div class="c-metric">
-                <div class="l">Most chaotic</div>
-                <div class="v" style={`font-size: 16px; color: ${color};`}>
-                  {s.mostChaotic.name} ({s.mostChaotic.vol})
-                </div>
+                <div class="l">Avg volatility</div>
+                <div class="v">{s.avgVolatility}</div>
               </div>
-            )}
-            {s.leastChaotic && (
+              <div style="height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; margin-bottom: 16px;">
+                <div style={`width: ${barPct}%; height: 100%; background: ${color}; border-radius: 3px;`} />
+              </div>
               <div class="c-metric">
-                <div class="l">Least chaotic</div>
-                <div class="v" style="font-size: 16px; color: var(--muted);">
-                  {s.leastChaotic.name} ({s.leastChaotic.vol})
-                </div>
+                <div class="l">Total inversions</div>
+                <div class="v" style="font-size: 20px;">{s.totalInversions.toLocaleString()}</div>
               </div>
-            )}
-            <a href={`/${s.year}`} style={`display: block; margin-top: 16px; font-size: 13px; color: ${color};`}>
-              Explore {s.year} season &rarr;
-            </a>
-          </div>
-        );
-      })}
+              <div class="c-metric">
+                <div class="l">Races / DNFs</div>
+                <div class="v" style="font-size: 20px;">{s.raceCount} <span style="font-size: 14px; color: var(--muted);">/ {s.totalDnfs}</span></div>
+              </div>
+              <div class="c-metric">
+                <div class="l">Avg overtakes / race</div>
+                <div class="v" style={`font-size: 20px; color: ${color};`}>{s.avgOvertakesPerRace}</div>
+              </div>
+              {s.mostChaotic && (
+                <div class="c-metric">
+                  <div class="l">Most chaotic</div>
+                  <div class="v" style={`font-size: 15px; color: ${color};`}>
+                    {s.mostChaotic.name} <span style="font-size: 12px; color: var(--muted);">({s.mostChaotic.vol})</span>
+                  </div>
+                </div>
+              )}
+              <a href={`/${s.year}`} style={`display: block; margin-top: 16px; font-size: 13px; color: ${color};`}>
+                Explore {s.year} season &rarr;
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </div>
 
-    <!-- Average volatility trend chart -->
+    <!-- ── Season Stats Comparison bars ─────────────────────── -->
+    <div class="section">
+      <div class="section-title">Head-to-Head Stats</div>
+      <div class="section-desc">Each bar shows a season relative to the highest value across all seasons.</div>
+      <div class="stats-panel">
+        {compRows.map(row => (
+          <div class="sp-row">
+            <div class="sp-label-col">
+              <div class="sp-label">{row.label}</div>
+              <div class="sp-desc">{row.desc}</div>
+            </div>
+            <div class="sp-bars-col">
+              {row.values.map(v => (
+                <div class="sp-bar-row">
+                  <div class="sp-year-tag" style={`color: ${v.color};`}>{v.year}</div>
+                  <div class="sp-track">
+                    <div class="sp-fill" style={`width: ${Math.max(v.pct, 5)}%; background: ${v.color};`}>
+                    </div>
+                  </div>
+                  <div class="sp-val" style={`color: ${v.color};`}>{v.displayVal}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- ── Average volatility trend chart ────────────────────── -->
     <div class="section">
       <div class="section-title">Average Volatility Trend</div>
       <div class="section-desc">
-        Each point is a season's average. The scale is open-ended — the axis can keep
-        climbing as regulations evolve.
+        Each point is a season's average. The scale is open-ended — the axis can keep climbing as regulations evolve.
       </div>
       <div class="card" style="padding: 24px 32px 8px;">
         <SeasonTrendChart seasons={trendSeasons} client:visible />
       </div>
     </div>
 
-    <!-- Cross-year race links -->
+    <!-- ── Cross-year race links ─────────────────────────────── -->
     <div class="section">
       <div class="section-title">Compare Races Across Years</div>
       <div class="section-desc">
@@ -175,11 +241,107 @@ const trendSeasons = seasons.map(s => ({
       <div class="title">How To Read These Numbers</div>
       <p>
         <strong>Volatility score</strong> = total lap inversions &divide; (grid size &times; total laps).
-        It normalises for different race lengths and grid sizes so seasons can be fairly compared.
-        A score above <strong>1.0</strong> means on average, every driver swapped places with at
-        least one other driver relative to the starting grid, every single lap.
+        Normalised so different race lengths and grid sizes are comparable.
+        A score above <strong>1.0</strong> means on average, every driver swapped places with at least one
+        other driver relative to the starting grid, every single lap.
         The 2026 regulations were designed to push this number higher.
       </p>
     </div>
   </div>
 </Base>
+
+<style>
+/* ── Season Stats Comparison panel ───────────────────────── */
+.stats-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.sp-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+
+.sp-row:last-child { border-bottom: none; }
+
+.sp-label-col {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 20px 24px;
+  border-right: 1px solid var(--border);
+  background: var(--surface2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.sp-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sp-desc {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sp-bars-col {
+  flex: 1;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sp-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sp-year-tag {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  width: 36px;
+  flex-shrink: 0;
+}
+
+.sp-track {
+  flex: 1;
+  height: 22px;
+  background: var(--surface2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sp-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+  min-width: 4px;
+}
+
+.sp-val {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  width: 52px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .sp-row { flex-direction: column; }
+  .sp-label-col { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+}
+</style>

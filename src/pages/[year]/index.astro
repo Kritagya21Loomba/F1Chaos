@@ -45,8 +45,8 @@ export async function getStaticPaths() {
 }
 
 const { year, races, totalInversions, avgVolatility, totalDnfs, highestVol, lowestVol } = Astro.props;
-const color   = SEASON_COLORS[year] ?? '#7070a0';
-const cssVar  = `--y${year}-color`;
+const color     = SEASON_COLORS[year] ?? '#7070a0';
+const cssVar    = `--y${year}-color`;
 const yearClass = `y${year}`;
 
 // Build bar chart data for the React component
@@ -72,15 +72,29 @@ const rankingData = races.map(r => ({
 ---
 
 <Base title={`${year} Season`} activeNav={String(year)}>
-  <div class="container">
-    <div class="page-header">
-      <div class="overline">Full Season &mdash; {races.length} Races</div>
-      <h1 style={`color: var(${cssVar});`}>{year} F1 Season</h1>
-      <p class="subtitle">
+
+  <!-- ═══════════════════════════════════════════════════ SEASON HERO -->
+  <section class="page-hero" style={`--page-accent: ${color};`}>
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-angle"></div>
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="page-hero-eye">
+        <span class="page-hero-dot"></span>
+        Full Season &mdash; {races.length} Races
+      </div>
+      <h1 class="page-hero-title">
+        <span class="ph-accent">{year}</span>&nbsp;F1 Season
+      </h1>
+      <p class="page-hero-sub">
         All {races.length} race results with inversion-based chaos metrics.
         {year === 2026 && <strong>First season under new technical regulations.</strong>}
       </p>
     </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ CONTENT -->
+  <div class="container" style="padding-top: 48px; padding-bottom: 80px;">
 
     <!-- Season headline stats -->
     <div class="metric-row">
@@ -111,7 +125,7 @@ const rankingData = races.map(r => ({
       </div>
     </div>
 
-    <!-- Season bar chart (React, with tooltip) -->
+    <!-- Season bar chart -->
     <div class="section">
       <div class="section-title">Volatility by Round</div>
       <div class="section-desc">

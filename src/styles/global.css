@@ -563,3 +563,141 @@ footer {
   color: #3a3a52;
   letter-spacing: 0.04em;
 }
+
+/* ─── Updated section title — F1 broadcast label style ────────── */
+.section-title {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: var(--accent) !important;
+  margin-bottom: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  position: relative !important;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ─── Page hero (compact, used across all pages) ──────────────── */
+.page-hero {
+  position: relative;
+  padding: 52px 0 60px;
+  overflow: hidden;
+  background: var(--bg);
+  border-bottom: 3px solid var(--page-accent, var(--accent));
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -18deg,
+    transparent 0px,
+    transparent 80px,
+    rgba(255,255,255,0.013) 80px,
+    rgba(255,255,255,0.013) 81px
+  );
+  pointer-events: none;
+}
+
+.page-hero-glow {
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--page-accent, var(--accent)) 10%, transparent) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.page-hero-angle {
+  position: absolute;
+  right: -70px;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  background: var(--page-accent, var(--accent));
+  transform: skewX(-10deg);
+  opacity: 0.055;
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page-hero-eye {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--page-accent, var(--accent));
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeSlideUp 0.5s ease forwards 0.05s;
+}
+
+.page-hero-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--page-accent, var(--accent));
+  flex-shrink: 0;
+  animation: glowPulse 2.2s ease-in-out infinite;
+}
+
+.page-hero-title {
+  font-size: clamp(34px, 5.2vw, 64px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeSlideUp 0.55s ease forwards 0.18s;
+}
+
+.page-hero-title .ph-accent {
+  color: var(--page-accent, var(--accent));
+}
+
+.page-hero-sub {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeSlideUp 0.55s ease forwards 0.3s;
+}
+
+.page-hero-sub strong { color: var(--text); }
+
+/* ─── Shared animations (also used in home page inline style) ──── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0   0 rgba(225,6,0,0.0); }
+  50%       { box-shadow: 0 0 0 6px rgba(225,6,0,0.3); }
+}

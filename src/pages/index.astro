@@ -1,11 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import SeasonTrendChart from '../components/charts/SeasonTrendChart';
-import { RACE_META, SEASON_COLORS } from '../data/races';
+import { SEASON_COLORS } from '../data/races';
 
 const allMetrics = import.meta.glob('../../public/metrics/*.json', { eager: true });
 
-// Build season summaries
 const byYear: Record<number, { dataSlug: string; metrics: any }[]> = {};
 for (const [filePath, raw] of Object.entries(allMetrics)) {
   const filename = filePath.split('/').pop()!.replace('.json', '');
@@ -25,86 +24,786 @@ const seasonSummaries = Object.entries(byYear)
     const totalInv = races.reduce((s, r) => s + (r.metrics.total_lap_inversions ?? 0), 0);
     return { year, raceCount: races.length, avgVol, totalInv, color: SEASON_COLORS[year] ?? '#7070a0' };
   });
+
+const totalRaces      = seasonSummaries.reduce((s, y) => s + y.raceCount, 0);
+const totalInversions = seasonSummaries.reduce((s, y) => s + y.totalInv, 0);
 ---
 
 <Base title="Home" activeNav="home">
-  <div class="container">
-    <div class="page-header">
-      <div class="overline">Algorithm + F1 + Data</div>
-      <h1>F1 Race Chaos Analyzer</h1>
-      <p class="subtitle">
-        Using <strong>inversion counting</strong> to measure overtaking turbulence and race volatility
+
+  <!-- ═══════════════════════════════════════════════════════════ HERO -->
+  <section class="hero">
+    <div class="hero-speed-lines"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-angle-block"></div>
+
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Algorithm &nbsp;&times;&nbsp; F1 &nbsp;&times;&nbsp; Data
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-t1">F1 RACE CHAOS</span>
+        <span class="hero-t2">ANALYZER</span>
+      </h1>
+
+      <p class="hero-sub">
+        Measuring overtaking turbulence using <strong>inversion counting</strong>
         across 2024, 2025, and 2026. Did the new regulations actually produce more exciting racing?
       </p>
-    </div>
 
-    <div class="section">
-      <div class="section-title">What is an inversion?</div>
-      <div class="insight">
-        <div class="title">Algorithm Concept</div>
-        <p>
-          An <strong>inversion</strong> occurs when a driver is running ahead of someone who started ahead of them.
-          If Norris starts P2 but runs behind Russell who started P5, that's 1 inversion.
-          More inversions = more overtaking = more chaotic race. We count inversions using
-          <strong>Merge Sort</strong> (start&rarr;finish) and a <strong>Fenwick Tree / BIT</strong> (per lap).
-          The <strong>volatility score</strong> normalises this across grid size and race length.
-        </p>
+      <div class="hero-ctas">
+        <a href="/2026" class="cta-primary">2026 Season &nbsp;&rarr;</a>
+        <a href="/compare" class="cta-secondary">Compare All Years</a>
       </div>
     </div>
+  </section>
 
-    <!-- Season trend chart -->
-    <div class="section">
-      <div class="section-title">Average Volatility Trend</div>
-      <div class="section-desc">
-        Each point is a full season's average. The scale is open-ended — future seasons
-        may land anywhere on this axis.
+  <!-- ════════════════════════════════════════════════════ STATS BAND -->
+  <div class="stats-band">
+    <div class="stats-band-inner">
+      <div class="sb-item">
+        <span class="sb-num count-up" data-target={totalRaces}>{totalRaces}</span>
+        <span class="sb-label">Races Analyzed</span>
       </div>
-      <div class="card" style="padding: 24px 32px 8px;">
-        <SeasonTrendChart seasons={seasonSummaries} client:visible />
+      <div class="sb-sep"></div>
+      <div class="sb-item">
+        <span class="sb-num count-up" data-target={totalInversions}>{totalInversions.toLocaleString()}</span>
+        <span class="sb-label">Lap Inversions</span>
+      </div>
+      <div class="sb-sep"></div>
+      <div class="sb-item">
+        <span class="sb-num">3</span>
+        <span class="sb-label">Seasons Covered</span>
+      </div>
+      <div class="sb-sep"></div>
+      <div class="sb-item">
+        <span class="sb-num">13</span>
+        <span class="sb-label">Analytics Modules</span>
       </div>
     </div>
+  </div>
 
-    <!-- Season cards -->
-    <div class="section">
-      <div class="section-title">Explore by Season</div>
-      <div class="card-grid">
-        {seasonSummaries.map(s => {
+  <!-- ══════════════════════════════════════════════════ MAIN CONTENT -->
+  <div class="container home-body">
+
+    <!-- ── Season cards ──────────────────────────────────────── -->
+    <div class="home-section">
+      <div class="hs-label">Explore by Season</div>
+      <div class="season-cards">
+        {seasonSummaries.map((s, i) => {
           const cssVar = `--y${s.year}-color`;
           return (
-            <a class="race-card" href={`/${s.year}`}>
-              <div class={`year-badge y${s.year}`}>{s.year} Season</div>
-              <h2>{s.raceCount} Races</h2>
-              <div class="circuit" style="margin-bottom: 16px;">Full calendar with inversion metrics</div>
-              <div class="stat-row">
-                <div class="stat">
-                  <span class="n" style={`color: var(${cssVar});`}>{s.avgVol}</span>
-                  <span class="l">Avg Volatility</span>
+            <a
+              class="scard"
+              href={`/${s.year}`}
+              style={`--c: ${s.color}; animation-delay: ${0.05 + i * 0.12}s;`}
+            >
+              <div class="scard-bg-year">{s.year}</div>
+              <div class="scard-top">
+                <div class="scard-year" style={`color: var(${cssVar})`}>{s.year}</div>
+                <div class="scard-badge">{s.raceCount} Races</div>
+              </div>
+              <div class="scard-div"></div>
+              <div class="scard-stats">
+                <div class="scard-stat">
+                  <div class="scard-n" style={`color: var(${cssVar})`}>{s.avgVol}</div>
+                  <div class="scard-l">Avg Volatility</div>
                 </div>
-                <div class="stat">
-                  <span class="n" style={`color: var(${cssVar});`}>{s.totalInv.toLocaleString()}</span>
-                  <span class="l">Total Inversions</span>
+                <div class="scard-stat">
+                  <div class="scard-n" style={`color: var(${cssVar})`}>{s.totalInv.toLocaleString()}</div>
+                  <div class="scard-l">Total Inversions</div>
                 </div>
               </div>
+              <div class="scard-arrow">Explore {s.year} season &nbsp;&rarr;</div>
             </a>
           );
         })}
       </div>
     </div>
 
-    <!-- Cross-season compare CTA -->
-    <div class="section">
-      <div class="section-title">Compare Seasons</div>
-      <div class="section-desc">
-        Side-by-side metrics, same-circuit comparisons across 2024, 2025, and 2026.
+    <!-- ── Algorithm explainer ───────────────────────────────── -->
+    <div class="home-section">
+      <div class="hs-label">How We Measure Chaos</div>
+      <div class="algo-panel">
+        <div class="algo-step">
+          <div class="algo-n">01</div>
+          <div class="algo-title">Inversion</div>
+          <div class="algo-body">
+            Driver A starts P6 but runs in P2 after lap 8 &mdash; they are now ahead of 4 drivers
+            who started ahead of them. That's <strong>4 inversions</strong> on that lap.
+            More inversions = more overtaking = more chaotic race.
+          </div>
+        </div>
+        <div class="algo-arrow">&rarr;</div>
+        <div class="algo-step">
+          <div class="algo-n">02</div>
+          <div class="algo-title">Fenwick Tree</div>
+          <div class="algo-body">
+            Per-lap inversions counted in <strong>O(n log n)</strong> using a Binary Indexed Tree.
+            Start&rarr;finish delta uses Merge Sort. Both give exact counts fast enough to run
+            across every lap of every race.
+          </div>
+        </div>
+        <div class="algo-arrow">&rarr;</div>
+        <div class="algo-step">
+          <div class="algo-n">03</div>
+          <div class="algo-title">Volatility Score</div>
+          <div class="algo-body">
+            <code class="algo-code">inversions &divide; (grid &times; laps)</code>
+            <br /><br />
+            Normalised so a 20-car 70-lap race and a 20-car 50-lap race are
+            comparable on the same scale. Higher = more chaotic.
+          </div>
+        </div>
       </div>
-      <a class="race-card" href="/compare" style="max-width: 480px; display: inline-block;">
-        <div style="font-size: 18px; font-weight: 700; color: var(--text);">
-          Full Season Comparison &rarr;
-        </div>
-        <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">
-          Average volatility, total inversions, race-by-race breakdowns
-        </div>
-      </a>
     </div>
+
+    <!-- ── Season trend chart ────────────────────────────────── -->
+    <div class="home-section">
+      <div class="hs-label">Average Volatility Trend</div>
+      <div class="hs-desc">
+        Each point is a full season's average volatility score. Watch how the numbers shift as technical regulations change.
+      </div>
+      <div class="card" style="padding: 24px 32px 8px;">
+        <SeasonTrendChart seasons={seasonSummaries} client:visible />
+      </div>
+    </div>
+
+    <!-- ── Compare CTA ───────────────────────────────────────── -->
+    <div class="compare-cta">
+      <div class="cta-inner-left">
+        <div class="cta-overline">Cross-Season Analysis</div>
+        <div class="cta-title">Is 2025 more chaotic than 2024?</div>
+        <div class="cta-sub">
+          Circuit-by-circuit comparisons, average volatility per season,
+          and head-to-head inversion breakdowns &mdash; side by side.
+        </div>
+      </div>
+      <a href="/compare" class="cta-arrow-btn">Full Comparison &nbsp;&rarr;</a>
+    </div>
+
   </div>
 </Base>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════ HERO */
+.hero {
+  position: relative;
+  min-height: calc(88vh - 68px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--bg);
+  padding: 80px 0 100px;
+}
+
+/* Subtle diagonal speed-line background */
+.hero-speed-lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -18deg,
+    transparent 0px,
+    transparent 80px,
+    rgba(255,255,255,0.013) 80px,
+    rgba(255,255,255,0.013) 81px
+  );
+  pointer-events: none;
+}
+
+/* Soft red ambient glow bottom-right */
+.hero-glow {
+  position: absolute;
+  right: -200px;
+  bottom: -200px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(225,6,0,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Angled red decorative block */
+.hero-angle-block {
+  position: absolute;
+  right: -80px;
+  top: 0;
+  bottom: 0;
+  width: 380px;
+  background: var(--accent);
+  transform: skewX(-10deg);
+  opacity: 0.055;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeSlideUp 0.55s ease forwards 0.1s;
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  animation: glowPulse 2.2s ease-in-out infinite;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(50px, 8.5vw, 98px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+  opacity: 0;
+  animation: fadeSlideUp 0.65s ease forwards 0.25s;
+}
+
+.hero-t1 {
+  color: var(--text);
+}
+
+/* Outlined text for dramatic F1-style */
+.hero-t2 {
+  -webkit-text-stroke: 3px var(--accent);
+  color: transparent;
+}
+
+.hero-sub {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: var(--muted);
+  max-width: 520px;
+  line-height: 1.75;
+  margin-bottom: 44px;
+  opacity: 0;
+  animation: fadeSlideUp 0.65s ease forwards 0.42s;
+}
+
+.hero-sub strong {
+  color: var(--text);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeSlideUp 0.65s ease forwards 0.58s;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 30px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.2s;
+}
+
+.cta-primary:hover {
+  background: #c50400;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(225,6,0,0.4);
+  text-decoration: none;
+}
+
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.cta-secondary:hover {
+  border-color: var(--muted);
+  background: var(--surface2);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* ══════════════════════════════════════════════════════ STATS BAND */
+.stats-band {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 3px solid var(--accent);
+}
+
+.stats-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: stretch;
+}
+
+.sb-item {
+  flex: 1;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  animation: fadeSlideUp 0.55s ease forwards;
+}
+
+.sb-item:nth-child(1) { animation-delay: 0.72s; }
+.sb-item:nth-child(3) { animation-delay: 0.86s; }
+.sb-item:nth-child(5) { animation-delay: 1.00s; }
+.sb-item:nth-child(7) { animation-delay: 1.14s; }
+
+.sb-num {
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.sb-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+
+.sb-sep {
+  width: 1px;
+  background: var(--border);
+  flex-shrink: 0;
+  margin: 20px 0;
+}
+
+/* ════════════════════════════════════════════════════ MAIN CONTENT */
+.home-body {
+  padding-top: 72px;
+  padding-bottom: 96px;
+}
+
+.home-section {
+  margin-bottom: 72px;
+}
+
+.hs-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hs-label::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.hs-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  margin-top: -12px;
+}
+
+/* ════════════════════════════════════════════════════ SEASON CARDS */
+.season-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.scard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--c, #7070a0);
+  border-radius: 14px;
+  padding: 28px;
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeSlideUp 0.58s ease forwards;
+  transition: border-color 0.2s, transform 0.18s, box-shadow 0.2s;
+}
+
+/* Subtle radial glow on hover */
+.scard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top left, color-mix(in srgb, var(--c, #7070a0) 10%, transparent), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.scard:hover::after { opacity: 1; }
+
+.scard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 44px color-mix(in srgb, var(--c, #7070a0) 18%, transparent);
+  border-color: var(--c, #7070a0);
+  text-decoration: none;
+}
+
+/* Watermark year in background */
+.scard-bg-year {
+  position: absolute;
+  right: -18px;
+  bottom: -24px;
+  font-size: 110px;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  color: var(--c, #7070a0);
+  opacity: 0.05;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.scard-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.scard-year {
+  font-size: 48px;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.scard-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  flex-shrink: 0;
+}
+
+.scard-div {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 20px;
+}
+
+.scard-stats {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.scard-n {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.scard-l {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.scard-arrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c, #7070a0);
+  margin-top: auto;
+  letter-spacing: 0.03em;
+  position: relative;
+  z-index: 1;
+  transition: letter-spacing 0.15s;
+}
+
+.scard:hover .scard-arrow {
+  letter-spacing: 0.07em;
+}
+
+/* ══════════════════════════════════════════════════════ ALGO PANEL */
+.algo-panel {
+  display: flex;
+  align-items: stretch;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.algo-step {
+  flex: 1;
+  padding: 28px 24px;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+
+.algo-step:first-child {
+  border-left: 4px solid var(--accent);
+}
+
+.algo-step:last-child {
+  border-right: none;
+}
+
+.algo-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--surface2);
+  border-right: 1px solid var(--border);
+  user-select: none;
+}
+
+.algo-n {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+}
+
+.algo-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.algo-body {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.algo-body strong { color: var(--text); }
+
+.algo-code {
+  display: inline-block;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: var(--green);
+  font-family: var(--font-mono);
+}
+
+/* ══════════════════════════════════════════════════════ COMPARE CTA */
+.compare-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: 14px;
+  padding: 36px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.compare-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at right center, rgba(225,6,0,0.06), transparent 55%);
+  pointer-events: none;
+}
+
+.cta-inner-left {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-overline {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.cta-title {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.cta-sub {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 460px;
+  line-height: 1.65;
+}
+
+.cta-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 34px;
+  background: transparent;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, transform 0.15s, box-shadow 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-arrow-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(225,6,0,0.35);
+  text-decoration: none;
+}
+
+/* ══════════════════════════════════════════════════════ ANIMATIONS */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0   0 rgba(225,6,0,0.0); }
+  50%       { box-shadow: 0 0 0 6px rgba(225,6,0,0.3); }
+}
+
+/* ═══════════════════════════════════════════════════════ RESPONSIVE */
+@media (max-width: 900px) {
+  .hero { min-height: auto; padding: 60px 0 80px; }
+  .algo-panel { flex-direction: column; }
+  .algo-step { border-right: none; border-bottom: 1px solid var(--border); }
+  .algo-step:first-child { border-left: 4px solid var(--accent); border-bottom: 1px solid var(--border); }
+  .algo-step:last-child { border-bottom: none; }
+  .algo-arrow { display: none; }
+}
+
+@media (max-width: 720px) {
+  .stats-band-inner { flex-wrap: wrap; }
+  .sb-item { min-width: calc(50% - 1px); padding: 20px 16px; }
+  .sb-sep { display: none; }
+  .compare-cta { flex-direction: column; align-items: flex-start; }
+  .cta-arrow-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: clamp(40px, 13vw, 60px); }
+  .hero-t2 { -webkit-text-stroke-width: 2px; }
+  .hero-ctas { flex-direction: column; }
+  .cta-primary, .cta-secondary { width: 100%; justify-content: center; }
+  .scard-year { font-size: 40px; }
+  .scard-bg-year { font-size: 80px; }
+}
+</style>
+
+<script>
+  // Count-up animation for stats band
+  const countEls = document.querySelectorAll('.count-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target as HTMLElement;
+      const target = parseInt(el.dataset.target ?? '0', 10);
+      const duration = 1500;
+      const startTime = performance.now();
+
+      function frame(now: number) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        el.textContent = Math.round(eased * target).toLocaleString();
+        if (progress < 1) requestAnimationFrame(frame);
+      }
+
+      requestAnimationFrame(frame);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+
+  countEls.forEach(el => observer.observe(el));
+</script>

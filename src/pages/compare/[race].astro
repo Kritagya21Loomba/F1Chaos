@@ -90,15 +90,25 @@ if (entries.length >= 3) {
 ---
 
 <Base title={`Compare — ${meta?.shortName ?? urlSlug}`} activeNav="compare">
-  <div class="container">
-    <div class="page-header">
-      <div class="overline">Cross-season comparison</div>
-      <h1>{meta?.name ?? urlSlug}</h1>
-      <p class="subtitle">
-        {meta?.circuit} — comparing {entries.map(e => e.year).join(', ')}.
-        Did the 2026 regulations change how this circuit raced?
+
+  <!-- ══════════════════════════════════════════════ CIRCUIT COMPARE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-angle"></div>
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="page-hero-eye">
+        <span class="page-hero-dot"></span>
+        Circuit Comparison &mdash; {entries.map(e => e.year).join(' · ')}
+      </div>
+      <h1 class="page-hero-title">{meta?.name ?? urlSlug}</h1>
+      <p class="page-hero-sub">
+        {meta?.circuit} &mdash; side-by-side chaos metrics across seasons at this circuit.
       </p>
     </div>
+  </section>
+
+  <div class="container" style="padding-top: 48px; padding-bottom: 80px;">
 
     <!-- ── Section 1: Year snapshot cards ──────────────────────────────────── -->
     <div class="section">
@@ -149,6 +159,155 @@ if (entries.length >= 3) {
                   Full {e.year} race &rarr;
                 </a>
               </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- ── Race Vitals at a Glance ──────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-title">Race Vitals at a Glance</div>
+      <div class="section-desc">
+        Side-by-side key facts from each year's race at this circuit.
+      </div>
+      <div class="vitals-grid">
+
+        {/* Header row */}
+        <div class="vg-row vg-head">
+          <div class="vg-metric-label"></div>
+          {entries.map(e => (
+            <div class="vg-val vg-year-head" style={`color: ${SEASON_COLORS[e.year] ?? '#7070a0'};`}>
+              {e.year}
+            </div>
+          ))}
+        </div>
+
+        {/* Volatility */}
+        <div class="vg-row vg-highlight">
+          <div class="vg-metric-label">Volatility Score</div>
+          {entries.map(e => {
+            const c = SEASON_COLORS[e.year] ?? '#7070a0';
+            return <div class="vg-val" style={`color: ${c}; font-weight: 700;`}>{e.metrics.volatility_score ?? '—'}</div>;
+          })}
+        </div>
+
+        {/* Lap inversions */}
+        <div class="vg-row">
+          <div class="vg-metric-label">Lap Inversions</div>
+          {entries.map(e => (
+            <div class="vg-val">{(e.metrics.total_lap_inversions ?? 0).toLocaleString()}</div>
+          ))}
+        </div>
+
+        {/* On-track overtakes */}
+        <div class="vg-row">
+          <div class="vg-metric-label">On-Track Overtakes</div>
+          {entries.map(e => {
+            const ot = e.metrics.overtake_summary?.on_track;
+            return <div class="vg-val">{ot != null ? ot : '—'}</div>;
+          })}
+        </div>
+
+        {/* SC / VSC */}
+        <div class="vg-row">
+          <div class="vg-metric-label">SC / VSC Events</div>
+          {entries.map(e => {
+            const sc  = e.metrics.track_status?.sc_count  ?? 0;
+            const vsc = e.metrics.track_status?.vsc_count ?? 0;
+            const txt = sc + vsc > 0 ? `${sc} SC · ${vsc} VSC` : 'None';
+            const col = sc + vsc > 0 ? 'var(--accent2)' : 'var(--muted)';
+            return <div class="vg-val" style={`color: ${col};`}>{txt}</div>;
+          })}
+        </div>
+
+        {/* DNFs */}
+        <div class="vg-row">
+          <div class="vg-metric-label">DNFs</div>
+          {entries.map(e => {
+            const d = e.metrics.dnf_count ?? 0;
+            return <div class="vg-val" style={d > 2 ? 'color: var(--accent);' : ''}>{d}</div>;
+          })}
+        </div>
+
+        {/* Winner */}
+        <div class="vg-row">
+          <div class="vg-metric-label">Winner</div>
+          {entries.map(e => {
+            const w = e.metrics.driver_movements?.[0];
+            const c = SEASON_COLORS[e.year] ?? '#7070a0';
+            return <div class="vg-val" style={`color: ${c}; font-weight: 700;`}>{w?.code ?? '—'}</div>;
+          })}
+        </div>
+
+        {/* Winner's grid slot */}
+        <div class="vg-row">
+          <div class="vg-metric-label">Winner Started</div>
+          {entries.map(e => {
+            const gs = e.metrics.driver_movements?.[0]?.grid_start;
+            const gained = gs != null ? Math.max(0, gs - 1) : 0;
+            return (
+              <div class="vg-val" style={gained >= 5 ? 'color: var(--green);' : ''}>
+                {gs != null ? `P${gs}` : '—'}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Biggest mover */}
+        <div class="vg-row vg-last">
+          <div class="vg-metric-label">Biggest Mover</div>
+          {entries.map(e => {
+            const bm = e.metrics.biggest_mover;
+            return (
+              <div class="vg-val" style={bm ? 'color: var(--green);' : 'color: var(--muted);'}>
+                {bm ? `${bm.code} +${bm.positions_gained}` : '—'}
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Podium Comparison ──────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-title">Podium Comparison</div>
+      <div class="section-desc">
+        Who stood on the podium at {meta?.name ?? urlSlug} across the years?
+        Grid start positions shown in brackets &mdash; green = gained places to podium.
+      </div>
+      <div class="podium-compare-grid">
+        {entries.map(e => {
+          const top3 = (e.metrics.driver_movements ?? []).slice(0, 3);
+          const color = SEASON_COLORS[e.year] ?? '#7070a0';
+          const posLabels = ['P1', 'P2', 'P3'];
+          return (
+            <div class="pyc-card" style={`--pyc-c: ${color};`}>
+              <div class="pyc-year">{e.year}</div>
+              <div class="pyc-circuit">{meta?.shortName ?? urlSlug}</div>
+              <div class="pyc-positions">
+                {top3.map((d, i) => {
+                  const gained = d.positions_gained ?? 0;
+                  const gainCol = gained > 0 ? 'var(--green)' : gained < 0 ? 'var(--accent)' : 'var(--muted)';
+                  return (
+                    <div class={`pyc-pos pyc-p${i + 1}`}>
+                      <span class="pyc-pos-label">{posLabels[i]}</span>
+                      <span class="pyc-driver">{d.code}</span>
+                      <span class="pyc-gain" style={`color: ${gainCol};`}>
+                        {d.grid_start != null ? `P${d.grid_start}` : ''}
+                        {gained !== 0 ? ` ${gained > 0 ? '+' : ''}${gained}` : ''}
+                      </span>
+                    </div>
+                  );
+                })}
+                {top3.length === 0 && (
+                  <div style="color: var(--muted); font-size: 13px; padding: 8px 0;">No data</div>
+                )}
+              </div>
+              <a href={`/${e.year}/${urlSlug}`} class="pyc-link">
+                Full {e.year} race &rarr;
+              </a>
             </div>
           );
         })}
@@ -286,3 +445,159 @@ if (entries.length >= 3) {
     </div>
   </div>
 </Base>
+
+<style>
+/* ── Race Vitals grid ─────────────────────────────────────── */
+.vitals-grid {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.vg-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.vg-row:hover:not(.vg-head) { background: var(--surface2); }
+.vg-last { border-bottom: none; }
+
+.vg-head {
+  background: var(--surface2);
+  border-bottom: 2px solid var(--border);
+}
+
+.vg-highlight {
+  background: color-mix(in srgb, var(--accent) 4%, var(--surface));
+}
+
+.vg-metric-label {
+  width: 190px;
+  flex-shrink: 0;
+  padding: 13px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.vg-val {
+  flex: 1;
+  padding: 13px 8px;
+  font-size: 14px;
+  font-family: var(--font-mono);
+  text-align: center;
+  color: var(--text);
+}
+
+.vg-year-head {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  padding: 14px 8px;
+}
+
+/* ── Podium Comparison ────────────────────────────────────── */
+.podium-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.pyc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--pyc-c, var(--accent));
+  border-radius: 12px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.pyc-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top left, color-mix(in srgb, var(--pyc-c, var(--accent)) 8%, transparent), transparent 55%);
+  pointer-events: none;
+}
+
+.pyc-year {
+  font-size: 40px;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  letter-spacing: -0.03em;
+  color: var(--pyc-c, var(--accent));
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.pyc-circuit {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.pyc-positions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.pyc-pos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  border-radius: 7px;
+}
+
+.pyc-p1 { background: rgba(255,180,0,0.1); border: 1px solid rgba(255,180,0,0.3); }
+.pyc-p2 { background: rgba(192,192,192,0.06); border: 1px solid rgba(192,192,192,0.2); }
+.pyc-p3 { background: rgba(160,100,40,0.08); border: 1px solid rgba(160,100,40,0.25); }
+
+.pyc-pos-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.pyc-driver {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  flex: 1;
+  color: var(--text);
+}
+
+.pyc-gain {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.pyc-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--pyc-c, var(--accent));
+  text-decoration: none;
+}
+
+.pyc-link:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .vg-metric-label { width: 130px; font-size: 10px; padding: 11px 12px; }
+  .vg-val { font-size: 12px; padding: 11px 4px; }
+  .vg-year-head { font-size: 16px; }
+}
+</style>

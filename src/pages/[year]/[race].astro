@@ -71,15 +71,24 @@ for (const y of allYears) {
 ---
 
 <Base title={`${meta?.shortName ?? urlSlug} ${year}`} activeNav={String(year)}>
-  <div class="container">
-    <div class="page-header">
-      <div class="overline">
+
+  <!-- ══════════════════════════════════════════════════ RACE HERO -->
+  <section class="page-hero" style={`--page-accent: ${color};`}>
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-angle"></div>
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="page-hero-eye">
+        <span class="page-hero-dot"></span>
         {year} Season &mdash; Round {m.round}
         {year === 2026 && <span style="margin-left: 8px; background: color-mix(in srgb, var(--green) 15%, transparent); color: var(--green); font-size: 10px; letter-spacing: 0.12em; padding: 2px 8px; border-radius: 4px;">NEW REGULATIONS</span>}
       </div>
-      <h1 style={`color: var(${cssVar});`}>{meta?.name ?? m.grand_prix}</h1>
-      <p class="subtitle">{m.circuit} &mdash; {m.total_laps} laps &mdash; {m.grid_size} drivers</p>
+      <h1 class="page-hero-title">{meta?.name ?? m.grand_prix}</h1>
+      <p class="page-hero-sub">{m.circuit} &mdash; {m.total_laps} laps &mdash; {m.grid_size} drivers</p>
     </div>
+  </section>
+
+  <div class="container" style="padding-top: 48px; padding-bottom: 80px;">
 
     <!-- Key metrics -->
     <div class="metric-row">
@@ -201,8 +210,9 @@ for (const y of allYears) {
     <div class="section">
       <div class="section-title">Position Heatmap</div>
       <div class="section-desc">
-        Rows = laps, columns = drivers sorted by grid position. Green = P1, red = last.
-        More colour transitions = more movement = more chaos. Faded cells = DNF.
+        Rows = drivers, columns = laps. Cell colour = position: green (P1) → yellow (mid-field) → red (last).
+        Faded cells = retired. More colour variance across a row = more movement for that driver throughout the race.
+        Hover any cell for driver, lap, and exact position.
       </div>
       <div class="card" style="overflow: hidden;">
         <PositionHeatmap
