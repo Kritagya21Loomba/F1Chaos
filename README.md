@@ -7,7 +7,7 @@
 
 A data engineering and computer science project that quantifies *how chaotic* a Formula 1 race was — not by eye, but through mathematically grounded algorithms. It covers every race from the 2024 and 2025 seasons and tracks the ongoing 2026 season in real time, providing lap-by-lap volatility scores, cross-season comparisons, tyre strategy visualisations, driver momentum analysis, safety car simulations, and more across 49+ races.
 
-**Live site:** *(deploy URL)*
+**Live site:** *f1chaos.pages.dev/*
 **Stack:** Astro · React · TypeScript · Python · FastF1
 **For queries/concerns:** loombakritagya05@gmail.com — subject: `F1Chaos-Concern` or `F1Chaos-Query`
 
