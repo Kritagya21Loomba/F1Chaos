@@ -2,6 +2,12 @@
 F1 Race Chaos Analyzer -- FastF1 Ingestion
 Fetches live race data and converts it to the project's raw JSON schema.
 
+Extracts:
+  - Per-lap positions (existing)
+  - Pit stop events per driver (new)
+  - Safety Car / VSC lap ranges (new)
+  - Per-lap track status (new)
+
 Usage:
   python analytics/fetch_race_data.py --year 2025 --round 1
   python analytics/fetch_race_data.py --year 2025 --round 1 --no-cache
@@ -254,6 +260,156 @@ def detect_dnf_laps(
     return result
 
 
+# ── Pit stop extraction ───────────────────────────────────────────────────────
+
+def extract_pit_stops(laps_df: "pd.DataFrame", all_codes: list[str]) -> list[dict]:
+    """
+    Extract pit stop events from FastF1 laps data.
+    Returns a list of {driver, lap, stint, compound, pit_duration_s} dicts.
+    Pit duration is computed as PitOutTime - PitInTime when both are available.
+    """
+    pit_stops: list[dict] = []
+    for code in all_codes:
+        driver_laps = laps_df[laps_df["Driver"] == code].sort_values("LapNumber")
+        for _, row in driver_laps.iterrows():
+            pit_in = row.get("PitInTime")
+            pit_out = row.get("PitOutTime")
+            has_pit_in = pd.notna(pit_in)
+            has_pit_out = pd.notna(pit_out)
+
+            if not has_pit_in and not has_pit_out:
+                continue
+
+            lap_num = int(row["LapNumber"])
+            stint = int(row["Stint"]) if pd.notna(row.get("Stint")) else None
+            compound = str(row.get("Compound", "")) if pd.notna(row.get("Compound")) else None
+
+            # Pit duration: time spent stationary in pit box (approximate)
+            duration_s = None
+            if has_pit_in and has_pit_out:
+                delta = pit_out - pit_in
+                duration_s = round(delta.total_seconds(), 2)
+
+            pit_stops.append({
+                "driver": code,
+                "lap": lap_num,
+                "is_in_lap": has_pit_in,
+                "is_out_lap": has_pit_out,
+                "stint": stint,
+                "compound": compound,
+                "pit_duration_s": duration_s,
+            })
+    return pit_stops
+
+
+# ── Track status / SC / VSC extraction ────────────────────────────────────────
+
+# FastF1 track status codes
+_TRACK_STATUS = {
+    "1": "AllClear",
+    "2": "Yellow",
+    "4": "SC",
+    "5": "Red",
+    "6": "VSC",
+    "7": "VSCEnding",
+}
+
+
+def extract_sc_vsc_laps(
+    laps_df: "pd.DataFrame",
+    total_laps: int,
+) -> dict:
+    """
+    Extract per-lap track status from the TrackStatus column in FastF1 laps.
+    TrackStatus is a string of concatenated single-digit codes (e.g. '16' = Clear+VSC).
+
+    Returns:
+      {
+        "sc_laps":  [list of lap numbers with Safety Car active],
+        "vsc_laps": [list of lap numbers with VSC active],
+        "red_flag_laps": [list of lap numbers with Red Flag],
+        "yellow_laps": [list of lap numbers with Yellow Flag],
+        "per_lap_status": [{"lap": N, "status": ["AllClear", ...]}]
+      }
+    """
+    sc_laps = set()
+    vsc_laps = set()
+    red_flag_laps = set()
+    yellow_laps = set()
+    per_lap: dict[int, set[str]] = {lap: set() for lap in range(1, total_laps + 1)}
+
+    has_track_status = "TrackStatus" in laps_df.columns
+
+    if has_track_status:
+        for _, row in laps_df.iterrows():
+            lap_num = int(row["LapNumber"])
+            ts = str(row.get("TrackStatus", ""))
+            if not ts or ts == "nan":
+                continue
+            for ch in ts:
+                label = _TRACK_STATUS.get(ch)
+                if label:
+                    per_lap.setdefault(lap_num, set()).add(label)
+                    if ch == "4":
+                        sc_laps.add(lap_num)
+                    elif ch == "6":
+                        vsc_laps.add(lap_num)
+                    elif ch == "5":
+                        red_flag_laps.add(lap_num)
+                    elif ch == "2":
+                        yellow_laps.add(lap_num)
+
+    per_lap_list = []
+    for lap in range(1, total_laps + 1):
+        statuses = sorted(per_lap.get(lap, set()))
+        per_lap_list.append({"lap": lap, "status": statuses if statuses else ["AllClear"]})
+
+    return {
+        "sc_laps": sorted(sc_laps),
+        "vsc_laps": sorted(vsc_laps),
+        "red_flag_laps": sorted(red_flag_laps),
+        "yellow_laps": sorted(yellow_laps),
+        "per_lap_status": per_lap_list,
+    }
+
+
+# ── Stint / tyre data extraction ─────────────────────────────────────────────
+
+def extract_stint_data(laps_df: "pd.DataFrame", all_codes: list[str]) -> list[dict]:
+    """
+    Extract stint information per driver: stint number, compound, start/end laps.
+    """
+    stints: list[dict] = []
+    for code in all_codes:
+        driver_laps = laps_df[laps_df["Driver"] == code].sort_values("LapNumber")
+        if driver_laps.empty:
+            continue
+        current_stint = None
+        for _, row in driver_laps.iterrows():
+            stint_num = int(row["Stint"]) if pd.notna(row.get("Stint")) else 0
+            compound = str(row.get("Compound", "")) if pd.notna(row.get("Compound")) else "UNKNOWN"
+            lap_num = int(row["LapNumber"])
+            tyre_life = int(row["TyreLife"]) if pd.notna(row.get("TyreLife")) else None
+            fresh = bool(row.get("FreshTyre", False)) if pd.notna(row.get("FreshTyre")) else None
+
+            if current_stint is None or current_stint["stint"] != stint_num:
+                if current_stint is not None:
+                    stints.append(current_stint)
+                current_stint = {
+                    "driver": code,
+                    "stint": stint_num,
+                    "compound": compound,
+                    "start_lap": lap_num,
+                    "end_lap": lap_num,
+                    "fresh_tyre": fresh,
+                }
+            else:
+                current_stint["end_lap"] = lap_num
+        if current_stint is not None:
+            stints.append(current_stint)
+    return stints
+
+
 # ── Main fetch ────────────────────────────────────────────────────────────────
 
 def fetch_race(
@@ -276,15 +432,20 @@ def fetch_race(
     print(f"\n  Loading session: {year} {round_or_name} Race ...")
     try:
         session = fastf1.get_session(year, round_or_name, "R")
-        session.load(laps=True, telemetry=False, weather=False, messages=False)
+        session.load(laps=True, telemetry=False, weather=False, messages=True)
     except Exception as exc:
         print(f"\n  ERROR: Could not load session — {exc}")
         print("  The race may not have happened yet, or FastF1 data is unavailable.")
         return None
 
-    results    = session.results
-    laps_df    = session.laps
-    event      = session.event
+    try:
+        results = session.results
+        laps_df = session.laps
+        event   = session.event
+    except Exception as exc:
+        print(f"\n  ERROR: Session data not available — {exc}")
+        print("  The race may not have happened yet.")
+        return None
 
     total_laps = int(laps_df["LapNumber"].max()) if not laps_df.empty else 0
     if total_laps == 0:
@@ -333,6 +494,19 @@ def fetch_race(
     print(f"  Building {total_laps} laps x {len(all_codes)} drivers ...")
     lap_records = build_lap_records(laps_df, all_codes, dnf_lap_map, total_laps)
 
+    # ── Pit stops ─────────────────────────────────────────────────────────────
+    pit_stops = extract_pit_stops(laps_df, all_codes)
+    print(f"  Pit stops    : {len(pit_stops)} events")
+
+    # ── SC / VSC / track status ───────────────────────────────────────────────
+    track_status = extract_sc_vsc_laps(laps_df, total_laps)
+    print(f"  SC laps      : {track_status['sc_laps'] or 'none'}")
+    print(f"  VSC laps     : {track_status['vsc_laps'] or 'none'}")
+
+    # ── Stint data ────────────────────────────────────────────────────────────
+    stint_data = extract_stint_data(laps_df, all_codes)
+    print(f"  Stints       : {len(stint_data)} total")
+
     # ── Assemble output ───────────────────────────────────────────────────────
     race_id = f"{year}_au"
     gp_name = str(event.get("EventName", "Australian Grand Prix"))
@@ -350,6 +524,9 @@ def fetch_race(
         "start_order":  start_order,
         "finish_order": finish_order,
         "laps":         lap_records,
+        "pit_stops":    pit_stops,
+        "track_status": track_status,
+        "stints":       stint_data,
     }
 
     print(f"  Session      : {gp_name} {year}")

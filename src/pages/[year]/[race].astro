@@ -5,6 +5,14 @@ import CumulativeChart from '../../components/charts/CumulativeChart';
 import DriverMovementChart from '../../components/charts/DriverMovementChart';
 import PositionHeatmap from '../../components/charts/PositionHeatmap';
 import LapPositionChart from '../../components/charts/LapPositionChart';
+import ChaosTimeline from '../../components/charts/ChaosTimeline';
+import OvertakeSummary from '../../components/charts/OvertakeSummary';
+import AdjustedVolatility from '../../components/charts/AdjustedVolatility';
+import DriverBattleIndex from '../../components/charts/DriverBattleIndex';
+import TyreStrategyTimeline from '../../components/charts/TyreStrategyTimeline';
+import NoSCSimulator from '../../components/charts/NoSCSimulator';
+import MomentumTracker from '../../components/charts/MomentumTracker';
+import StrategyChaosScore from '../../components/charts/StrategyChaosScore';
 import { DATA_SLUG_TO_URL, RACE_META, SEASON_COLORS } from '../../data/races';
 
 export async function getStaticPaths() {
@@ -38,6 +46,21 @@ const cssVar  = `--y${year}-color`;
 const winner = m.driver_movements?.[0];
 const bm     = m.biggest_mover;
 const mo     = m.most_overtaken;
+
+// V2 enhanced data
+const hasEnhanced     = m.has_enhanced_data ?? false;
+const chaosTimeline   = m.chaos_timeline ?? [];
+const overtakeSummary = m.overtake_summary ?? null;
+const pitAdjusted     = m.pit_adjusted ?? null;
+const scNeutralized   = m.sc_neutralized ?? null;
+const driverBattles   = m.driver_battles ?? [];
+const pitImpact       = m.pit_impact ?? [];
+const strategyScore   = m.strategy_score ?? null;
+const trackStatus     = m.track_status ?? {};
+const adjBiggestMover = m.attrition_adjusted_biggest_mover ?? null;
+const stints          = m.stints ?? [];
+const noScSim         = m.no_sc_sim ?? null;
+const momentum        = m.momentum ?? null;
 
 // Determine which other years have data for this same circuit
 const otherYears: number[] = [];
@@ -90,6 +113,24 @@ for (const y of allYears) {
         <div class="value">{m.dnf_count}</div>
         <div class="sub">retirements</div>
       </div>
+      {overtakeSummary && overtakeSummary.total > 0 && (
+        <div class="metric-card">
+          <div class="label">On-track overtakes</div>
+          <div class="value" style="color: var(--green);">{overtakeSummary.on_track}</div>
+          <div class="sub">of {overtakeSummary.total} total moves</div>
+        </div>
+      )}
+      {(trackStatus.sc_count > 0 || trackStatus.vsc_count > 0) && (
+        <div class="metric-card">
+          <div class="label">Interventions</div>
+          <div class="value" style="color: #ffdd00; font-size: 18px;">
+            {trackStatus.sc_count > 0 && <span>{trackStatus.sc_count} SC</span>}
+            {trackStatus.sc_count > 0 && trackStatus.vsc_count > 0 && <span style="color: #3a3a5a;"> / </span>}
+            {trackStatus.vsc_count > 0 && <span>{trackStatus.vsc_count} VSC</span>}
+          </div>
+          <div class="sub">laps under neutralisation</div>
+        </div>
+      )}
     </div>
 
     <div class="insight">
@@ -172,6 +213,153 @@ for (const y of allYears) {
         />
       </div>
     </div>
+
+    <!-- Race Chaos Timeline -->
+    {chaosTimeline.length > 0 && (
+      <div class="section">
+        <div class="section-title">Race Chaos Timeline</div>
+        <div class="section-desc">
+          Lap-by-lap breakdown of overtaking activity by type. Green = genuine on-track passes,
+          orange = pit-cycle position changes, yellow = moves under Safety Car / VSC,
+          red = DNF-induced gains. Yellow dashed lines mark neutralisation laps.
+        </div>
+        <div class="card chart-wrap">
+          <ChaosTimeline client:load data={chaosTimeline} color={color} height={360} />
+        </div>
+      </div>
+    )}
+
+    <!-- Overtake Classification -->
+    {overtakeSummary && overtakeSummary.total > 0 && (
+      <div class="section">
+        <div class="section-title">Overtake Classification</div>
+        <div class="section-desc">
+          Breaking down how position changes occurred during the race.
+          Only data from re-ingested races (fetch_race_data.py v2) will show full classification.
+        </div>
+        <div class="card" style="max-width: 540px; margin: 0 auto;">
+          <OvertakeSummary client:load summary={overtakeSummary} />
+        </div>
+      </div>
+    )}
+
+    <!-- Adjusted Volatility -->
+    {pitAdjusted && (
+      <div class="section">
+        <div class="section-title">Adjusted Volatility</div>
+        <div class="section-desc">
+          Three inversion curves for comparison.
+          <strong>Raw</strong>: unfiltered (dashed grey).
+          <strong>Pit-adjusted</strong>: removes drivers on in/out-laps so pit stops don't inflate inversions (green).
+          <strong>SC-neutralized</strong>: SC and VSC laps weighted at 25% to reduce artificial compression effects (yellow).
+        </div>
+        <div class="card chart-wrap" style="height: auto;">
+          <AdjustedVolatility
+            client:load
+            raw={m.inversions_per_lap}
+            pitAdjusted={pitAdjusted.inversions_per_lap}
+            scNeutralized={scNeutralized?.inversions_per_lap ?? m.inversions_per_lap}
+            rawVolatility={m.volatility_score}
+            pitAdjustedVolatility={pitAdjusted.volatility_score}
+            scNeutralizedVolatility={scNeutralized?.volatility_score ?? m.volatility_score}
+            scLaps={trackStatus.sc_laps ?? []}
+            vscLaps={trackStatus.vsc_laps ?? []}
+            color={color}
+            height={440}
+          />
+        </div>
+      </div>
+    )}
+
+    <!-- Driver Battle Index -->
+    {driverBattles.length > 0 && (
+      <div class="section">
+        <div class="section-title">Driver Battle Index</div>
+        <div class="section-desc">
+          The most intense wheel-to-wheel fights of the race, ranked by a combined intensity score
+          (position swaps + laps within 1 position). Higher = more sustained wheel-to-wheel racing.
+        </div>
+        <div class="card" style="max-width: 700px; margin: 0 auto;">
+          <DriverBattleIndex client:load battles={driverBattles} drivers={m.drivers} />
+        </div>
+      </div>
+    )}
+
+    <!-- Tyre Strategy Timeline -->
+    {stints.length > 0 && (
+      <div class="section">
+        <div class="section-title">Tyre Strategy Timeline</div>
+        <div class="section-desc">
+          Lap-by-lap view of each driver's tyre compounds through the race. Solid = new tyres, faded with border = used tyres.
+          Hover over any stint bar to see compound, stint length, pit lap, duration, and net position change.
+        </div>
+        <div class="card">
+          <TyreStrategyTimeline
+            client:load
+            stints={stints}
+            pitImpact={pitImpact}
+            drivers={m.drivers}
+            totalLaps={m.total_laps}
+          />
+        </div>
+      </div>
+    )}
+
+    <!-- What If No SC? -->
+    {noScSim && noScSim.sc_laps_removed > 0 && (
+      <div class="section">
+        <div class="section-title">What If No Safety Car?</div>
+        <div class="section-desc">
+          Simulates the race volatility if all SC and VSC laps were removed entirely.
+          Orange line = what the chaos curve would look like with pure racing laps only.
+          Faint yellow verticals mark the removed neutralisation laps.
+        </div>
+        <div class="card">
+          <NoSCSimulator
+            client:load
+            noScSim={noScSim}
+            inversionsPerLap={m.inversions_per_lap}
+            volatilityScore={m.volatility_score}
+            totalLaps={m.total_laps}
+            totalLapInversions={m.total_lap_inversions}
+          />
+        </div>
+      </div>
+    )}
+
+    <!-- Momentum Tracker -->
+    {momentum && momentum.per_lap.length > 0 && (
+      <div class="section">
+        <div class="section-title">Momentum Tracker</div>
+        <div class="section-desc">
+          Rolling {momentum.window}-lap position change per driver. Positive = charging forward, negative = falling back.
+          Shows who had the most momentum at each phase of the race. Defaults to top 10 finishers — use filters to explore all drivers.
+        </div>
+        <div class="card">
+          <MomentumTracker
+            client:load
+            momentumPerLap={momentum.per_lap}
+            drivers={m.drivers}
+            window={momentum.window}
+            peakMomentum={momentum.peak_momentum}
+          />
+        </div>
+      </div>
+    )}
+
+    <!-- Strategy Chaos Score -->
+    {strategyScore && (
+      <div class="section">
+        <div class="section-title">Strategy Chaos Score</div>
+        <div class="section-desc">
+          Measures how much strategy decisions shaped the race outcome.
+          Counts undercuts, overcuts, pit-cycle passes, and failed strategies.
+        </div>
+        <div class="card" style="max-width: 540px; margin: 0 auto;">
+          <StrategyChaosScore client:load data={strategyScore} />
+        </div>
+      </div>
+    )}
 
     <!-- Cross-year compare links -->
     <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">

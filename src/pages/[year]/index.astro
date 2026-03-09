@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import SeasonBarChart from '../../components/charts/SeasonBarChart';
+import SeasonChaosRankings from '../../components/charts/SeasonChaosRankings';
 import { DATA_SLUG_TO_URL, RACE_META, SEASON_COLORS } from '../../data/races';
 
 export async function getStaticPaths() {
@@ -57,6 +58,17 @@ const barData = races.map(r => ({
   inversions: r.metrics.total_lap_inversions ?? 0,
   href:       `/${year}/${DATA_SLUG_TO_URL[r.dataSlug] ?? r.dataSlug}`,
 }));
+
+// Build Season Chaos Rankings data
+const rankingData = races.map(r => ({
+  round:            r.metrics.round ?? 0,
+  shortName:        RACE_META[r.dataSlug]?.shortName ?? r.metrics.grand_prix ?? r.dataSlug,
+  href:             `/${year}/${DATA_SLUG_TO_URL[r.dataSlug] ?? r.dataSlug}`,
+  volatility:       r.metrics.volatility_score ?? 0,
+  inversions:       r.metrics.total_lap_inversions ?? 0,
+  onTrackOvertakes: r.metrics.overtake_summary?.on_track ?? 0,
+  scInterventions:  (r.metrics.track_status?.sc_count ?? 0) + (r.metrics.track_status?.vsc_count ?? 0),
+}));
 ---
 
 <Base title={`${year} Season`} activeNav={String(year)}>
@@ -107,6 +119,18 @@ const barData = races.map(r => ({
       </div>
       <div class="card" style="padding: 24px 24px 16px; overflow: visible;">
         <SeasonBarChart client:load races={barData} color={color} />
+      </div>
+    </div>
+
+    <!-- Season Chaos Rankings -->
+    <div class="section">
+      <div class="section-title">Season Chaos Rankings</div>
+      <div class="section-desc">
+        Every race ranked by chaos metric. Sort by volatility, total inversions, genuine on-track overtakes,
+        or total SC / VSC interventions. Click any race to explore its full analytics.
+      </div>
+      <div class="card">
+        <SeasonChaosRankings client:load races={rankingData} seasonColor={color} />
       </div>
     </div>
 

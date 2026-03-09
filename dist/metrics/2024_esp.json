@@ -6366,5 +6366,4751 @@
         "dnf": false
       }
     }
+  ],
+  "schema_version": 2,
+  "has_enhanced_data": true,
+  "pit_adjusted": {
+    "inversions_per_lap": [
+      {
+        "lap": 1,
+        "inversions": 14
+      },
+      {
+        "lap": 2,
+        "inversions": 13
+      },
+      {
+        "lap": 3,
+        "inversions": 13
+      },
+      {
+        "lap": 4,
+        "inversions": 13
+      },
+      {
+        "lap": 5,
+        "inversions": 13
+      },
+      {
+        "lap": 6,
+        "inversions": 14
+      },
+      {
+        "lap": 7,
+        "inversions": 14
+      },
+      {
+        "lap": 8,
+        "inversions": 14
+      },
+      {
+        "lap": 9,
+        "inversions": 13
+      },
+      {
+        "lap": 10,
+        "inversions": 13
+      },
+      {
+        "lap": 11,
+        "inversions": 16
+      },
+      {
+        "lap": 12,
+        "inversions": 17
+      },
+      {
+        "lap": 13,
+        "inversions": 20
+      },
+      {
+        "lap": 14,
+        "inversions": 18
+      },
+      {
+        "lap": 15,
+        "inversions": 23
+      },
+      {
+        "lap": 16,
+        "inversions": 20
+      },
+      {
+        "lap": 17,
+        "inversions": 14
+      },
+      {
+        "lap": 18,
+        "inversions": 12
+      },
+      {
+        "lap": 19,
+        "inversions": 13
+      },
+      {
+        "lap": 20,
+        "inversions": 12
+      },
+      {
+        "lap": 21,
+        "inversions": 12
+      },
+      {
+        "lap": 22,
+        "inversions": 13
+      },
+      {
+        "lap": 23,
+        "inversions": 13
+      },
+      {
+        "lap": 24,
+        "inversions": 11
+      },
+      {
+        "lap": 25,
+        "inversions": 16
+      },
+      {
+        "lap": 26,
+        "inversions": 19
+      },
+      {
+        "lap": 27,
+        "inversions": 15
+      },
+      {
+        "lap": 28,
+        "inversions": 11
+      },
+      {
+        "lap": 29,
+        "inversions": 15
+      },
+      {
+        "lap": 30,
+        "inversions": 22
+      },
+      {
+        "lap": 31,
+        "inversions": 24
+      },
+      {
+        "lap": 32,
+        "inversions": 23
+      },
+      {
+        "lap": 33,
+        "inversions": 25
+      },
+      {
+        "lap": 34,
+        "inversions": 24
+      },
+      {
+        "lap": 35,
+        "inversions": 22
+      },
+      {
+        "lap": 36,
+        "inversions": 20
+      },
+      {
+        "lap": 37,
+        "inversions": 16
+      },
+      {
+        "lap": 38,
+        "inversions": 15
+      },
+      {
+        "lap": 39,
+        "inversions": 23
+      },
+      {
+        "lap": 40,
+        "inversions": 27
+      },
+      {
+        "lap": 41,
+        "inversions": 23
+      },
+      {
+        "lap": 42,
+        "inversions": 17
+      },
+      {
+        "lap": 43,
+        "inversions": 13
+      },
+      {
+        "lap": 44,
+        "inversions": 13
+      },
+      {
+        "lap": 45,
+        "inversions": 16
+      },
+      {
+        "lap": 46,
+        "inversions": 14
+      },
+      {
+        "lap": 47,
+        "inversions": 14
+      },
+      {
+        "lap": 48,
+        "inversions": 17
+      },
+      {
+        "lap": 49,
+        "inversions": 15
+      },
+      {
+        "lap": 50,
+        "inversions": 15
+      },
+      {
+        "lap": 51,
+        "inversions": 17
+      },
+      {
+        "lap": 52,
+        "inversions": 16
+      },
+      {
+        "lap": 53,
+        "inversions": 15
+      },
+      {
+        "lap": 54,
+        "inversions": 15
+      },
+      {
+        "lap": 55,
+        "inversions": 13
+      },
+      {
+        "lap": 56,
+        "inversions": 13
+      },
+      {
+        "lap": 57,
+        "inversions": 14
+      },
+      {
+        "lap": 58,
+        "inversions": 14
+      },
+      {
+        "lap": 59,
+        "inversions": 14
+      },
+      {
+        "lap": 60,
+        "inversions": 15
+      },
+      {
+        "lap": 61,
+        "inversions": 15
+      },
+      {
+        "lap": 62,
+        "inversions": 15
+      },
+      {
+        "lap": 63,
+        "inversions": 15
+      },
+      {
+        "lap": 64,
+        "inversions": 15
+      },
+      {
+        "lap": 65,
+        "inversions": 15
+      },
+      {
+        "lap": 66,
+        "inversions": 16
+      }
+    ],
+    "cumulative_inversions": [
+      {
+        "lap": 1,
+        "cumulative": 14
+      },
+      {
+        "lap": 2,
+        "cumulative": 27
+      },
+      {
+        "lap": 3,
+        "cumulative": 40
+      },
+      {
+        "lap": 4,
+        "cumulative": 53
+      },
+      {
+        "lap": 5,
+        "cumulative": 66
+      },
+      {
+        "lap": 6,
+        "cumulative": 80
+      },
+      {
+        "lap": 7,
+        "cumulative": 94
+      },
+      {
+        "lap": 8,
+        "cumulative": 108
+      },
+      {
+        "lap": 9,
+        "cumulative": 121
+      },
+      {
+        "lap": 10,
+        "cumulative": 134
+      },
+      {
+        "lap": 11,
+        "cumulative": 150
+      },
+      {
+        "lap": 12,
+        "cumulative": 167
+      },
+      {
+        "lap": 13,
+        "cumulative": 187
+      },
+      {
+        "lap": 14,
+        "cumulative": 205
+      },
+      {
+        "lap": 15,
+        "cumulative": 228
+      },
+      {
+        "lap": 16,
+        "cumulative": 248
+      },
+      {
+        "lap": 17,
+        "cumulative": 262
+      },
+      {
+        "lap": 18,
+        "cumulative": 274
+      },
+      {
+        "lap": 19,
+        "cumulative": 287
+      },
+      {
+        "lap": 20,
+        "cumulative": 299
+      },
+      {
+        "lap": 21,
+        "cumulative": 311
+      },
+      {
+        "lap": 22,
+        "cumulative": 324
+      },
+      {
+        "lap": 23,
+        "cumulative": 337
+      },
+      {
+        "lap": 24,
+        "cumulative": 348
+      },
+      {
+        "lap": 25,
+        "cumulative": 364
+      },
+      {
+        "lap": 26,
+        "cumulative": 383
+      },
+      {
+        "lap": 27,
+        "cumulative": 398
+      },
+      {
+        "lap": 28,
+        "cumulative": 409
+      },
+      {
+        "lap": 29,
+        "cumulative": 424
+      },
+      {
+        "lap": 30,
+        "cumulative": 446
+      },
+      {
+        "lap": 31,
+        "cumulative": 470
+      },
+      {
+        "lap": 32,
+        "cumulative": 493
+      },
+      {
+        "lap": 33,
+        "cumulative": 518
+      },
+      {
+        "lap": 34,
+        "cumulative": 542
+      },
+      {
+        "lap": 35,
+        "cumulative": 564
+      },
+      {
+        "lap": 36,
+        "cumulative": 584
+      },
+      {
+        "lap": 37,
+        "cumulative": 600
+      },
+      {
+        "lap": 38,
+        "cumulative": 615
+      },
+      {
+        "lap": 39,
+        "cumulative": 638
+      },
+      {
+        "lap": 40,
+        "cumulative": 665
+      },
+      {
+        "lap": 41,
+        "cumulative": 688
+      },
+      {
+        "lap": 42,
+        "cumulative": 705
+      },
+      {
+        "lap": 43,
+        "cumulative": 718
+      },
+      {
+        "lap": 44,
+        "cumulative": 731
+      },
+      {
+        "lap": 45,
+        "cumulative": 747
+      },
+      {
+        "lap": 46,
+        "cumulative": 761
+      },
+      {
+        "lap": 47,
+        "cumulative": 775
+      },
+      {
+        "lap": 48,
+        "cumulative": 792
+      },
+      {
+        "lap": 49,
+        "cumulative": 807
+      },
+      {
+        "lap": 50,
+        "cumulative": 822
+      },
+      {
+        "lap": 51,
+        "cumulative": 839
+      },
+      {
+        "lap": 52,
+        "cumulative": 855
+      },
+      {
+        "lap": 53,
+        "cumulative": 870
+      },
+      {
+        "lap": 54,
+        "cumulative": 885
+      },
+      {
+        "lap": 55,
+        "cumulative": 898
+      },
+      {
+        "lap": 56,
+        "cumulative": 911
+      },
+      {
+        "lap": 57,
+        "cumulative": 925
+      },
+      {
+        "lap": 58,
+        "cumulative": 939
+      },
+      {
+        "lap": 59,
+        "cumulative": 953
+      },
+      {
+        "lap": 60,
+        "cumulative": 968
+      },
+      {
+        "lap": 61,
+        "cumulative": 983
+      },
+      {
+        "lap": 62,
+        "cumulative": 998
+      },
+      {
+        "lap": 63,
+        "cumulative": 1013
+      },
+      {
+        "lap": 64,
+        "cumulative": 1028
+      },
+      {
+        "lap": 65,
+        "cumulative": 1043
+      },
+      {
+        "lap": 66,
+        "cumulative": 1059
+      }
+    ],
+    "total_lap_inversions": 1059,
+    "volatility_score": 0.8023
+  },
+  "sc_neutralized": {
+    "inversions_per_lap": [
+      {
+        "lap": 1,
+        "inversions": 14.0
+      },
+      {
+        "lap": 2,
+        "inversions": 13.0
+      },
+      {
+        "lap": 3,
+        "inversions": 13.0
+      },
+      {
+        "lap": 4,
+        "inversions": 13.0
+      },
+      {
+        "lap": 5,
+        "inversions": 13.0
+      },
+      {
+        "lap": 6,
+        "inversions": 14.0
+      },
+      {
+        "lap": 7,
+        "inversions": 14.0
+      },
+      {
+        "lap": 8,
+        "inversions": 14.0
+      },
+      {
+        "lap": 9,
+        "inversions": 19.0
+      },
+      {
+        "lap": 10,
+        "inversions": 21.0
+      },
+      {
+        "lap": 11,
+        "inversions": 21.0
+      },
+      {
+        "lap": 12,
+        "inversions": 24.0
+      },
+      {
+        "lap": 13,
+        "inversions": 27.0
+      },
+      {
+        "lap": 14,
+        "inversions": 33.0
+      },
+      {
+        "lap": 15,
+        "inversions": 30.0
+      },
+      {
+        "lap": 16,
+        "inversions": 33.0
+      },
+      {
+        "lap": 17,
+        "inversions": 25.0
+      },
+      {
+        "lap": 18,
+        "inversions": 21.0
+      },
+      {
+        "lap": 19,
+        "inversions": 13.0
+      },
+      {
+        "lap": 20,
+        "inversions": 18.0
+      },
+      {
+        "lap": 21,
+        "inversions": 16.0
+      },
+      {
+        "lap": 22,
+        "inversions": 14.0
+      },
+      {
+        "lap": 23,
+        "inversions": 13.0
+      },
+      {
+        "lap": 24,
+        "inversions": 18.0
+      },
+      {
+        "lap": 25,
+        "inversions": 18.0
+      },
+      {
+        "lap": 26,
+        "inversions": 19.0
+      },
+      {
+        "lap": 27,
+        "inversions": 17.0
+      },
+      {
+        "lap": 28,
+        "inversions": 18.0
+      },
+      {
+        "lap": 29,
+        "inversions": 23.0
+      },
+      {
+        "lap": 30,
+        "inversions": 26.0
+      },
+      {
+        "lap": 31,
+        "inversions": 25.0
+      },
+      {
+        "lap": 32,
+        "inversions": 26.0
+      },
+      {
+        "lap": 33,
+        "inversions": 25.0
+      },
+      {
+        "lap": 34,
+        "inversions": 26.0
+      },
+      {
+        "lap": 35,
+        "inversions": 23.0
+      },
+      {
+        "lap": 36,
+        "inversions": 20.0
+      },
+      {
+        "lap": 37,
+        "inversions": 25.0
+      },
+      {
+        "lap": 38,
+        "inversions": 27.0
+      },
+      {
+        "lap": 39,
+        "inversions": 29.0
+      },
+      {
+        "lap": 40,
+        "inversions": 27.0
+      },
+      {
+        "lap": 41,
+        "inversions": 27.0
+      },
+      {
+        "lap": 42,
+        "inversions": 23.0
+      },
+      {
+        "lap": 43,
+        "inversions": 19.0
+      },
+      {
+        "lap": 44,
+        "inversions": 20.0
+      },
+      {
+        "lap": 45,
+        "inversions": 21.0
+      },
+      {
+        "lap": 46,
+        "inversions": 19.0
+      },
+      {
+        "lap": 47,
+        "inversions": 19.0
+      },
+      {
+        "lap": 48,
+        "inversions": 19.0
+      },
+      {
+        "lap": 49,
+        "inversions": 18.0
+      },
+      {
+        "lap": 50,
+        "inversions": 16.0
+      },
+      {
+        "lap": 51,
+        "inversions": 17.0
+      },
+      {
+        "lap": 52,
+        "inversions": 16.0
+      },
+      {
+        "lap": 53,
+        "inversions": 15.0
+      },
+      {
+        "lap": 54,
+        "inversions": 15.0
+      },
+      {
+        "lap": 55,
+        "inversions": 13.0
+      },
+      {
+        "lap": 56,
+        "inversions": 13.0
+      },
+      {
+        "lap": 57,
+        "inversions": 14.0
+      },
+      {
+        "lap": 58,
+        "inversions": 14.0
+      },
+      {
+        "lap": 59,
+        "inversions": 14.0
+      },
+      {
+        "lap": 60,
+        "inversions": 15.0
+      },
+      {
+        "lap": 61,
+        "inversions": 15.0
+      },
+      {
+        "lap": 62,
+        "inversions": 15.0
+      },
+      {
+        "lap": 63,
+        "inversions": 15.0
+      },
+      {
+        "lap": 64,
+        "inversions": 15.0
+      },
+      {
+        "lap": 65,
+        "inversions": 15.0
+      },
+      {
+        "lap": 66,
+        "inversions": 16.0
+      }
+    ],
+    "total": 1266.0,
+    "volatility_score": 0.9591
+  },
+  "overtake_summary": {
+    "total": 204,
+    "on_track": 32,
+    "pit_cycle": 172,
+    "sc_vsc": 0,
+    "dnf": 0
+  },
+  "dnf_aware_movements": [
+    {
+      "code": "VER",
+      "name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "start_pos": 2,
+      "finish_pos": 1,
+      "positions_gained": 1,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 1
+    },
+    {
+      "code": "NOR",
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "start_pos": 1,
+      "finish_pos": 2,
+      "positions_gained": -1,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -1
+    },
+    {
+      "code": "HAM",
+      "name": "Lewis Hamilton",
+      "team": "Mercedes",
+      "start_pos": 3,
+      "finish_pos": 3,
+      "positions_gained": 0,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 0
+    },
+    {
+      "code": "RUS",
+      "name": "George Russell",
+      "team": "Mercedes",
+      "start_pos": 4,
+      "finish_pos": 4,
+      "positions_gained": 0,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 0
+    },
+    {
+      "code": "LEC",
+      "name": "Charles Leclerc",
+      "team": "Ferrari",
+      "start_pos": 5,
+      "finish_pos": 5,
+      "positions_gained": 0,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 0
+    },
+    {
+      "code": "SAI",
+      "name": "Carlos Sainz",
+      "team": "Ferrari",
+      "start_pos": 6,
+      "finish_pos": 6,
+      "positions_gained": 0,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 0
+    },
+    {
+      "code": "PIA",
+      "name": "Oscar Piastri",
+      "team": "McLaren",
+      "start_pos": 9,
+      "finish_pos": 7,
+      "positions_gained": 2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 2
+    },
+    {
+      "code": "PER",
+      "name": "Sergio Perez",
+      "team": "Red Bull Racing",
+      "start_pos": 11,
+      "finish_pos": 8,
+      "positions_gained": 3,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 3
+    },
+    {
+      "code": "GAS",
+      "name": "Pierre Gasly",
+      "team": "Alpine",
+      "start_pos": 7,
+      "finish_pos": 9,
+      "positions_gained": -2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -2
+    },
+    {
+      "code": "OCO",
+      "name": "Esteban Ocon",
+      "team": "Alpine",
+      "start_pos": 8,
+      "finish_pos": 10,
+      "positions_gained": -2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -2
+    },
+    {
+      "code": "HUL",
+      "name": "Nico Hulkenberg",
+      "team": "Haas F1 Team",
+      "start_pos": 13,
+      "finish_pos": 11,
+      "positions_gained": 2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 2
+    },
+    {
+      "code": "ALO",
+      "name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "start_pos": 10,
+      "finish_pos": 12,
+      "positions_gained": -2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -2
+    },
+    {
+      "code": "ZHO",
+      "name": "Guanyu Zhou",
+      "team": "Kick Sauber",
+      "start_pos": 15,
+      "finish_pos": 13,
+      "positions_gained": 2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 2
+    },
+    {
+      "code": "STR",
+      "name": "Lance Stroll",
+      "team": "Aston Martin",
+      "start_pos": 14,
+      "finish_pos": 14,
+      "positions_gained": 0,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 0
+    },
+    {
+      "code": "RIC",
+      "name": "Daniel Ricciardo",
+      "team": "RB",
+      "start_pos": 18,
+      "finish_pos": 15,
+      "positions_gained": 3,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 3
+    },
+    {
+      "code": "BOT",
+      "name": "Valtteri Bottas",
+      "team": "Kick Sauber",
+      "start_pos": 12,
+      "finish_pos": 16,
+      "positions_gained": -4,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -4
+    },
+    {
+      "code": "MAG",
+      "name": "Kevin Magnussen",
+      "team": "Haas F1 Team",
+      "start_pos": 16,
+      "finish_pos": 17,
+      "positions_gained": -1,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -1
+    },
+    {
+      "code": "ALB",
+      "name": "Alexander Albon",
+      "team": "Williams",
+      "start_pos": 20,
+      "finish_pos": 18,
+      "positions_gained": 2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": 2
+    },
+    {
+      "code": "TSU",
+      "name": "Yuki Tsunoda",
+      "team": "RB",
+      "start_pos": 17,
+      "finish_pos": 19,
+      "positions_gained": -2,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -2
+    },
+    {
+      "code": "SAR",
+      "name": "Logan Sargeant",
+      "team": "Williams",
+      "start_pos": 19,
+      "finish_pos": 20,
+      "positions_gained": -1,
+      "dnf": false,
+      "dnf_lap": null,
+      "attrition_adjusted_gain": -1
+    }
+  ],
+  "attrition_adjusted_biggest_mover": {
+    "code": "PER",
+    "name": "Sergio Perez",
+    "team": "Red Bull Racing",
+    "start_pos": 11,
+    "finish_pos": 8,
+    "positions_gained": 3,
+    "dnf": false,
+    "dnf_lap": null,
+    "attrition_adjusted_gain": 3
+  },
+  "driver_battles": [
+    {
+      "driver_a": "LEC",
+      "driver_b": "SAI",
+      "position_swaps": 6,
+      "laps_within_1": 44,
+      "winner": "LEC",
+      "intensity": 28.0
+    },
+    {
+      "driver_a": "HAM",
+      "driver_b": "NOR",
+      "position_swaps": 2,
+      "laps_within_1": 45,
+      "winner": "NOR",
+      "intensity": 24.5
+    },
+    {
+      "driver_a": "GAS",
+      "driver_b": "PIA",
+      "position_swaps": 3,
+      "laps_within_1": 41,
+      "winner": "PIA",
+      "intensity": 23.5
+    },
+    {
+      "driver_a": "HAM",
+      "driver_b": "RUS",
+      "position_swaps": 5,
+      "laps_within_1": 36,
+      "winner": "HAM",
+      "intensity": 23.0
+    },
+    {
+      "driver_a": "HUL",
+      "driver_b": "OCO",
+      "position_swaps": 2,
+      "laps_within_1": 42,
+      "winner": "OCO",
+      "intensity": 23.0
+    },
+    {
+      "driver_a": "SAR",
+      "driver_b": "TSU",
+      "position_swaps": 6,
+      "laps_within_1": 32,
+      "winner": "TSU",
+      "intensity": 22.0
+    },
+    {
+      "driver_a": "NOR",
+      "driver_b": "VER",
+      "position_swaps": 4,
+      "laps_within_1": 35,
+      "winner": "VER",
+      "intensity": 21.5
+    },
+    {
+      "driver_a": "OCO",
+      "driver_b": "PER",
+      "position_swaps": 5,
+      "laps_within_1": 33,
+      "winner": "PER",
+      "intensity": 21.5
+    },
+    {
+      "driver_a": "HAM",
+      "driver_b": "SAI",
+      "position_swaps": 4,
+      "laps_within_1": 34,
+      "winner": "HAM",
+      "intensity": 21.0
+    },
+    {
+      "driver_a": "ALB",
+      "driver_b": "RIC",
+      "position_swaps": 4,
+      "laps_within_1": 34,
+      "winner": "RIC",
+      "intensity": 21.0
+    },
+    {
+      "driver_a": "ALB",
+      "driver_b": "SAR",
+      "position_swaps": 3,
+      "laps_within_1": 35,
+      "winner": "ALB",
+      "intensity": 20.5
+    },
+    {
+      "driver_a": "ALO",
+      "driver_b": "STR",
+      "position_swaps": 4,
+      "laps_within_1": 32,
+      "winner": "ALO",
+      "intensity": 20.0
+    },
+    {
+      "driver_a": "BOT",
+      "driver_b": "STR",
+      "position_swaps": 4,
+      "laps_within_1": 32,
+      "winner": "STR",
+      "intensity": 20.0
+    },
+    {
+      "driver_a": "STR",
+      "driver_b": "ZHO",
+      "position_swaps": 3,
+      "laps_within_1": 32,
+      "winner": "ZHO",
+      "intensity": 19.0
+    },
+    {
+      "driver_a": "MAG",
+      "driver_b": "RIC",
+      "position_swaps": 5,
+      "laps_within_1": 24,
+      "winner": "RIC",
+      "intensity": 17.0
+    }
+  ],
+  "pit_impact": [
+    {
+      "driver": "VER",
+      "in_lap": 17,
+      "out_lap": 18,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 1,
+      "pos_after": 4,
+      "net_position_change": -3
+    },
+    {
+      "driver": "VER",
+      "in_lap": 44,
+      "out_lap": 45,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 1,
+      "pos_after": 3,
+      "net_position_change": -2
+    },
+    {
+      "driver": "NOR",
+      "in_lap": 23,
+      "out_lap": 24,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 1,
+      "pos_after": 6,
+      "net_position_change": -5
+    },
+    {
+      "driver": "NOR",
+      "in_lap": 47,
+      "out_lap": 48,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 1,
+      "pos_after": 2,
+      "net_position_change": -1
+    },
+    {
+      "driver": "HAM",
+      "in_lap": 16,
+      "out_lap": 17,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 3,
+      "pos_after": 7,
+      "net_position_change": -4
+    },
+    {
+      "driver": "HAM",
+      "in_lap": 43,
+      "out_lap": 44,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 3,
+      "pos_after": 7,
+      "net_position_change": -4
+    },
+    {
+      "driver": "RUS",
+      "in_lap": 15,
+      "out_lap": 16,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 2,
+      "pos_after": 7,
+      "net_position_change": -5
+    },
+    {
+      "driver": "RUS",
+      "in_lap": 36,
+      "out_lap": 37,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 3,
+      "pos_after": 7,
+      "net_position_change": -4
+    },
+    {
+      "driver": "LEC",
+      "in_lap": 24,
+      "out_lap": 25,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 2,
+      "pos_after": 7,
+      "net_position_change": -5
+    },
+    {
+      "driver": "LEC",
+      "in_lap": 47,
+      "out_lap": 48,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 2,
+      "pos_after": 6,
+      "net_position_change": -4
+    },
+    {
+      "driver": "SAI",
+      "in_lap": 15,
+      "out_lap": 16,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 5,
+      "pos_after": 9,
+      "net_position_change": -4
+    },
+    {
+      "driver": "SAI",
+      "in_lap": 36,
+      "out_lap": 37,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 5,
+      "pos_after": 8,
+      "net_position_change": -3
+    },
+    {
+      "driver": "PIA",
+      "in_lap": 21,
+      "out_lap": 22,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 3,
+      "pos_after": 10,
+      "net_position_change": -7
+    },
+    {
+      "driver": "PIA",
+      "in_lap": 46,
+      "out_lap": 47,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 4,
+      "pos_after": 8,
+      "net_position_change": -4
+    },
+    {
+      "driver": "PER",
+      "in_lap": 13,
+      "out_lap": 14,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 10,
+      "pos_after": 14,
+      "net_position_change": -4
+    },
+    {
+      "driver": "PER",
+      "in_lap": 31,
+      "out_lap": 32,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 9,
+      "pos_after": 14,
+      "net_position_change": -5
+    },
+    {
+      "driver": "PER",
+      "in_lap": 49,
+      "out_lap": 50,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 7,
+      "pos_after": 10,
+      "net_position_change": -3
+    },
+    {
+      "driver": "GAS",
+      "in_lap": 14,
+      "out_lap": 15,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 7,
+      "pos_after": 13,
+      "net_position_change": -6
+    },
+    {
+      "driver": "GAS",
+      "in_lap": 38,
+      "out_lap": 39,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 6,
+      "pos_after": 10,
+      "net_position_change": -4
+    },
+    {
+      "driver": "OCO",
+      "in_lap": 13,
+      "out_lap": 14,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 9,
+      "pos_after": 13,
+      "net_position_change": -4
+    },
+    {
+      "driver": "OCO",
+      "in_lap": 37,
+      "out_lap": 38,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 9,
+      "pos_after": 14,
+      "net_position_change": -5
+    },
+    {
+      "driver": "HUL",
+      "in_lap": 12,
+      "out_lap": 13,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 10,
+      "pos_after": 16,
+      "net_position_change": -6
+    },
+    {
+      "driver": "HUL",
+      "in_lap": 38,
+      "out_lap": 39,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 9,
+      "pos_after": 14,
+      "net_position_change": -5
+    },
+    {
+      "driver": "ALO",
+      "in_lap": 19,
+      "out_lap": 20,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 8,
+      "pos_after": 16,
+      "net_position_change": -8
+    },
+    {
+      "driver": "ALO",
+      "in_lap": 45,
+      "out_lap": 46,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 10,
+      "pos_after": 13,
+      "net_position_change": -3
+    },
+    {
+      "driver": "ZHO",
+      "in_lap": 9,
+      "out_lap": 10,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 16,
+      "pos_after": 19,
+      "net_position_change": -3
+    },
+    {
+      "driver": "ZHO",
+      "in_lap": 41,
+      "out_lap": 42,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 10,
+      "pos_after": 17,
+      "net_position_change": -7
+    },
+    {
+      "driver": "STR",
+      "in_lap": 17,
+      "out_lap": 18,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 6,
+      "pos_after": 17,
+      "net_position_change": -11
+    },
+    {
+      "driver": "STR",
+      "in_lap": 37,
+      "out_lap": 38,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 13,
+      "pos_after": 17,
+      "net_position_change": -4
+    },
+    {
+      "driver": "RIC",
+      "in_lap": 16,
+      "out_lap": 17,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 10,
+      "pos_after": 19,
+      "net_position_change": -9
+    },
+    {
+      "driver": "RIC",
+      "in_lap": 42,
+      "out_lap": 43,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 13,
+      "pos_after": 19,
+      "net_position_change": -6
+    },
+    {
+      "driver": "BOT",
+      "in_lap": 11,
+      "out_lap": 12,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 13,
+      "pos_after": 18,
+      "net_position_change": -5
+    },
+    {
+      "driver": "BOT",
+      "in_lap": 28,
+      "out_lap": 29,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 15,
+      "pos_after": 19,
+      "net_position_change": -4
+    },
+    {
+      "driver": "MAG",
+      "in_lap": 10,
+      "out_lap": 11,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 15,
+      "pos_after": 19,
+      "net_position_change": -4
+    },
+    {
+      "driver": "MAG",
+      "in_lap": 29,
+      "out_lap": 30,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 15,
+      "pos_after": 20,
+      "net_position_change": -5
+    },
+    {
+      "driver": "ALB",
+      "in_lap": 18,
+      "out_lap": 19,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 13,
+      "pos_after": 20,
+      "net_position_change": -7
+    },
+    {
+      "driver": "ALB",
+      "in_lap": 43,
+      "out_lap": 44,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 14,
+      "pos_after": 19,
+      "net_position_change": -5
+    },
+    {
+      "driver": "TSU",
+      "in_lap": 9,
+      "out_lap": 10,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 17,
+      "pos_after": 20,
+      "net_position_change": -3
+    },
+    {
+      "driver": "TSU",
+      "in_lap": 27,
+      "out_lap": 28,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 18,
+      "pos_after": 20,
+      "net_position_change": -2
+    },
+    {
+      "driver": "TSU",
+      "in_lap": 44,
+      "out_lap": 45,
+      "compound": "HARD",
+      "duration_s": null,
+      "pos_before": 18,
+      "pos_after": 20,
+      "net_position_change": -2
+    },
+    {
+      "driver": "SAR",
+      "in_lap": 14,
+      "out_lap": 15,
+      "compound": "SOFT",
+      "duration_s": null,
+      "pos_before": 15,
+      "pos_after": 20,
+      "net_position_change": -5
+    },
+    {
+      "driver": "SAR",
+      "in_lap": 34,
+      "out_lap": 35,
+      "compound": "MEDIUM",
+      "duration_s": null,
+      "pos_before": 18,
+      "pos_after": 20,
+      "net_position_change": -2
+    }
+  ],
+  "strategy_score": {
+    "undercuts": 32,
+    "overcuts": 140,
+    "pit_cycle_passes": 172,
+    "failed_strategies": 20,
+    "strategy_chaos_score": 456.0
+  },
+  "chaos_timeline": [
+    {
+      "lap": 1,
+      "inversions": 14,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 2,
+      "inversions": 13,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 3,
+      "inversions": 13,
+      "on_track_overtakes": 2,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 4,
+      "inversions": 13,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 5,
+      "inversions": 13,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 6,
+      "inversions": 14,
+      "on_track_overtakes": 3,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 7,
+      "inversions": 14,
+      "on_track_overtakes": 2,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 8,
+      "inversions": 14,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 9,
+      "inversions": 19,
+      "on_track_overtakes": 0,
+      "pit_passes": 3,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 10,
+      "inversions": 21,
+      "on_track_overtakes": 0,
+      "pit_passes": 2,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 11,
+      "inversions": 21,
+      "on_track_overtakes": 0,
+      "pit_passes": 4,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 12,
+      "inversions": 24,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 13,
+      "inversions": 27,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 14,
+      "inversions": 33,
+      "on_track_overtakes": 0,
+      "pit_passes": 6,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 15,
+      "inversions": 30,
+      "on_track_overtakes": 0,
+      "pit_passes": 13,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 16,
+      "inversions": 33,
+      "on_track_overtakes": 0,
+      "pit_passes": 6,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 17,
+      "inversions": 25,
+      "on_track_overtakes": 0,
+      "pit_passes": 10,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 18,
+      "inversions": 21,
+      "on_track_overtakes": 0,
+      "pit_passes": 10,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 19,
+      "inversions": 13,
+      "on_track_overtakes": 1,
+      "pit_passes": 7,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 20,
+      "inversions": 18,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 21,
+      "inversions": 16,
+      "on_track_overtakes": 0,
+      "pit_passes": 2,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 22,
+      "inversions": 14,
+      "on_track_overtakes": 0,
+      "pit_passes": 6,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 23,
+      "inversions": 13,
+      "on_track_overtakes": 0,
+      "pit_passes": 1,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 24,
+      "inversions": 18,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 25,
+      "inversions": 18,
+      "on_track_overtakes": 0,
+      "pit_passes": 6,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 26,
+      "inversions": 19,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 27,
+      "inversions": 17,
+      "on_track_overtakes": 3,
+      "pit_passes": 1,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 28,
+      "inversions": 18,
+      "on_track_overtakes": 1,
+      "pit_passes": 2,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 29,
+      "inversions": 23,
+      "on_track_overtakes": 1,
+      "pit_passes": 3,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 30,
+      "inversions": 26,
+      "on_track_overtakes": 1,
+      "pit_passes": 4,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 31,
+      "inversions": 25,
+      "on_track_overtakes": 0,
+      "pit_passes": 1,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 32,
+      "inversions": 26,
+      "on_track_overtakes": 1,
+      "pit_passes": 4,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 33,
+      "inversions": 25,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 34,
+      "inversions": 26,
+      "on_track_overtakes": 2,
+      "pit_passes": 1,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 35,
+      "inversions": 23,
+      "on_track_overtakes": 2,
+      "pit_passes": 1,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 36,
+      "inversions": 20,
+      "on_track_overtakes": 0,
+      "pit_passes": 3,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 37,
+      "inversions": 25,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 38,
+      "inversions": 27,
+      "on_track_overtakes": 0,
+      "pit_passes": 8,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 39,
+      "inversions": 29,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 40,
+      "inversions": 27,
+      "on_track_overtakes": 2,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 41,
+      "inversions": 27,
+      "on_track_overtakes": 0,
+      "pit_passes": 2,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 42,
+      "inversions": 23,
+      "on_track_overtakes": 0,
+      "pit_passes": 6,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 43,
+      "inversions": 19,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 44,
+      "inversions": 20,
+      "on_track_overtakes": 0,
+      "pit_passes": 7,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 45,
+      "inversions": 21,
+      "on_track_overtakes": 0,
+      "pit_passes": 5,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 46,
+      "inversions": 19,
+      "on_track_overtakes": 0,
+      "pit_passes": 4,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 47,
+      "inversions": 19,
+      "on_track_overtakes": 0,
+      "pit_passes": 2,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 2,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 48,
+      "inversions": 19,
+      "on_track_overtakes": 0,
+      "pit_passes": 4,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 49,
+      "inversions": 18,
+      "on_track_overtakes": 0,
+      "pit_passes": 1,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 1,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 50,
+      "inversions": 16,
+      "on_track_overtakes": 0,
+      "pit_passes": 2,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 51,
+      "inversions": 17,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 52,
+      "inversions": 16,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 53,
+      "inversions": 15,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 54,
+      "inversions": 15,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 55,
+      "inversions": 13,
+      "on_track_overtakes": 2,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 56,
+      "inversions": 13,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 57,
+      "inversions": 14,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 58,
+      "inversions": 14,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 59,
+      "inversions": 14,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 60,
+      "inversions": 15,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 61,
+      "inversions": 15,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 62,
+      "inversions": 15,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 63,
+      "inversions": 15,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 64,
+      "inversions": 15,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 65,
+      "inversions": 15,
+      "on_track_overtakes": 0,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    },
+    {
+      "lap": 66,
+      "inversions": 16,
+      "on_track_overtakes": 1,
+      "pit_passes": 0,
+      "sc_vsc_moves": 0,
+      "dnf_moves": 0,
+      "pit_stops": 0,
+      "safety_car": false,
+      "vsc": false,
+      "red_flag": false
+    }
+  ],
+  "no_sc_sim": {
+    "inversions_per_lap": [
+      {
+        "lap": 1,
+        "inversions": 14
+      },
+      {
+        "lap": 2,
+        "inversions": 13
+      },
+      {
+        "lap": 3,
+        "inversions": 13
+      },
+      {
+        "lap": 4,
+        "inversions": 13
+      },
+      {
+        "lap": 5,
+        "inversions": 13
+      },
+      {
+        "lap": 6,
+        "inversions": 14
+      },
+      {
+        "lap": 7,
+        "inversions": 14
+      },
+      {
+        "lap": 8,
+        "inversions": 14
+      },
+      {
+        "lap": 9,
+        "inversions": 19
+      },
+      {
+        "lap": 10,
+        "inversions": 21
+      },
+      {
+        "lap": 11,
+        "inversions": 21
+      },
+      {
+        "lap": 12,
+        "inversions": 24
+      },
+      {
+        "lap": 13,
+        "inversions": 27
+      },
+      {
+        "lap": 14,
+        "inversions": 33
+      },
+      {
+        "lap": 15,
+        "inversions": 30
+      },
+      {
+        "lap": 16,
+        "inversions": 33
+      },
+      {
+        "lap": 17,
+        "inversions": 25
+      },
+      {
+        "lap": 18,
+        "inversions": 21
+      },
+      {
+        "lap": 19,
+        "inversions": 13
+      },
+      {
+        "lap": 20,
+        "inversions": 18
+      },
+      {
+        "lap": 21,
+        "inversions": 16
+      },
+      {
+        "lap": 22,
+        "inversions": 14
+      },
+      {
+        "lap": 23,
+        "inversions": 13
+      },
+      {
+        "lap": 24,
+        "inversions": 18
+      },
+      {
+        "lap": 25,
+        "inversions": 18
+      },
+      {
+        "lap": 26,
+        "inversions": 19
+      },
+      {
+        "lap": 27,
+        "inversions": 17
+      },
+      {
+        "lap": 28,
+        "inversions": 18
+      },
+      {
+        "lap": 29,
+        "inversions": 23
+      },
+      {
+        "lap": 30,
+        "inversions": 26
+      },
+      {
+        "lap": 31,
+        "inversions": 25
+      },
+      {
+        "lap": 32,
+        "inversions": 26
+      },
+      {
+        "lap": 33,
+        "inversions": 25
+      },
+      {
+        "lap": 34,
+        "inversions": 26
+      },
+      {
+        "lap": 35,
+        "inversions": 23
+      },
+      {
+        "lap": 36,
+        "inversions": 20
+      },
+      {
+        "lap": 37,
+        "inversions": 25
+      },
+      {
+        "lap": 38,
+        "inversions": 27
+      },
+      {
+        "lap": 39,
+        "inversions": 29
+      },
+      {
+        "lap": 40,
+        "inversions": 27
+      },
+      {
+        "lap": 41,
+        "inversions": 27
+      },
+      {
+        "lap": 42,
+        "inversions": 23
+      },
+      {
+        "lap": 43,
+        "inversions": 19
+      },
+      {
+        "lap": 44,
+        "inversions": 20
+      },
+      {
+        "lap": 45,
+        "inversions": 21
+      },
+      {
+        "lap": 46,
+        "inversions": 19
+      },
+      {
+        "lap": 47,
+        "inversions": 19
+      },
+      {
+        "lap": 48,
+        "inversions": 19
+      },
+      {
+        "lap": 49,
+        "inversions": 18
+      },
+      {
+        "lap": 50,
+        "inversions": 16
+      },
+      {
+        "lap": 51,
+        "inversions": 17
+      },
+      {
+        "lap": 52,
+        "inversions": 16
+      },
+      {
+        "lap": 53,
+        "inversions": 15
+      },
+      {
+        "lap": 54,
+        "inversions": 15
+      },
+      {
+        "lap": 55,
+        "inversions": 13
+      },
+      {
+        "lap": 56,
+        "inversions": 13
+      },
+      {
+        "lap": 57,
+        "inversions": 14
+      },
+      {
+        "lap": 58,
+        "inversions": 14
+      },
+      {
+        "lap": 59,
+        "inversions": 14
+      },
+      {
+        "lap": 60,
+        "inversions": 15
+      },
+      {
+        "lap": 61,
+        "inversions": 15
+      },
+      {
+        "lap": 62,
+        "inversions": 15
+      },
+      {
+        "lap": 63,
+        "inversions": 15
+      },
+      {
+        "lap": 64,
+        "inversions": 15
+      },
+      {
+        "lap": 65,
+        "inversions": 15
+      },
+      {
+        "lap": 66,
+        "inversions": 16
+      }
+    ],
+    "total_inversions": 1266,
+    "volatility_score": 0.9591,
+    "racing_laps": 66,
+    "removed_laps": [],
+    "sc_laps_removed": 0
+  },
+  "momentum": {
+    "window": 5,
+    "per_lap": [
+      {
+        "lap": 1,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 2,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": -1
+      },
+      {
+        "lap": 3,
+        "VER": 1,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": -1,
+        "LEC": -1,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": -1
+      },
+      {
+        "lap": 4,
+        "VER": 1,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": -1,
+        "LEC": -1,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": -1
+      },
+      {
+        "lap": 5,
+        "VER": 1,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": -1,
+        "LEC": -1,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": -1
+      },
+      {
+        "lap": 6,
+        "VER": 1,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": -1,
+        "LEC": -1,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": -1,
+        "ZHO": 0,
+        "STR": 1,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": 1,
+        "ALB": 1,
+        "TSU": -1,
+        "SAR": -2
+      },
+      {
+        "lap": 7,
+        "VER": 1,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": -1,
+        "LEC": -1,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": -2,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 0,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 1,
+        "TSU": -2,
+        "SAR": -1
+      },
+      {
+        "lap": 8,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": -2,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 0,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 1,
+        "TSU": -2,
+        "SAR": -1
+      },
+      {
+        "lap": 9,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": -2,
+        "ZHO": -1,
+        "STR": 1,
+        "RIC": 2,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 3,
+        "TSU": -5,
+        "SAR": 0
+      },
+      {
+        "lap": 10,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": -2,
+        "ZHO": -2,
+        "STR": 1,
+        "RIC": 3,
+        "BOT": 1,
+        "MAG": 0,
+        "ALB": 3,
+        "TSU": -5,
+        "SAR": 1
+      },
+      {
+        "lap": 11,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": -1,
+        "STR": 0,
+        "RIC": 3,
+        "BOT": 0,
+        "MAG": -4,
+        "ALB": 3,
+        "TSU": -4,
+        "SAR": 3
+      },
+      {
+        "lap": 12,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 1,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": -1,
+        "ALO": 1,
+        "ZHO": -1,
+        "STR": 0,
+        "RIC": 4,
+        "BOT": -5,
+        "MAG": -4,
+        "ALB": 4,
+        "TSU": -3,
+        "SAR": 4
+      },
+      {
+        "lap": 13,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 1,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": -6,
+        "ALO": 2,
+        "ZHO": -1,
+        "STR": 1,
+        "RIC": 5,
+        "BOT": -5,
+        "MAG": -4,
+        "ALB": 5,
+        "TSU": -3,
+        "SAR": 5
+      },
+      {
+        "lap": 14,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 1,
+        "PER": -3,
+        "GAS": -1,
+        "OCO": -4,
+        "HUL": -6,
+        "ALO": 4,
+        "ZHO": 0,
+        "STR": 3,
+        "RIC": 5,
+        "BOT": -4,
+        "MAG": -4,
+        "ALB": 5,
+        "TSU": 0,
+        "SAR": 4
+      },
+      {
+        "lap": 15,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": 1,
+        "RUS": -2,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 1,
+        "PER": -3,
+        "GAS": -6,
+        "OCO": -3,
+        "HUL": -5,
+        "ALO": 5,
+        "ZHO": 2,
+        "STR": 4,
+        "RIC": 5,
+        "BOT": -3,
+        "MAG": -2,
+        "ALB": 6,
+        "TSU": 1,
+        "SAR": -2
+      },
+      {
+        "lap": 16,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": 0,
+        "RUS": -5,
+        "LEC": 3,
+        "SAI": -4,
+        "PIA": 3,
+        "PER": -3,
+        "GAS": -4,
+        "OCO": -1,
+        "HUL": -5,
+        "ALO": 5,
+        "ZHO": 1,
+        "STR": 6,
+        "RIC": 3,
+        "BOT": -2,
+        "MAG": 1,
+        "ALB": 3,
+        "TSU": 1,
+        "SAR": -3
+      },
+      {
+        "lap": 17,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": -3,
+        "RUS": -3,
+        "LEC": 3,
+        "SAI": -1,
+        "PIA": 4,
+        "PER": -2,
+        "GAS": -3,
+        "OCO": -2,
+        "HUL": -3,
+        "ALO": 5,
+        "ZHO": 1,
+        "STR": 3,
+        "RIC": -5,
+        "BOT": 3,
+        "MAG": 2,
+        "ALB": 2,
+        "TSU": 2,
+        "SAR": -4
+      },
+      {
+        "lap": 18,
+        "VER": -3,
+        "NOR": 2,
+        "HAM": -3,
+        "RUS": -3,
+        "LEC": 4,
+        "SAI": -1,
+        "PIA": 5,
+        "PER": -1,
+        "GAS": -2,
+        "OCO": -1,
+        "HUL": 4,
+        "ALO": 4,
+        "ZHO": 3,
+        "STR": -6,
+        "RIC": -6,
+        "BOT": 5,
+        "MAG": 3,
+        "ALB": -1,
+        "TSU": 2,
+        "SAR": -5
+      },
+      {
+        "lap": 19,
+        "VER": -3,
+        "NOR": 2,
+        "HAM": -2,
+        "RUS": -3,
+        "LEC": 4,
+        "SAI": -2,
+        "PIA": 4,
+        "PER": 3,
+        "GAS": 0,
+        "OCO": 4,
+        "HUL": 4,
+        "ALO": 0,
+        "ZHO": 4,
+        "STR": -7,
+        "RIC": -7,
+        "BOT": 4,
+        "MAG": 4,
+        "ALB": -8,
+        "TSU": 3,
+        "SAR": -4
+      },
+      {
+        "lap": 20,
+        "VER": -3,
+        "NOR": 1,
+        "HAM": -3,
+        "RUS": -1,
+        "LEC": 3,
+        "SAI": -1,
+        "PIA": 4,
+        "PER": 4,
+        "GAS": 5,
+        "OCO": 3,
+        "HUL": 4,
+        "ALO": -7,
+        "ZHO": 4,
+        "STR": -6,
+        "RIC": -8,
+        "BOT": 4,
+        "MAG": 3,
+        "ALB": -9,
+        "TSU": 2,
+        "SAR": 1
+      },
+      {
+        "lap": 21,
+        "VER": -2,
+        "NOR": 1,
+        "HAM": -2,
+        "RUS": 3,
+        "LEC": 1,
+        "SAI": 2,
+        "PIA": 0,
+        "PER": 4,
+        "GAS": 3,
+        "OCO": 1,
+        "HUL": 4,
+        "ALO": -8,
+        "ZHO": 4,
+        "STR": -8,
+        "RIC": -6,
+        "BOT": 4,
+        "MAG": 3,
+        "ALB": -7,
+        "TSU": 2,
+        "SAR": 1
+      },
+      {
+        "lap": 22,
+        "VER": -2,
+        "NOR": 1,
+        "HAM": 2,
+        "RUS": 1,
+        "LEC": 1,
+        "SAI": 0,
+        "PIA": -6,
+        "PER": 3,
+        "GAS": 3,
+        "OCO": 3,
+        "HUL": 3,
+        "ALO": -8,
+        "ZHO": 3,
+        "STR": -5,
+        "RIC": 2,
+        "BOT": 3,
+        "MAG": 2,
+        "ALB": -7,
+        "TSU": 0,
+        "SAR": 1
+      },
+      {
+        "lap": 23,
+        "VER": 1,
+        "NOR": 0,
+        "HAM": 2,
+        "RUS": 1,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": -7,
+        "PER": 2,
+        "GAS": 2,
+        "OCO": 2,
+        "HUL": 1,
+        "ALO": -7,
+        "ZHO": 1,
+        "STR": 3,
+        "RIC": 2,
+        "BOT": 1,
+        "MAG": 0,
+        "ALB": -5,
+        "TSU": 0,
+        "SAR": 1
+      },
+      {
+        "lap": 24,
+        "VER": 3,
+        "NOR": -5,
+        "HAM": 2,
+        "RUS": 2,
+        "LEC": 0,
+        "SAI": 2,
+        "PIA": -7,
+        "PER": 2,
+        "GAS": 1,
+        "OCO": 1,
+        "HUL": 1,
+        "ALO": -5,
+        "ZHO": 1,
+        "STR": 2,
+        "RIC": 1,
+        "BOT": 1,
+        "MAG": -1,
+        "ALB": 1,
+        "TSU": -1,
+        "SAR": -1
+      },
+      {
+        "lap": 25,
+        "VER": 3,
+        "NOR": -4,
+        "HAM": 3,
+        "RUS": 3,
+        "LEC": -5,
+        "SAI": 3,
+        "PIA": -7,
+        "PER": 1,
+        "GAS": 2,
+        "OCO": 1,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": 1,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": -1,
+        "MAG": -1,
+        "ALB": 1,
+        "TSU": -1,
+        "SAR": -1
+      },
+      {
+        "lap": 26,
+        "VER": 2,
+        "NOR": -4,
+        "HAM": 3,
+        "RUS": 2,
+        "LEC": -5,
+        "SAI": 3,
+        "PIA": -5,
+        "PER": 1,
+        "GAS": 2,
+        "OCO": 1,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 1,
+        "BOT": -2,
+        "MAG": -1,
+        "ALB": 1,
+        "TSU": -1,
+        "SAR": -1
+      },
+      {
+        "lap": 27,
+        "VER": 2,
+        "NOR": -3,
+        "HAM": 2,
+        "RUS": 2,
+        "LEC": -4,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 2,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 0,
+        "BOT": -3,
+        "MAG": -1,
+        "ALB": 2,
+        "TSU": -1,
+        "SAR": -1
+      },
+      {
+        "lap": 28,
+        "VER": 2,
+        "NOR": -3,
+        "HAM": 2,
+        "RUS": 2,
+        "LEC": -4,
+        "SAI": 1,
+        "PIA": 1,
+        "PER": -1,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 0,
+        "BOT": -4,
+        "MAG": 1,
+        "ALB": 2,
+        "TSU": -2,
+        "SAR": 0
+      },
+      {
+        "lap": 29,
+        "VER": 0,
+        "NOR": 2,
+        "HAM": 1,
+        "RUS": 1,
+        "LEC": -4,
+        "SAI": 0,
+        "PIA": 2,
+        "PER": -1,
+        "GAS": 0,
+        "OCO": -1,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 2,
+        "BOT": -7,
+        "MAG": 0,
+        "ALB": 2,
+        "TSU": -2,
+        "SAR": 2
+      },
+      {
+        "lap": 30,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 2,
+        "PER": 0,
+        "GAS": -1,
+        "OCO": -2,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": 0,
+        "STR": 1,
+        "RIC": 2,
+        "BOT": -5,
+        "MAG": -4,
+        "ALB": 3,
+        "TSU": -1,
+        "SAR": 3
+      },
+      {
+        "lap": 31,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 2,
+        "PER": -1,
+        "GAS": -1,
+        "OCO": -1,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 2,
+        "BOT": -4,
+        "MAG": -4,
+        "ALB": 3,
+        "TSU": -1,
+        "SAR": 3
+      },
+      {
+        "lap": 32,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": -1,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 2,
+        "PER": -5,
+        "GAS": 0,
+        "OCO": -1,
+        "HUL": 1,
+        "ALO": 1,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 2,
+        "BOT": -3,
+        "MAG": -4,
+        "ALB": 2,
+        "TSU": 0,
+        "SAR": 3
+      },
+      {
+        "lap": 33,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": -1,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 1,
+        "PER": -4,
+        "GAS": 0,
+        "OCO": -1,
+        "HUL": 1,
+        "ALO": 1,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 2,
+        "BOT": -1,
+        "MAG": -5,
+        "ALB": 2,
+        "TSU": 1,
+        "SAR": 1
+      },
+      {
+        "lap": 34,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": -1,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 1,
+        "PER": -3,
+        "GAS": -1,
+        "OCO": 0,
+        "HUL": 1,
+        "ALO": 0,
+        "ZHO": 1,
+        "STR": 1,
+        "RIC": 0,
+        "BOT": 2,
+        "MAG": -4,
+        "ALB": 1,
+        "TSU": 2,
+        "SAR": -1
+      },
+      {
+        "lap": 35,
+        "VER": 0,
+        "NOR": 2,
+        "HAM": -1,
+        "RUS": -1,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 1,
+        "PER": -3,
+        "GAS": -1,
+        "OCO": 1,
+        "HUL": 1,
+        "ALO": 0,
+        "ZHO": 1,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -3
+      },
+      {
+        "lap": 36,
+        "VER": 0,
+        "NOR": 2,
+        "HAM": 0,
+        "RUS": -2,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 1,
+        "PER": -1,
+        "GAS": -1,
+        "OCO": 0,
+        "HUL": 1,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -3
+      },
+      {
+        "lap": 37,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": 1,
+        "RUS": -5,
+        "LEC": 2,
+        "SAI": -3,
+        "PIA": 3,
+        "PER": 3,
+        "GAS": 1,
+        "OCO": -1,
+        "HUL": 1,
+        "ALO": 0,
+        "ZHO": -1,
+        "STR": -2,
+        "RIC": 0,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -3
+      },
+      {
+        "lap": 38,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": 1,
+        "RUS": -4,
+        "LEC": 2,
+        "SAI": -2,
+        "PIA": 3,
+        "PER": 5,
+        "GAS": -1,
+        "OCO": -5,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": 0,
+        "STR": -5,
+        "RIC": 2,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 1,
+        "TSU": 1,
+        "SAR": -2
+      },
+      {
+        "lap": 39,
+        "VER": 0,
+        "NOR": 1,
+        "HAM": 1,
+        "RUS": -4,
+        "LEC": 2,
+        "SAI": -2,
+        "PIA": 2,
+        "PER": 5,
+        "GAS": -2,
+        "OCO": -4,
+        "HUL": -4,
+        "ALO": 3,
+        "ZHO": 2,
+        "STR": -5,
+        "RIC": 3,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 1,
+        "TSU": 0,
+        "SAR": -1
+      },
+      {
+        "lap": 40,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 1,
+        "RUS": -3,
+        "LEC": 2,
+        "SAI": -2,
+        "PIA": 2,
+        "PER": 4,
+        "GAS": -1,
+        "OCO": -3,
+        "HUL": -4,
+        "ALO": 3,
+        "ZHO": 1,
+        "STR": -4,
+        "RIC": 2,
+        "BOT": 1,
+        "MAG": 0,
+        "ALB": 1,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 41,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": -2,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 2,
+        "PER": 3,
+        "GAS": -1,
+        "OCO": -3,
+        "HUL": -4,
+        "ALO": 4,
+        "ZHO": 1,
+        "STR": -3,
+        "RIC": 2,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 1,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 42,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 1,
+        "LEC": 0,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": 3,
+        "GAS": -3,
+        "OCO": -1,
+        "HUL": -3,
+        "ALO": 3,
+        "ZHO": -5,
+        "STR": -1,
+        "RIC": 2,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": 2,
+        "TSU": -1,
+        "SAR": 0
+      },
+      {
+        "lap": 43,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": -1,
+        "RUS": 0,
+        "LEC": 1,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 1,
+        "GAS": -1,
+        "OCO": 3,
+        "HUL": -2,
+        "ALO": 2,
+        "ZHO": -3,
+        "STR": 4,
+        "RIC": -6,
+        "BOT": 0,
+        "MAG": 2,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 44,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": -4,
+        "RUS": 1,
+        "LEC": 1,
+        "SAI": 1,
+        "PIA": 1,
+        "PER": 0,
+        "GAS": 1,
+        "OCO": 2,
+        "HUL": 2,
+        "ALO": 1,
+        "ZHO": -4,
+        "STR": 3,
+        "RIC": -5,
+        "BOT": 1,
+        "MAG": 3,
+        "ALB": -4,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 45,
+        "VER": -2,
+        "NOR": 1,
+        "HAM": -4,
+        "RUS": 1,
+        "LEC": 2,
+        "SAI": 1,
+        "PIA": 1,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 2,
+        "HUL": 2,
+        "ALO": 0,
+        "ZHO": -3,
+        "STR": 3,
+        "RIC": -4,
+        "BOT": 1,
+        "MAG": 3,
+        "ALB": -3,
+        "TSU": -2,
+        "SAR": 1
+      },
+      {
+        "lap": 46,
+        "VER": -2,
+        "NOR": 1,
+        "HAM": -2,
+        "RUS": 2,
+        "LEC": 2,
+        "SAI": 1,
+        "PIA": -2,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 2,
+        "HUL": 3,
+        "ALO": -3,
+        "ZHO": -1,
+        "STR": 2,
+        "RIC": -4,
+        "BOT": 2,
+        "MAG": 3,
+        "ALB": -3,
+        "TSU": -2,
+        "SAR": 1
+      },
+      {
+        "lap": 47,
+        "VER": -1,
+        "NOR": 1,
+        "HAM": -2,
+        "RUS": 2,
+        "LEC": 1,
+        "SAI": 1,
+        "PIA": -3,
+        "PER": 1,
+        "GAS": 0,
+        "OCO": 1,
+        "HUL": 1,
+        "ALO": -3,
+        "ZHO": 5,
+        "STR": 1,
+        "RIC": -4,
+        "BOT": 1,
+        "MAG": 2,
+        "ALB": -4,
+        "TSU": -1,
+        "SAR": 1
+      },
+      {
+        "lap": 48,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 3,
+        "LEC": -3,
+        "SAI": 2,
+        "PIA": -3,
+        "PER": 1,
+        "GAS": 0,
+        "OCO": 1,
+        "HUL": 1,
+        "ALO": -3,
+        "ZHO": 2,
+        "STR": -1,
+        "RIC": 2,
+        "BOT": 1,
+        "MAG": 1,
+        "ALB": -3,
+        "TSU": -2,
+        "SAR": 1
+      },
+      {
+        "lap": 49,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 3,
+        "RUS": 2,
+        "LEC": -3,
+        "SAI": 1,
+        "PIA": -3,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 1,
+        "HUL": 1,
+        "ALO": -3,
+        "ZHO": 1,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 1,
+        "TSU": -2,
+        "SAR": 1
+      },
+      {
+        "lap": 50,
+        "VER": 2,
+        "NOR": -1,
+        "HAM": 3,
+        "RUS": 2,
+        "LEC": -4,
+        "SAI": 1,
+        "PIA": -3,
+        "PER": -2,
+        "GAS": 1,
+        "OCO": 1,
+        "HUL": 1,
+        "ALO": -2,
+        "ZHO": 1,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 51,
+        "VER": 2,
+        "NOR": -1,
+        "HAM": 1,
+        "RUS": 1,
+        "LEC": -4,
+        "SAI": 1,
+        "PIA": 0,
+        "PER": -1,
+        "GAS": 1,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 52,
+        "VER": 1,
+        "NOR": -1,
+        "HAM": 2,
+        "RUS": 0,
+        "LEC": -3,
+        "SAI": 1,
+        "PIA": 1,
+        "PER": -2,
+        "GAS": 1,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 53,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 1,
+        "RUS": -1,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 1,
+        "PER": -2,
+        "GAS": 1,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": -1,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 54,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 1,
+        "RUS": -1,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": -1,
+        "GAS": 1,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": -1,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 55,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 1,
+        "RUS": -1,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 0,
+        "PER": 1,
+        "GAS": 0,
+        "OCO": -1,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": -1,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -1
+      },
+      {
+        "lap": 56,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 1,
+        "RUS": -1,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": -1,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -1
+      },
+      {
+        "lap": 57,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 1,
+        "ZHO": -1,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": -1,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -1
+      },
+      {
+        "lap": 58,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": -1,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -1
+      },
+      {
+        "lap": 59,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 1,
+        "SAI": -1,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": 0,
+        "MAG": -1,
+        "ALB": 0,
+        "TSU": 1,
+        "SAR": -1
+      },
+      {
+        "lap": 60,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 2,
+        "BOT": -1,
+        "MAG": -1,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 61,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 2,
+        "BOT": -1,
+        "MAG": -1,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 62,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": -1,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 63,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": -1,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 64,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 1,
+        "BOT": -1,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 65,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 0,
+        "GAS": 0,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      },
+      {
+        "lap": 66,
+        "VER": 0,
+        "NOR": 0,
+        "HAM": 0,
+        "RUS": 0,
+        "LEC": 0,
+        "SAI": 0,
+        "PIA": 0,
+        "PER": 1,
+        "GAS": -1,
+        "OCO": 0,
+        "HUL": 0,
+        "ALO": 0,
+        "ZHO": 0,
+        "STR": 0,
+        "RIC": 0,
+        "BOT": 0,
+        "MAG": 0,
+        "ALB": 0,
+        "TSU": 0,
+        "SAR": 0
+      }
+    ],
+    "peak_momentum": [
+      {
+        "code": "ALB",
+        "peak_momentum": -9,
+        "peak_lap": 20
+      },
+      {
+        "code": "ALO",
+        "peak_momentum": -8,
+        "peak_lap": 21
+      },
+      {
+        "code": "STR",
+        "peak_momentum": -8,
+        "peak_lap": 21
+      },
+      {
+        "code": "RIC",
+        "peak_momentum": -8,
+        "peak_lap": 20
+      },
+      {
+        "code": "PIA",
+        "peak_momentum": -7,
+        "peak_lap": 23
+      },
+      {
+        "code": "BOT",
+        "peak_momentum": -7,
+        "peak_lap": 29
+      },
+      {
+        "code": "GAS",
+        "peak_momentum": -6,
+        "peak_lap": 15
+      },
+      {
+        "code": "HUL",
+        "peak_momentum": -6,
+        "peak_lap": 13
+      },
+      {
+        "code": "NOR",
+        "peak_momentum": -5,
+        "peak_lap": 24
+      },
+      {
+        "code": "RUS",
+        "peak_momentum": -5,
+        "peak_lap": 16
+      }
+    ]
+  },
+  "track_status": {
+    "sc_laps": [],
+    "vsc_laps": [],
+    "red_flag_laps": [],
+    "sc_count": 0,
+    "vsc_count": 0
+  },
+  "stints": [
+    {
+      "driver": "VER",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 17,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "VER",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 18,
+      "end_lap": 44,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "VER",
+      "stint": 3,
+      "compound": "SOFT",
+      "start_lap": 45,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "NOR",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 23,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "NOR",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 24,
+      "end_lap": 47,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "NOR",
+      "stint": 3,
+      "compound": "SOFT",
+      "start_lap": 48,
+      "end_lap": 66,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "HAM",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 16,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "HAM",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 17,
+      "end_lap": 43,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HAM",
+      "stint": 3,
+      "compound": "SOFT",
+      "start_lap": 44,
+      "end_lap": 66,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "RUS",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 15,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "RUS",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 16,
+      "end_lap": 36,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "RUS",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 37,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LEC",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 24,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LEC",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 25,
+      "end_lap": 47,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LEC",
+      "stint": 3,
+      "compound": "SOFT",
+      "start_lap": 48,
+      "end_lap": 66,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "SAI",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 15,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAI",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 16,
+      "end_lap": 36,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAI",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 37,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PIA",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 21,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "PIA",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 22,
+      "end_lap": 46,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PIA",
+      "stint": 3,
+      "compound": "SOFT",
+      "start_lap": 47,
+      "end_lap": 66,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "PER",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 13,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "PER",
+      "stint": 2,
+      "compound": "SOFT",
+      "start_lap": 14,
+      "end_lap": 31,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "PER",
+      "stint": 3,
+      "compound": "MEDIUM",
+      "start_lap": 32,
+      "end_lap": 49,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PER",
+      "stint": 4,
+      "compound": "SOFT",
+      "start_lap": 50,
+      "end_lap": 66,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "GAS",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 14,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "GAS",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 15,
+      "end_lap": 38,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "GAS",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 39,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "OCO",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 13,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "OCO",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 14,
+      "end_lap": 37,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "OCO",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 38,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HUL",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 12,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HUL",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 13,
+      "end_lap": 38,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HUL",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 39,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALO",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 19,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALO",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 20,
+      "end_lap": 45,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "ALO",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 46,
+      "end_lap": 65,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "ZHO",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 9,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ZHO",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 10,
+      "end_lap": 41,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ZHO",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 42,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "STR",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 17,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "STR",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 18,
+      "end_lap": 37,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "STR",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 38,
+      "end_lap": 65,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "RIC",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 16,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "RIC",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 17,
+      "end_lap": 42,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "RIC",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 43,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOT",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 11,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOT",
+      "stint": 2,
+      "compound": "SOFT",
+      "start_lap": 12,
+      "end_lap": 28,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "BOT",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 29,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "MAG",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 10,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "MAG",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 11,
+      "end_lap": 29,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "MAG",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 30,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALB",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 18,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALB",
+      "stint": 2,
+      "compound": "SOFT",
+      "start_lap": 19,
+      "end_lap": 43,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALB",
+      "stint": 3,
+      "compound": "SOFT",
+      "start_lap": 44,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "TSU",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 9,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "TSU",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 10,
+      "end_lap": 27,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "TSU",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 28,
+      "end_lap": 44,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "TSU",
+      "stint": 4,
+      "compound": "SOFT",
+      "start_lap": 45,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAR",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 14,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAR",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 15,
+      "end_lap": 34,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAR",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 35,
+      "end_lap": 64,
+      "fresh_tyre": true
+    }
   ]
 }
