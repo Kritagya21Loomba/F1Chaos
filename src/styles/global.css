@@ -701,3 +701,255 @@ footer {
   0%, 100% { box-shadow: 0 0 0   0 rgba(225,6,0,0.0); }
   50%       { box-shadow: 0 0 0 6px rgba(225,6,0,0.3); }
 }
+
+/* ─── Tab Container ────────────────────────────────────────────── */
+.tab-container {
+  width: 100%;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover:not(.disabled) {
+  color: var(--text);
+  background: var(--surface2);
+}
+
+.tab-btn.active {
+  color: #000;
+  background: var(--tab-accent, var(--accent));
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.tab-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.tab-icon {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.tab-label {
+  font-family: var(--font-mono);
+}
+
+.tab-content {
+  animation: tabFadeIn 0.25s ease;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .tab-nav {
+    border-radius: 8px;
+  }
+  
+  .tab-btn {
+    padding: 10px 12px;
+    font-size: 11px;
+    min-width: 80px;
+  }
+  
+  .tab-icon {
+    display: none;
+  }
+}
+
+/* ─── Collapsible Section ──────────────────────────────────────── */
+.collapsible-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.collapsible-section.open {
+  border-color: color-mix(in srgb, var(--section-accent, var(--accent)) 40%, var(--border));
+}
+
+.collapsible-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.collapsible-header:hover {
+  background: var(--surface2);
+}
+
+.collapsible-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.collapsible-indicator {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--section-accent, var(--accent));
+  background: color-mix(in srgb, var(--section-accent, var(--accent)) 15%, transparent);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.collapsible-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.collapsible-desc-preview {
+  font-size: 11px;
+  color: var(--muted);
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collapsible-content {
+  padding: 0 18px 18px;
+  animation: collapseFadeIn 0.2s ease;
+}
+
+.collapsible-desc {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+@keyframes collapseFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── Compact chart adjustments ────────────────────────────────── */
+.chart-wrap.compact {
+  height: 260px;
+}
+
+.chart-wrap.xs {
+  height: 200px;
+}
+
+/* ─── Two-column grid for tab content ──────────────────────────── */
+.tab-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tab-grid-2 > .full-width {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .tab-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Inline metric strip ──────────────────────────────────────── */
+.metric-strip {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+.metric-strip-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-strip-item .label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.metric-strip-item .value {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text);
+}
+
+/* ─── Section compact variant ──────────────────────────────────── */
+.section.compact {
+  margin-bottom: 24px;
+}
+
+.section.compact .section-title {
+  margin-bottom: 10px !important;
+}
+
+.section.compact .section-desc {
+  margin-bottom: 12px;
+}
+
+.section.compact .card {
+  padding: 16px;
+}
