@@ -1,0 +1,3914 @@
+{
+  "race_id": "2026_esp",
+  "year": 2026,
+  "round": 7,
+  "grand_prix": "Barcelona Grand Prix",
+  "circuit": "Barcelona",
+  "total_laps": 66,
+  "drivers": [
+    {
+      "code": "HAM",
+      "name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "status": "FINISHED"
+    },
+    {
+      "code": "RUS",
+      "name": "George Russell",
+      "team": "Mercedes",
+      "status": "FINISHED"
+    },
+    {
+      "code": "NOR",
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "status": "FINISHED"
+    },
+    {
+      "code": "VER",
+      "name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "status": "FINISHED"
+    },
+    {
+      "code": "PIA",
+      "name": "Oscar Piastri",
+      "team": "McLaren",
+      "status": "FINISHED"
+    },
+    {
+      "code": "HAD",
+      "name": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "status": "FINISHED"
+    },
+    {
+      "code": "GAS",
+      "name": "Pierre Gasly",
+      "team": "Alpine",
+      "status": "FINISHED"
+    },
+    {
+      "code": "LAW",
+      "name": "Liam Lawson",
+      "team": "Racing Bulls",
+      "status": "FINISHED"
+    },
+    {
+      "code": "LIN",
+      "name": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "status": "FINISHED"
+    },
+    {
+      "code": "COL",
+      "name": "Franco Colapinto",
+      "team": "Alpine",
+      "status": "FINISHED"
+    },
+    {
+      "code": "BOR",
+      "name": "Gabriel Bortoleto",
+      "team": "Audi",
+      "status": "FINISHED"
+    },
+    {
+      "code": "SAI",
+      "name": "Carlos Sainz",
+      "team": "Williams",
+      "status": "FINISHED"
+    },
+    {
+      "code": "OCO",
+      "name": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "status": "FINISHED"
+    },
+    {
+      "code": "PER",
+      "name": "Sergio Perez",
+      "team": "Cadillac",
+      "status": "FINISHED"
+    },
+    {
+      "code": "LEC",
+      "name": "Charles Leclerc",
+      "team": "Ferrari",
+      "status": "FINISHED"
+    },
+    {
+      "code": "ANT",
+      "name": "Kimi Antonelli",
+      "team": "Mercedes",
+      "status": "FINISHED"
+    },
+    {
+      "code": "BEA",
+      "name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "status": "FINISHED"
+    },
+    {
+      "code": "ALB",
+      "name": "Alexander Albon",
+      "team": "Williams",
+      "status": "DNF"
+    },
+    {
+      "code": "ALO",
+      "name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "status": "DNF"
+    },
+    {
+      "code": "HUL",
+      "name": "Nico Hulkenberg",
+      "team": "Audi",
+      "status": "DNF"
+    },
+    {
+      "code": "BOT",
+      "name": "Valtteri Bottas",
+      "team": "Cadillac",
+      "status": "DNF"
+    },
+    {
+      "code": "STR",
+      "name": "Lance Stroll",
+      "team": "Aston Martin",
+      "status": "DNF"
+    }
+  ],
+  "start_order": [
+    "RUS",
+    "HAM",
+    "ANT",
+    "NOR",
+    "VER",
+    "HAD",
+    "PIA",
+    "LAW",
+    "HUL",
+    "LEC",
+    "LIN",
+    "BOR",
+    "COL",
+    "GAS",
+    "BEA",
+    "SAI",
+    "OCO",
+    "ALB",
+    "PER",
+    "BOT",
+    "STR",
+    "ALO"
+  ],
+  "finish_order": [
+    "HAM",
+    "RUS",
+    "NOR",
+    "VER",
+    "PIA",
+    "HAD",
+    "GAS",
+    "LAW",
+    "LIN",
+    "COL",
+    "BOR",
+    "SAI",
+    "OCO",
+    "PER",
+    "LEC",
+    "ANT",
+    "BEA",
+    "ALB_DNF",
+    "ALO_DNF",
+    "HUL_DNF",
+    "BOT_DNF",
+    "STR_DNF"
+  ],
+  "laps": [
+    {
+      "lap": 1,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "LAW",
+        "LIN",
+        "HUL",
+        "COL",
+        "GAS",
+        "SAI",
+        "HAD",
+        "BEA",
+        "OCO",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "STR",
+        "ALO"
+      ]
+    },
+    {
+      "lap": 2,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "LAW",
+        "HUL",
+        "LIN",
+        "COL",
+        "GAS",
+        "SAI",
+        "HAD",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "STR",
+        "ALO"
+      ]
+    },
+    {
+      "lap": 3,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "LAW",
+        "HUL",
+        "LIN",
+        "COL",
+        "GAS",
+        "HAD",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "STR",
+        "ALO"
+      ]
+    },
+    {
+      "lap": 4,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "LAW",
+        "HUL",
+        "LIN",
+        "COL",
+        "GAS",
+        "HAD",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "STR",
+        "ALO"
+      ]
+    },
+    {
+      "lap": 5,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "LAW",
+        "HUL",
+        "LIN",
+        "COL",
+        "GAS",
+        "HAD",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "ALO",
+        "STR"
+      ]
+    },
+    {
+      "lap": 6,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "LAW",
+        "HUL",
+        "LIN",
+        "COL",
+        "HAD",
+        "GAS",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "ALO",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 7,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "LAW",
+        "HUL",
+        "LIN",
+        "HAD",
+        "COL",
+        "GAS",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "ALO",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 8,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "LAW",
+        "HUL",
+        "LIN",
+        "HAD",
+        "COL",
+        "GAS",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "ALO",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 9,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "LAW",
+        "HUL",
+        "LIN",
+        "HAD",
+        "COL",
+        "GAS",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "ALO",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 10,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "LAW",
+        "HUL",
+        "HAD",
+        "LIN",
+        "COL",
+        "GAS",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "ALO",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 11,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "HAM",
+        "VER",
+        "LEC",
+        "PIA",
+        "HUL",
+        "HAD",
+        "LAW",
+        "LIN",
+        "COL",
+        "GAS",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT",
+        "ALO",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 12,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "LEC",
+        "PIA",
+        "VER",
+        "HAM",
+        "HUL",
+        "HAD",
+        "LIN",
+        "GAS",
+        "COL",
+        "SAI",
+        "OCO",
+        "BEA",
+        "BOR",
+        "ALB",
+        "LAW",
+        "PER",
+        "ALO",
+        "BOT",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 13,
+      "positions": [
+        "ANT",
+        "NOR",
+        "LEC",
+        "PIA",
+        "RUS",
+        "HAM",
+        "HAD",
+        "VER",
+        "HUL",
+        "LIN",
+        "GAS",
+        "SAI",
+        "BEA",
+        "BOR",
+        "OCO",
+        "ALB",
+        "LAW",
+        "COL",
+        "ALO",
+        "BOT",
+        "PER",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 14,
+      "positions": [
+        "ANT",
+        "LEC",
+        "RUS",
+        "PIA",
+        "HAM",
+        "NOR",
+        "VER",
+        "HAD",
+        "LIN",
+        "GAS",
+        "SAI",
+        "BEA",
+        "BOR",
+        "LAW",
+        "HUL",
+        "COL",
+        "ALO",
+        "OCO",
+        "BOT",
+        "ALB",
+        "PER",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 15,
+      "positions": [
+        "LEC",
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "HAD",
+        "PIA",
+        "LIN",
+        "BEA",
+        "LAW",
+        "BOR",
+        "HUL",
+        "COL",
+        "GAS",
+        "ALO",
+        "SAI",
+        "OCO",
+        "ALB",
+        "PER",
+        "BOT",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 16,
+      "positions": [
+        "RUS",
+        "LEC",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LIN",
+        "BEA",
+        "LAW",
+        "HAD",
+        "HUL",
+        "COL",
+        "GAS",
+        "SAI",
+        "OCO",
+        "ALO",
+        "ALB",
+        "BOR",
+        "PER",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 17,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "LIN",
+        "HAD",
+        "BEA",
+        "LAW",
+        "HUL",
+        "COL",
+        "GAS",
+        "SAI",
+        "OCO",
+        "ALO",
+        "BOR",
+        "ALB",
+        "PER",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 18,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "LIN",
+        "HAD",
+        "LAW",
+        "HUL",
+        "COL",
+        "GAS",
+        "BEA",
+        "SAI",
+        "OCO",
+        "BOR",
+        "ALO",
+        "ALB",
+        "PER",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 19,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "LIN",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "OCO",
+        "BOR",
+        "ALB",
+        "ALO",
+        "PER",
+        "BEA",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 20,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "LIN",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "OCO",
+        "BOR",
+        "ALB",
+        "BEA",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 21,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "LIN",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "OCO",
+        "BOR",
+        "ALB",
+        "BEA",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 22,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "LAW",
+        "HUL",
+        "LIN",
+        "GAS",
+        "COL",
+        "SAI",
+        "OCO",
+        "BOR",
+        "ALB",
+        "BEA",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 23,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "OCO",
+        "BOR",
+        "LIN",
+        "BEA",
+        "ALB",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 24,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "BOR",
+        "OCO",
+        "LIN",
+        "BEA",
+        "ALB",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 25,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "BOR",
+        "OCO",
+        "LIN",
+        "BEA",
+        "ALB",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 26,
+      "positions": [
+        "RUS",
+        "HAM",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "BOR",
+        "LIN",
+        "OCO",
+        "BEA",
+        "ALB",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 27,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "HAM",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "BOR",
+        "LIN",
+        "OCO",
+        "BEA",
+        "ALB",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 28,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAM",
+        "HAD",
+        "LAW",
+        "HUL",
+        "GAS",
+        "COL",
+        "SAI",
+        "BOR",
+        "LIN",
+        "OCO",
+        "BEA",
+        "ALB",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 29,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "LEC",
+        "VER",
+        "HAM",
+        "PIA",
+        "HAD",
+        "LAW",
+        "GAS",
+        "COL",
+        "HUL",
+        "SAI",
+        "BOR",
+        "LIN",
+        "OCO",
+        "BEA",
+        "ALB",
+        "PER",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 30,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "LEC",
+        "HAM",
+        "PIA",
+        "VER",
+        "HAD",
+        "LAW",
+        "GAS",
+        "COL",
+        "BOR",
+        "HUL_DNF",
+        "LIN",
+        "SAI",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALB",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 31,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "LEC",
+        "HAM",
+        "PIA",
+        "VER",
+        "HAD",
+        "LAW",
+        "GAS",
+        "COL",
+        "LIN",
+        "HUL_DNF",
+        "BOR",
+        "BEA",
+        "OCO",
+        "SAI",
+        "PER",
+        "ALB",
+        "ALO",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 32,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "HAM",
+        "LEC",
+        "PIA",
+        "VER",
+        "HAD",
+        "LAW",
+        "GAS",
+        "COL",
+        "LIN",
+        "HUL_DNF",
+        "BOR",
+        "BEA",
+        "OCO",
+        "SAI",
+        "ALB",
+        "ALO",
+        "PER",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 33,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "HAM",
+        "LEC",
+        "PIA",
+        "VER",
+        "HAD",
+        "LAW",
+        "GAS",
+        "COL",
+        "LIN",
+        "HUL_DNF",
+        "BEA",
+        "BOR",
+        "OCO",
+        "SAI",
+        "ALB",
+        "ALO",
+        "PER",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 34,
+      "positions": [
+        "RUS",
+        "ANT",
+        "NOR",
+        "HAM",
+        "LEC",
+        "PIA",
+        "VER",
+        "HAD",
+        "LAW",
+        "GAS",
+        "COL",
+        "LIN",
+        "HUL_DNF",
+        "BEA",
+        "SAI",
+        "OCO",
+        "BOR",
+        "ALB",
+        "ALO",
+        "PER",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 35,
+      "positions": [
+        "RUS",
+        "ANT",
+        "HAM",
+        "NOR",
+        "LEC",
+        "PIA",
+        "VER",
+        "HAD",
+        "GAS",
+        "LAW",
+        "LIN",
+        "COL",
+        "HUL_DNF",
+        "BEA",
+        "SAI",
+        "BOR",
+        "OCO",
+        "ALO",
+        "PER",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 36,
+      "positions": [
+        "ANT",
+        "RUS",
+        "HAM",
+        "LEC",
+        "NOR",
+        "PIA",
+        "VER",
+        "HAD",
+        "GAS",
+        "LIN",
+        "COL",
+        "LAW",
+        "HUL_DNF",
+        "BEA",
+        "SAI",
+        "BOR",
+        "OCO",
+        "ALO",
+        "PER",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 37,
+      "positions": [
+        "ANT",
+        "HAM",
+        "LEC",
+        "RUS",
+        "NOR",
+        "VER",
+        "PIA",
+        "HAD",
+        "GAS",
+        "LIN",
+        "COL",
+        "LAW",
+        "HUL_DNF",
+        "BEA",
+        "SAI",
+        "BOR",
+        "OCO",
+        "ALO",
+        "PER",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 38,
+      "positions": [
+        "HAM",
+        "LEC",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "BEA",
+        "HUL_DNF",
+        "SAI",
+        "LIN",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 39,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "LEC",
+        "VER",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "BEA",
+        "HUL_DNF",
+        "SAI",
+        "LIN",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 40,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "SAI",
+        "HUL_DNF",
+        "LIN",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 41,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "SAI",
+        "HUL_DNF",
+        "LIN",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 42,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "SAI",
+        "HUL_DNF",
+        "LIN",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 43,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "SAI",
+        "HUL_DNF",
+        "LIN",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 44,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "SAI",
+        "HUL_DNF",
+        "LIN",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 45,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 46,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 47,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BOR",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 48,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BEA",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 49,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BEA",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 50,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BEA",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 51,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BEA",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 52,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BEA",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 53,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BEA",
+        "BOR",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 54,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "SAI",
+        "BEA",
+        "OCO",
+        "BOR",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 55,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "BEA",
+        "SAI",
+        "OCO",
+        "BOR",
+        "PER",
+        "ALO_DNF",
+        "ALB",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 56,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "BEA",
+        "BOR",
+        "OCO",
+        "SAI",
+        "PER",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 57,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "BEA",
+        "BOR",
+        "SAI",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 58,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "BEA",
+        "BOR",
+        "SAI",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 59,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "BEA",
+        "BOR",
+        "SAI",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 60,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "BOR",
+        "SAI",
+        "BEA",
+        "OCO",
+        "PER",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 61,
+      "positions": [
+        "HAM",
+        "ANT",
+        "RUS",
+        "NOR",
+        "VER",
+        "LEC",
+        "PIA",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "HUL_DNF",
+        "BOR",
+        "SAI",
+        "OCO",
+        "BEA",
+        "PER",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 62,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "LEC",
+        "HAD",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "BOR",
+        "HUL_DNF",
+        "SAI",
+        "OCO",
+        "PER",
+        "BEA",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 63,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "HAD",
+        "LEC",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "BOR",
+        "SAI",
+        "HUL_DNF",
+        "OCO",
+        "PER",
+        "BEA",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 64,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "HAD",
+        "LEC",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "BOR",
+        "SAI",
+        "HUL_DNF",
+        "OCO",
+        "PER",
+        "BEA",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 65,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "HAD",
+        "LEC",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "BOR",
+        "SAI",
+        "HUL_DNF",
+        "OCO",
+        "PER",
+        "BEA",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    },
+    {
+      "lap": 66,
+      "positions": [
+        "HAM",
+        "RUS",
+        "ANT",
+        "NOR",
+        "VER",
+        "PIA",
+        "HAD",
+        "LEC",
+        "GAS",
+        "COL",
+        "LAW",
+        "LIN",
+        "BOR",
+        "SAI",
+        "HUL_DNF",
+        "OCO",
+        "PER",
+        "BEA",
+        "ALO_DNF",
+        "ALB_DNF",
+        "BOT_DNF",
+        "STR_DNF"
+      ]
+    }
+  ],
+  "pit_stops": [
+    {
+      "driver": "HAM",
+      "lap": 11,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAM",
+      "lap": 12,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAM",
+      "lap": 27,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAM",
+      "lap": 28,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAM",
+      "lap": 41,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAM",
+      "lap": 42,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "RUS",
+      "lap": 12,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "RUS",
+      "lap": 13,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "RUS",
+      "lap": 36,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "RUS",
+      "lap": 37,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "NOR",
+      "lap": 13,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "NOR",
+      "lap": 14,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "NOR",
+      "lap": 35,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "NOR",
+      "lap": 36,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "VER",
+      "lap": 12,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "VER",
+      "lap": 13,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "VER",
+      "lap": 29,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "VER",
+      "lap": 30,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "VER",
+      "lap": 40,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "VER",
+      "lap": 41,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PIA",
+      "lap": 14,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PIA",
+      "lap": 15,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PIA",
+      "lap": 36,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PIA",
+      "lap": 37,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAD",
+      "lap": 15,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAD",
+      "lap": 16,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAD",
+      "lap": 32,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAD",
+      "lap": 33,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAD",
+      "lap": 58,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HAD",
+      "lap": 59,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "GAS",
+      "lap": 14,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "GAS",
+      "lap": 15,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "GAS",
+      "lap": 40,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "GAS",
+      "lap": 41,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LAW",
+      "lap": 11,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LAW",
+      "lap": 12,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LAW",
+      "lap": 35,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LAW",
+      "lap": 36,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LIN",
+      "lap": 22,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LIN",
+      "lap": 23,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LIN",
+      "lap": 37,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LIN",
+      "lap": 38,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "COL",
+      "lap": 12,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "COL",
+      "lap": 13,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "COL",
+      "lap": 34,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "COL",
+      "lap": 35,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOR",
+      "lap": 15,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOR",
+      "lap": 16,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOR",
+      "lap": 33,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOR",
+      "lap": 34,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOR",
+      "lap": 53,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOR",
+      "lap": 54,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "SAI",
+      "lap": 14,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "SAI",
+      "lap": 15,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "SAI",
+      "lap": 30,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "SAI",
+      "lap": 31,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "SAI",
+      "lap": 55,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "SAI",
+      "lap": 56,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "OCO",
+      "lap": 13,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "OCO",
+      "lap": 14,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "OCO",
+      "lap": 34,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "OCO",
+      "lap": 35,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "OCO",
+      "lap": 58,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "OCO",
+      "lap": 59,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PER",
+      "lap": 12,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PER",
+      "lap": 13,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PER",
+      "lap": 31,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PER",
+      "lap": 32,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PER",
+      "lap": 39,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "PER",
+      "lap": 40,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LEC",
+      "lap": 16,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LEC",
+      "lap": 17,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LEC",
+      "lap": 39,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LEC",
+      "lap": 40,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "LEC",
+      "lap": 62,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ANT",
+      "lap": 14,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ANT",
+      "lap": 15,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ANT",
+      "lap": 37,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ANT",
+      "lap": 38,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BEA",
+      "lap": 18,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BEA",
+      "lap": 19,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BEA",
+      "lap": 39,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BEA",
+      "lap": 40,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BEA",
+      "lap": 60,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 13,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 14,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 29,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 30,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 34,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 3,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 35,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 4,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 50,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 4,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALB",
+      "lap": 51,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 5,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALO",
+      "lap": 1,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 1,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALO",
+      "lap": 21,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "ALO",
+      "lap": 22,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HUL",
+      "lap": 13,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "SOFT",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HUL",
+      "lap": 14,
+      "is_in_lap": false,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "HUL",
+      "lap": 29,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOT",
+      "lap": 14,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "MEDIUM",
+      "pit_duration_s": null
+    },
+    {
+      "driver": "BOT",
+      "lap": 15,
+      "is_in_lap": true,
+      "is_out_lap": true,
+      "stint": 2,
+      "compound": "HARD",
+      "pit_duration_s": -97.42
+    },
+    {
+      "driver": "STR",
+      "lap": 5,
+      "is_in_lap": true,
+      "is_out_lap": false,
+      "stint": 1,
+      "compound": "HARD",
+      "pit_duration_s": null
+    }
+  ],
+  "track_status": {
+    "sc_laps": [],
+    "vsc_laps": [
+      35,
+      38,
+      39,
+      40,
+      41,
+      42,
+      51,
+      52,
+      53,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ],
+    "red_flag_laps": [],
+    "yellow_laps": [
+      35,
+      38,
+      39,
+      40,
+      41,
+      51,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "per_lap_status": [
+      {
+        "lap": 1,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 2,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 3,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 4,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 5,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 6,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 7,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 8,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 9,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 10,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 11,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 12,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 13,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 14,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 15,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 16,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 17,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 18,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 19,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 20,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 21,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 22,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 23,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 24,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 25,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 26,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 27,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 28,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 29,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 30,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 31,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 32,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 33,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 34,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 35,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 36,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 37,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 38,
+        "status": [
+          "AllClear",
+          "VSC",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 39,
+        "status": [
+          "AllClear",
+          "VSC",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 40,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 41,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 42,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding"
+        ]
+      },
+      {
+        "lap": 43,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 44,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 45,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 46,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 47,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 48,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 49,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 50,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 51,
+        "status": [
+          "AllClear",
+          "VSC",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 52,
+        "status": [
+          "AllClear",
+          "VSC"
+        ]
+      },
+      {
+        "lap": 53,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding"
+        ]
+      },
+      {
+        "lap": 54,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 55,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 56,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 57,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 58,
+        "status": [
+          "AllClear"
+        ]
+      },
+      {
+        "lap": 59,
+        "status": [
+          "AllClear",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 60,
+        "status": [
+          "AllClear",
+          "VSC",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 61,
+        "status": [
+          "AllClear",
+          "VSC",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 62,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 63,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding",
+          "Yellow"
+        ]
+      },
+      {
+        "lap": 64,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding"
+        ]
+      },
+      {
+        "lap": 65,
+        "status": [
+          "AllClear",
+          "VSC",
+          "VSCEnding"
+        ]
+      },
+      {
+        "lap": 66,
+        "status": [
+          "AllClear"
+        ]
+      }
+    ]
+  },
+  "stints": [
+    {
+      "driver": "HAM",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 11,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "HAM",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 12,
+      "end_lap": 27,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HAM",
+      "stint": 3,
+      "compound": "MEDIUM",
+      "start_lap": 28,
+      "end_lap": 41,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HAM",
+      "stint": 4,
+      "compound": "HARD",
+      "start_lap": 42,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "RUS",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 12,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "RUS",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 13,
+      "end_lap": 36,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "RUS",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 37,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "NOR",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 13,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "NOR",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 14,
+      "end_lap": 35,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "NOR",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 36,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "VER",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 12,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "VER",
+      "stint": 2,
+      "compound": "MEDIUM",
+      "start_lap": 13,
+      "end_lap": 29,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "VER",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 30,
+      "end_lap": 40,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "VER",
+      "stint": 4,
+      "compound": "MEDIUM",
+      "start_lap": 41,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PIA",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 14,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PIA",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 15,
+      "end_lap": 36,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PIA",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 37,
+      "end_lap": 66,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HAD",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 15,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HAD",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 16,
+      "end_lap": 32,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HAD",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 33,
+      "end_lap": 58,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HAD",
+      "stint": 4,
+      "compound": "SOFT",
+      "start_lap": 59,
+      "end_lap": 65,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "GAS",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 14,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "GAS",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 15,
+      "end_lap": 40,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "GAS",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 41,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LAW",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 11,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LAW",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 12,
+      "end_lap": 35,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LAW",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 36,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LIN",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 22,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LIN",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 23,
+      "end_lap": 37,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LIN",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 38,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "COL",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 12,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "COL",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 13,
+      "end_lap": 34,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "COL",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 35,
+      "end_lap": 65,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOR",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 15,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOR",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 16,
+      "end_lap": 33,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOR",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 34,
+      "end_lap": 53,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOR",
+      "stint": 4,
+      "compound": "SOFT",
+      "start_lap": 54,
+      "end_lap": 64,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAI",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 14,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAI",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 15,
+      "end_lap": 30,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAI",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 31,
+      "end_lap": 55,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "SAI",
+      "stint": 4,
+      "compound": "MEDIUM",
+      "start_lap": 56,
+      "end_lap": 64,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "OCO",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 13,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "OCO",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 14,
+      "end_lap": 34,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "OCO",
+      "stint": 3,
+      "compound": "MEDIUM",
+      "start_lap": 35,
+      "end_lap": 58,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "OCO",
+      "stint": 4,
+      "compound": "SOFT",
+      "start_lap": 59,
+      "end_lap": 64,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PER",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 12,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PER",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 13,
+      "end_lap": 31,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PER",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 32,
+      "end_lap": 39,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "PER",
+      "stint": 4,
+      "compound": "MEDIUM",
+      "start_lap": 40,
+      "end_lap": 63,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LEC",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 16,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LEC",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 17,
+      "end_lap": 39,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "LEC",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 40,
+      "end_lap": 62,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ANT",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 14,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ANT",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 15,
+      "end_lap": 37,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ANT",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 38,
+      "end_lap": 62,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BEA",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 18,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BEA",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 19,
+      "end_lap": 39,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BEA",
+      "stint": 3,
+      "compound": "SOFT",
+      "start_lap": 40,
+      "end_lap": 60,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "ALB",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 13,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALB",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 14,
+      "end_lap": 29,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALB",
+      "stint": 3,
+      "compound": "HARD",
+      "start_lap": 30,
+      "end_lap": 34,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALB",
+      "stint": 4,
+      "compound": "SOFT",
+      "start_lap": 35,
+      "end_lap": 50,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALB",
+      "stint": 5,
+      "compound": "SOFT",
+      "start_lap": 51,
+      "end_lap": 55,
+      "fresh_tyre": false
+    },
+    {
+      "driver": "ALO",
+      "stint": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 21,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "ALO",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 22,
+      "end_lap": 38,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HUL",
+      "stint": 1,
+      "compound": "SOFT",
+      "start_lap": 1,
+      "end_lap": 13,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "HUL",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 14,
+      "end_lap": 29,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOT",
+      "stint": 1,
+      "compound": "MEDIUM",
+      "start_lap": 1,
+      "end_lap": 14,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "BOT",
+      "stint": 2,
+      "compound": "HARD",
+      "start_lap": 15,
+      "end_lap": 15,
+      "fresh_tyre": true
+    },
+    {
+      "driver": "STR",
+      "stint": 1,
+      "compound": "HARD",
+      "start_lap": 1,
+      "end_lap": 5,
+      "fresh_tyre": true
+    }
+  ]
+}
